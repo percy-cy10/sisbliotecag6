@@ -32,35 +32,6 @@
          <input class="btn btn-success" type="submit" value="ingresar">
        </p>
     </form>
-
-
-       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión</h4>
-
-       <form action="validar.php" method="POST">
-
-            <div class="group-material-login">
-              <input type="text" class="material-login-control" name="mail" required="" maxlength="70">
-              <span class="highlight-login"></span>
-              <span class="bar-login"></span>
-              <label><i class="zmdi zmdi-account"></i> &nbsp; Correos</label>
-            </div><br>
-            <div class="group-material-login">
-              <input type="password" class="material-login-control" name="pass" required="" maxlength="70">
-              <span class="highlight-login"></span>
-              <span class="bar-login"></span>
-              <label><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</label>
-            </div>
-            <div class="group-material">
-                <select class="material-control-login" required >
-                    <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="Student">Estudiante</option>
-                    <option value="Teacher">Docente</option>
-                    <option value="Admin">Administrador</option>
-                </select>
-            </div>
-            <button class="btn-login" type="submit">Ingresar &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
-        </form>
-          </form>
             <a href="registro.php">
             <button class="btn-login3" type="submit"><i class="zmdi zmdi-arrow-left"></i> &nbsp; Registrarse </button>
           </a>
