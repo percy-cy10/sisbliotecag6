@@ -8,7 +8,7 @@ class Welcome extends CI_Controller {
 		
 		
 		if($this->session->userdata('auth')!=true){
-				redirect('Biblioteca');
+				redirect('biblioteca');
 				dic("");
 		};
 	}
