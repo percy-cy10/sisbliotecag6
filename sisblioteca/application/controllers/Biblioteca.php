@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Biblioteca extends CI_Controller {
+class biblioteca extends CI_Controller {
 
 	public function index()
 	{
