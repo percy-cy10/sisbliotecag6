@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 		    $this->load->view('biblioteca/footer');
 	   }
 	}
-	public function confidencial2(){
+	public function usuarios(){
 		
 	    if($this->session->userdata('auth')!=true) die("ascesso denegado");
 		if($this->session->userdata('id')!=1) die("ascesso denegado");
@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
 		    $data['usuario'] = $this->db->query("SELECT * FROM usuario")->result();
 			$this->load->view('biblioteca/header');
 		    $this->load->view('biblioteca/menu');
-			$this->load->view('biblioteca/confidencial2',$data);
+			$this->load->view('biblioteca/usuarios',$data);
 		    $this->load->view('biblioteca/footer');
 	   
     }
