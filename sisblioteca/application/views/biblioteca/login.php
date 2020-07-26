@@ -30,11 +30,12 @@
           </div>
        <p>
          <input class="btn btn-success" type="submit" value="ingresar">
-       </p>
-    </form>
-            <a href="registro.php">
+        <a href="registro.php">
             <button class="btn-login3" type="submit"><i class="zmdi zmdi-arrow-left"></i> &nbsp; Registrarse </button>
           </a>
+        </p>
+    </form>
+
     </div>    
 </body>
 </html>
