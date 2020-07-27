@@ -18,7 +18,7 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>">INICIO&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/confidencial') ?>">INFORMACION CONFIDENCIAL&nbsp;&nbsp;</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuario') ?>">REGISTRO&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
           <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuarios') ?>">USUARIOS&nbsp;&nbsp;</a>
@@ -33,18 +33,3 @@
   
 </nav>
 
-
-
-
-
-
-<<<<<<< HEAD
-    <ul>
-       <li><a href="<?php echo base_url() ?>">inicio</a></li>
-       <li><a href="<?php echo base_url('Welcome/confidencial') ?>">informacion confidencial</a></li>
-       <li><a href="<?php echo base_url('Welcome/usuarios') ?>">usuarios</a></li>
-       <li><a href="<?php echo base_url('biblioteca/salir') ?>">logout</a></li>
-       <li><a href="<?php echo base_url('Welcome/Registro') ?>">registro</a></li>
-    </ul>
-=======
->>>>>>> 0f7912eb48052e1e25521ab2ff5d5810fce7d9d5
