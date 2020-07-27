@@ -23,7 +23,6 @@
 <body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
   <br>
   <div class="container">
-<<<<<<< HEAD
     <h1 style="text-align: center;color: blue">BIBLIOTECA GRUPO 6</h1>
     <div class="form-container">
   <div class="card" style="width:30%;float: left;left: 36%">
