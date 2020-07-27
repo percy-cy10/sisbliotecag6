@@ -90,36 +90,5 @@ showPassword.classList.toggle("fa-eye-slash");
 })
 });
 </script>
-=======
-    <form action="<?php echo base_url('biblioteca/evaluar')?>" method="post">
-        <p class="text-center" style="margin-top: 17px;">
-           <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eleconomista.es%2Fstatus%2Fnoticias%2F10083026%2F09%2F19%2FLa-biblioteca-cambia-de-rol-de-los-libros-a-la-formacion.html&psig=AOvVaw1dmUJ5sr6Fyso63kyePE7R&ust=1595881644771000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiW48rg6-oCFQAAAAAdAAAAABAD" width="100" height="100">
-       </p>
-       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión</h4>
-       <p>
-         <label for="usuario">usuario</label>
-         <input type="text" name="usuario">
-       </p>
-       <p>
-         <label for="password">password</label>
-         <input type="password" name="password">
-       </p>
-          <div class="group-material">
-              <select class="material-control-login" required >
-                  <option value="" disabled="" selected="">Tipo de usuario</option>
-                  <option value="Student">Estudiante</option>
-                  <option value="Teacher">Docente</option>
-                  <option value="Admin">Administrador</option>
-              </select>
-          </div>
-       <p>
-         <input class="btn btn-success" type="submit" value="ingresar">
-       </p>
-    </form>
-            <a href="registro.php">
-            <button class="btn btn-success" type="submit"><i class="zmdi zmdi-arrow-left"></i> &nbsp; Registrarse </button>
-          </a>
-    </div>    
->>>>>>> 127dda328b3d57b0d03b62bee5357238e0b0e22b
 </body>
 </html>
