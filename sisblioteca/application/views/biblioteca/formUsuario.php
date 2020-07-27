@@ -13,10 +13,10 @@
 <body>
     <header class="container " >
         <br>
-        <div class="card container "style="width: 700px;height: auto;">
+        <div class="card container "style="width: 700px;height: auto;" method="post">
           <div class="card-body">
 
-        <form class="container">
+        <form action="#" class="container">
             
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">

@@ -60,13 +60,11 @@
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
+           <input class="btn btn-success" type="submit" value="ingresar"> 
+           </form>
           <a href="#">
             <button class="btn btn-info" type="submit"> Registrarse </button>
-          </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <input class="btn btn-success" type="submit" value="ingresar"> 
-
-           </form>
-          
+          </a> 
     </div> 
     </div>
   </div>
