@@ -18,7 +18,7 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>">INICIO&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/confidencial') ?>">INFORMACION CONFIDENCIAL&nbsp;&nbsp;</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuario') ?>">REGISTRO&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
           <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuarios') ?>">USUARIOS&nbsp;&nbsp;</a>
@@ -32,9 +32,4 @@
     </div>
   
 </nav>
-
-
-
-
-
 
