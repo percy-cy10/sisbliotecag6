@@ -62,7 +62,7 @@
           
           </p>
       </form>
-          <a href="#">
+          <a href="#" style="top: 86%;position: absolute;float: left;left: 60%">
             <button class="btn btn-info" type="submit"> Registrarse </button>
           </a>
     </div> 
