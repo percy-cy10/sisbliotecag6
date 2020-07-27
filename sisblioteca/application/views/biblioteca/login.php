@@ -33,7 +33,7 @@
        </p>
     </form>
             <a href="registro.php">
-            <button class="btn-login3" type="submit"><i class="zmdi zmdi-arrow-left"></i> &nbsp; Registrarse </button>
+            <button class="btn btn-success" type="submit"><i class="zmdi zmdi-arrow-left"></i> &nbsp; Registrarse </button>
           </a>
     </div>    
 </body>

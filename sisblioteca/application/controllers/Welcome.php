@@ -43,6 +43,14 @@ class Welcome extends CI_Controller {
 			$this->load->view('biblioteca/usuarios',$data);
 		    $this->load->view('biblioteca/footer');
 	   
-    }
+	}
+	public function registro()
+	{
+		$this->load->view('biblioteca/header');
+		$this->load->view('biblioteca/menu');
+		$this->load->view('biblioteca/Registro');
+		$this->load->view('biblioteca/footer');
+		
+	}
 }
 
