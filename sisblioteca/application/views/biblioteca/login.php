@@ -21,8 +21,11 @@
   </style>
 
 <body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
+  <br>
   <div class="container">
-  <div class="card" style="width:400px;">
+    <h1 style="text-align: center;color: blue">BIBLIOTECA GRUPO 6</h1>
+    <div class="form-container">
+  <div class="card" style="width:30%;float: left;left: 36%">
   <div class="card-body">
         <form action="<?php echo base_url('biblioteca/evaluar')?>" method="post">
           <p class="text-center" style="margin-top: 17px;">
@@ -37,12 +40,18 @@
 
 
 
+            <label for="usuario">USUARIO:</label>
+            <input type="text" name="usuario" class="form-control" placeholder="Enter su usuario" >
+            <br>
 
-          <label for="usuario">usuario</label>
-           <input type="text" name="usuario"  placeholder="imgrese se usuario" /><br>
-           <label for="password">password</label>
+
+
+
+           <label for="password">CONTRASEÑA</label>
            <input type="password" name="password" class="form-control password1" value="" placeholder="imgrese se contraseña" />
             <span class="fa fa-fw fa-eye password-icon show-password"></span>
+            <br>
+
             <div class="group-material">
                 <select class="material-control-login" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
@@ -51,15 +60,15 @@
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
-         <p>
-           <input class="btn btn-success" type="submit" value="ingresar">
+          <a href="#">
+            <button class="btn btn-info" type="submit"> Registrarse </button>
+          </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <input class="btn btn-success" type="submit" value="ingresar"> 
+
+           </form>
           
-          </p>
-      </form>
-          <a href="registro.php">
-            <button class="btn btn-success" type="submit"> Registrarse </button>
-          </a>
     </div> 
+    </div>
   </div>
 </div>
      
@@ -69,12 +78,13 @@ window.addEventListener("load", function() {
 showPassword = document.querySelector('.show-password');
 showPassword.addEventListener('click', () => {
 // elementos input de tipo password
-password1 = document.querySelector('.password1');
-if ( password1.type === "text" ) {
+password = document.querySelector('.password1');
+
+if ( password.type === "text" ) {
 password1.type = "password"
 showPassword.classList.remove('fa-eye-slash');
 } else {
-password1.type = "text"
+password.type = "text"
 showPassword.classList.toggle("fa-eye-slash");
 }
 })
