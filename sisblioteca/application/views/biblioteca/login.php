@@ -23,8 +23,7 @@
 <body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
   <br>
   <div class="container">
-    <h1 style="text-align: center;color: blue">BIBLIOTECA GRUPO 6</h1>
-    <div class="form-container">
+    <h1 style="color: blue;text-align: center;">BIBLIOTECA GRUPO 6</h1>
   <div class="card" style="width:30%;float: left;left: 36%">
   <div class="card-body">
         <form action="<?php echo base_url('biblioteca/evaluar')?>" method="post">
@@ -42,16 +41,14 @@
 
             <label for="usuario">USUARIO:</label>
             <input type="text" name="usuario" class="form-control" placeholder="Enter su usuario" >
-            <br>
 
-
-
+<br>
 
            <label for="password">CONTRASEÑA</label>
            <input type="password" name="password" class="form-control password1" value="" placeholder="imgrese se contraseña" />
             <span class="fa fa-fw fa-eye password-icon show-password"></span>
-            <br>
 
+<br>
             <div class="group-material">
                 <select class="material-control-login" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
@@ -60,13 +57,15 @@
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
-           <input class="btn btn-success" type="submit" value="ingresar"> 
-           </form>
+         <p>
+           <input class="btn btn-success" type="submit" value="ingresar">
+          
+          </p>
+      </form>
           <a href="#">
             <button class="btn btn-info" type="submit"> Registrarse </button>
-          </a> 
+          </a>
     </div> 
-    </div>
   </div>
 </div>
      
@@ -76,13 +75,12 @@ window.addEventListener("load", function() {
 showPassword = document.querySelector('.show-password');
 showPassword.addEventListener('click', () => {
 // elementos input de tipo password
-password = document.querySelector('.password1');
-
-if ( password.type === "text" ) {
+password1 = document.querySelector('.password1');
+if ( password1.type === "text" ) {
 password1.type = "password"
 showPassword.classList.remove('fa-eye-slash');
 } else {
-password.type = "text"
+password1.type = "text"
 showPassword.classList.toggle("fa-eye-slash");
 }
 })
