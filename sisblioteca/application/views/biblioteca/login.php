@@ -60,12 +60,12 @@
                 </select>
             </div><br>
          <p>
-           <input class="btn btn-success" type="submit" value="ingresar">
+           <input class="btn btn-success" type="submit" value="INGRESAR">
           
           </p>
       </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 60%">
-            REGISTARSE</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 65%">
+            REGISTRARSE</button>
         <div class="modal" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
