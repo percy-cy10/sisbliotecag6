@@ -22,85 +22,85 @@
             <div class="input-group-prepend">
               <span class="input-group-text">TITULO</span>
             </div>
-            <input type="text" class="form-control" name="titulo">
+            <input type="text" class="form-control" name="ejem_titulo">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">EDITORIAL</span>
             </div>
-            <input type="text" class="form-control" name="editorial">
+            <input type="text" class="form-control" name="ejem_editorial">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">PAGINAS</span>
             </div>
-            <input type="text" class="form-control" name="paginas">
+            <input type="text" class="form-control" name="ejem_paginas">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">ISBN</span>
             </div>
-            <input type="text" class="form-control" name="isbn">
+            <input type="text" class="form-control" name="ejem_isbn">
           </div>
         <div class="input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
               <span class="input-group-text">IDIOMA</span>
             </div>
-            <input type="text" class="form-control" name="idioma">
+            <input type="text" class="form-control" name="ejem_idioma">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">PORTADA</span>
             </div>
-            <input type="text" class="form-control" name="portada">
+            <input type="text" class="form-control" name="ejem_portada">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">DIGITAL</span>
             </div>
-            <input type="text" class="form-control" name="digital">
+            <input type="text" class="form-control" name="ejem_digital">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">AUDIO</span>
             </div>
-            <input type="text" class="form-control" name="audio">
+            <input type="text" class="form-control" name="ejem_audio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">RESUMEN</span>
             </div>
-            <input type="text" class="form-control" name="resumen">
+            <input type="text" class="form-control" name="ejem_resumen">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">TIPO ID</span>
             </div>
-            <input type="number" class="form-control" name="tipo_id">
+            <input type="number" class="form-control" name="ejem_tipo_id">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">CATEGORIA ID</span>
             </div>
-            <input type="number" class="form-control" name="cate_id">
+            <input type="number" class="form-control" name="ejem_cate_id">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">VALORACION</span>
             </div>
-            <input type="text" class="form-control" name="valoracion">
+            <input type="text" class="form-control" name="ejem_valoracion">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">AÑO</span>
             </div>
-            <input type="number" class="form-control" name="año">
+            <input type="number" class="form-control" name="ejem_anio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">NUMERO DE PRESTAMOS</span>
             </div>
-            <input type="number" class="form-control" name="nprestamos">
+            <input type="number" class="form-control" name="ejem_nprestamos">
           </div>
           <button  class="btn btn-success" type="submit">ENVIAR</button>
         </form>
