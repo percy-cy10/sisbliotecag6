@@ -1,14 +1,13 @@
+<?php
+  include('estilos.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <title>Inicio</title>
-  <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
     .password-icon {
@@ -78,11 +77,10 @@
               <!-- Modal body -->
                 <div class="container">
 
-                <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar" method="post" role="form" style="display: block;">
+                <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar?id=0" method="post" role="form" style="display: block;">
                       <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
 
-                          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar?id=0" >
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
@@ -157,13 +155,7 @@
                             </div>
                             <input type="text" class="form-control" name="usua_esadmin">
                           </div>
-                          <div class="input-group mb-3 input-group-lg">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">ESAADMIN</span>
-                              </div>
-                              <input type="text" class="form-control" name="usua_esadmin">
-                            </div>
-                          <button  class="btn btn-success" type="submit">ENVIAR</button>
+                              <button  class="btn btn-success" type="submit">ENVIAR</button>
                 </form>
    </div>
 
@@ -240,6 +232,7 @@ showPassword.classList.toggle("fa-eye-slash");
           return false;
         } else {
           //$('#register-form').trigger('submit');
+          alert("SU CUENTA FUE REGISTRADO EXCITOSAMENTE");
           return true;
         }
       }
