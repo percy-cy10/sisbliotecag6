@@ -10,7 +10,7 @@ class ctrlusuarios extends CI_Controller {
         $result = $this->model_usuario->consultar1($id);
 
         $datos = array('registros'=>$result);
-        
+       var_dump($result);
         $this->load->view('biblioteca/formUsuario',$datos);
         
         

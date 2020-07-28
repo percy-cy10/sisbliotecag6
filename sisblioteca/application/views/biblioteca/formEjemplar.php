@@ -1,8 +1,5 @@
 <?php 
-<<<<<<< HEAD
-
-=======
->>>>>>> 5026b5c17a2f94db1cce3856c6e416c90a4c5eb1
+ 
    include('estilos.php');
 ?>
 

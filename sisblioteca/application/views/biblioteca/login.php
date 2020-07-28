@@ -82,10 +82,8 @@
                       <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
 
-<<<<<<< HEAD
                           <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar?id=0" >
-=======
->>>>>>> 5026b5c17a2f94db1cce3856c6e416c90a4c5eb1
+
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
                               <span class="input-group-text">LOGIN</span>
