@@ -22,26 +22,22 @@
 		   <th>CORREO</th>
 		   <th>DIRECCION</th>
            <th>TELEFONO</th>
+           <th>ESADMIN</th>
 		   <th colspan='2'>OPCIONES</th>
 		</thead>
 		<tbody>
 		<?php foreach($registros as $reg): ?>
                <tr>
-                  <td><?php echo $reg->ejem_id; ?></td>
-                  <td><?php echo $reg->ejem_titulo; ?></td>
-                  <td><?php echo $reg->ejem_editorial; ?></td>
-                  <td><?php echo $reg->ejem_paginas; ?></td>
-                  <td><?php echo $reg->ejem_isbn; ?></td>
-                  <td><?php echo $reg->ejem_idioma; ?></td>
-                  <td><?php echo $reg->ejem_portada; ?></td>
-                  <td><?php echo $reg->ejem_digital; ?></td>
-                  <td><?php echo $reg->ejem_audio; ?></td>
-                  <td><?php echo $reg->ejem_resumen; ?></td>
-                  <td><?php echo $reg->ejem_tipo_id; ?></td>
-                  <td><?php echo $reg->ejem_cate_id; ?></td>
-                  <td><?php echo $reg->ejem_valoracion; ?></td>
-                  <td><?php echo $reg->ejem_anio; ?></td>                 
-                  <td><?php echo $reg->ejem_nprestamos; ?></td>
+                  <td><?php echo $reg->usua_id; ?></td>
+                  <td><?php echo $reg->usua_login; ?></td>
+                  <td><?php echo $reg->usua_password; ?></td>
+                  <td><?php echo $reg->usua_codigo; ?></td>
+                  <td><?php echo $reg->usua_nombres; ?></td>
+                  <td><?php echo $reg->usua_apellidos; ?></td>
+                  <td><?php echo $reg->usua_direccion; ?></td>
+                  <td><?php echo $reg->usua_email; ?></td>
+                  <td><?php echo $reg->usua_telefono; ?></td>
+                  <td><?php echo $reg->usua_esadmin; ?></td>
                 
                </tr>
                <?php endforeach; ?>

@@ -21,50 +21,58 @@
             <div class="input-group-prepend">
               <span class="input-group-text">LOGIN</span>
             </div>
-            <input type="text" class="form-control" name="login">
+            <input type="text" class="form-control" name="usua_login">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">PASSWORD</span>
             </div>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control" name="usua_password">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">CODIGO</span>
             </div>
-            <input type="text" class="form-control" name="codigo">
+            <input type="text" class="form-control" name="usua_codigo">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">NOMBRES</span>
             </div>
-            <input type="text" class="form-control" name="nombres">
+            <input type="text" class="form-control" name="usua_nombres">
           </div>
         <div class="input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
               <span class="input-group-text">APELLIDOS</span>
             </div>
-            <input type="text" class="form-control" name="apellidos">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">E-MAIL</span>
-            </div>
-            <input type="email" class="form-control" name="correo">
+            <input type="text" class="form-control" name="usua_apellidos">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">DIRECCION</span>
             </div>
-            <input type="text" class="form-control" name="direccion">
+            <input type="text" class="form-control" name="usua_direccion">
+          </div>
+          <div class="input-group mb-3 input-group-lg">
+          <div class="input-group-prepend">
+              <span class="input-group-text">email</span>
+            </div>
+            <input type="text" class="form-control" name="usua_email">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">TELEFONO</span>
             </div>
-            <input type="number" class="form-control" name="telefono">
+            <input type="text" class="form-control" name="usua_telefono">
           </div>
+          
+          <div class="input-group mb-3 input-group-lg">
+          <div class="input-group-prepend">
+              <span class="input-group-text">esadmin</span>
+            </div>
+            <input type="text" class="form-control" name="usua_esadmin">
+          </div>
+
           <div class="text-center">
           <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
           </div>
