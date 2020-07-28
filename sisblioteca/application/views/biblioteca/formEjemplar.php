@@ -42,12 +42,6 @@ background-size: cover;
 
    <form method="post"  action="<?php echo base_url();?>ctrlejemplar/guardar" > 
 
-<<<<<<< HEAD
-  
-
-=======
->>>>>>> 8de8b2671b4d08512887a0d226b8475c2294d374
-
 
         <div class="form-group col-md-6 ">
             <label for="" class="text-primary font-weight-bold ">titulo</label >

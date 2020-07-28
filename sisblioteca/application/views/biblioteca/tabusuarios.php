@@ -45,7 +45,12 @@
                   <td><?php echo $reg->usua_email; ?></td>
                   <td><?php echo $reg->usua_telefono; ?></td>
                   <td><?php echo $reg->usua_esadmin; ?></td>
-                
+                  <td>
+
+                     <a href="<?php echo base_url();?>ctrlusuarios/index?id=<?php echo $reg->usua_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                     <a href="<?php echo base_url();?>ctrlusuarios/eliminar?id=<?php echo $reg->usua_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
+
+                  </td>
                </tr>
                <?php endforeach; ?>
 			
