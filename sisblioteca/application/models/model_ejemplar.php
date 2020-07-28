@@ -13,9 +13,5 @@ class model_ejemplar extends CI_Model {
             $this->db->insert('ejemplar',$data);
         
     }
-       
-
-        
-         
-       
+          
 }
