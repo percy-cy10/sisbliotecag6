@@ -22,6 +22,25 @@
 <br>
 <img class="aligncenter wp-image-3850 size-full" title="Las bibliotecas escolares son imprescindibles en los centros educativos" src="http://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg" alt="Las bibliotecas escolares son imprescindibles en los centros educativos" width="700" height="450" srcset="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg 1000w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-300x201.jpg 300w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-768x515.jpg 768w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-82x55.jpg 82w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-75x50.jpg 75w" >
 
-<video width="400" controls>
-  <source src="https://www.youtube.com/watch?v=beqbhd7q5Xw" type="video/mp4">
-</video>
+<div class="card rounded float-right" style="width: 23rem;">
+  <div class="card-body">
+  <video width="300" controls>
+   
+   <source src="https://www.youtube.com/watch?v=beqbhd7q5Xw" type="video/mp4">
+ </video>
+  
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">La lectura permite mejorar nuestra ortografía.
+     Ayuda al desarrollo y perfeccionamiento del lenguaje. Mejora la expresión 
+     oral y escrita y hace el lenguaje más fluido. La lectura da facilidad para 
+     exponer el propio pensamiento y posibilita la capacidad de pensar.</li>
+  </ul>
+  
+  <div class="card-body">
+    <a class="button" href="https://quiurevista.com/por-que-importante-es-la-lectura/#:~:text=La%20lectura%20permite%20mejorar%20nuestra,posibilita%20la%20capacidad%20de%20pensar." class="card-link"><button>MAS INFORMACION</button></a>
+  </div>
+  
+</div>
+
+
