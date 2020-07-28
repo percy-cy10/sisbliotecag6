@@ -84,20 +84,23 @@
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
-                              <span class="input-group-text">LOGIN</span>
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" class="form-control" name="usua_login" placeholder="Escriba su login" required >
+                          </div>
+                          <div>
+                            <p>Tu contraseña debe constar de 6 caracteres</p>
                           </div>
 
                                     <div class="input-group mb-3 input-group-lg">
                                         <div class="input-group-prepend">
-                                          <span class="input-group-text">contraseña</span>
+                                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                         </div>                                   
                                          <input type="password" name="usua_password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
                                   </div>
                                   <div class="input-group mb-3 input-group-lg">
                                         <div class="input-group-prepend">
-                                          <span class="input-group-text"> confirmar contraseña</span>
+                                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                         </div>                                   
 
                                           <input type="password" name="confirm-passwordreg" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
@@ -107,9 +110,9 @@
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
-                              <span class="input-group-text">CODIGO</span>
+                              <span class="input-group-text"><i class="fas fa-code"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="usua_codigo">
+                            <input type="text" class="form-control" name="usua_codigo" placeholder="INGRESE SU CODIGO">
                           </div>
 
 
@@ -120,40 +123,40 @@
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
-                              <span class="input-group-text">NOMBRES</span>
+                              <span class="input-group-text">Name</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_nombres">
+                            <input type="text" class="form-control" name="usua_nombres" placeholder="NOMBRE">
                           </div>
                         <div class="input-group mb-3 input-group-lg">
                         <div class="input-group-prepend">
-                              <span class="input-group-text">APELLIDOS</span>
+                              <span class="input-group-text">Surame</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_apellidos">
+                            <input type="text" class="form-control" name="usua_apellidos" placeholder="APELLIDO">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
-                              <span class="input-group-text">E-MAIL</span>
+                              <span class="input-group-text"><i class="far fa-envelope"></i><i class="fas fa-at"></i></span>
                             </div>
-                            <input type="email" class="form-control" name="usua_email">
+                            <input type="email" class="form-control" name="usua_email" placeholder="EMAIL">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
-                              <span class="input-group-text">DIRECCION</span>
+                              <span class="input-group-text"><i class="far fa-address-card"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="usua_direccion">
+                            <input type="text" class="form-control" name="usua_direccion" placeholder="DIRECCION">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
-                              <span class="input-group-text">TELEFONO</span>
+                              <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="number" class="form-control" name="usua_telefono">
+                            <input type="number" class="form-control" name="usua_telefono" placeholder="TELEFONO/CELULAR">
                           </div>
                           
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
-                              <span class="input-group-text">ESADMIN</span>
+                              <span class="input-group-text">Esadmin</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_esadmin">
+                            <input type="text" class="form-control" name="usua_esadmin"placeholder="ESADMIN">
                           </div>
                               <button  class="btn btn-success" type="submit">ENVIAR</button>
                 </form>
@@ -164,7 +167,7 @@
 
               
               <!-- Modal footer -->
-              <div class="modal-footer" style="top: 88.3%;position: absolute;float: left;left: 75%">
+              <div class="modal-footer" style="top: 90%;position: absolute;float: left;left: 75%">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>
               
@@ -208,31 +211,31 @@ showPassword.classList.toggle("fa-eye-slash");
       var cla1 = $('#register-form #password').val();
       var cla2 = $('#register-form #confirm-password').val();
       if (cla1 == '' || cla2 == '') {
-        alert('Debes introducir tu clave en los dos campos.');
+        alert('Debes introducir tu contraseña en los dos campos.');
         //document.registro
         e.preventDefault();
         return false;
       }
       if (cla1.length < caract_longitud) {
-        alert('Tu clave debe constar de ' + caract_longitud + ' carácteres.');
+        alert('Tu contraseña debe constar de ' + caract_longitud + ' carácteres.');
         //document.registro
         e.preventDefault();
         return false;
       }
       if (cla1.indexOf(caract_invalido) > -1) {
-        alert("Las claves no pueden contener espacios");
+        alert("Las contraseñas no pueden contener espacios");
         //document.registro
         e.preventDefault();
         return false;
       } else {
         if (cla1 != cla2) {
-          alert("Las claves introducidas no son iguales");
+          alert("Las contraseñas introducidas no son iguales");
           //document.registro
           e.preventDefault();
           return false;
         } else {
           //$('#register-form').trigger('submit');
-          alert("SU CUENTA FUE REGISTRADO EXCITOSAMENTE");
+          alert("Estimado usuario sus datos fueron registardos satisfactoriamente y seran administrados por el ADMIN  .................... Acepta los terminos y condiciones..");
           return true;
         }
       }
