@@ -25,7 +25,7 @@
 		   <th colspan='2'>OPCIONES</th>
 		</thead>
 		<tbody>
-		
+		<tr></tr>
 			
 		</tbody>
 	  </table>
