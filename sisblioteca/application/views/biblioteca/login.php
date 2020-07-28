@@ -232,6 +232,7 @@ showPassword.classList.toggle("fa-eye-slash");
           return false;
         } else {
           //$('#register-form').trigger('submit');
+          alert("SU CUENTA FUE REGISTRADO EXCITOSAMENTE");
           return true;
         }
       }
