@@ -1,6 +1,6 @@
 <?php 
  include("estilos.php");
-  //var_dump($registros);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
