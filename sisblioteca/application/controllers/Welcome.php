@@ -61,7 +61,10 @@ class Welcome extends CI_Controller {
 	}
 	public function tabejemplar()
 	{
-		$this->load->view('biblioteca/tabEjemplar');
+		$this->load->model('model_ejemplar');
+        $result = $this->model_ejemplar->consultar();
+        $datos = array('registros'=>$result);
+		$this->load->view('biblioteca/tabEjemplar',$datos);
 		
 	}
 }

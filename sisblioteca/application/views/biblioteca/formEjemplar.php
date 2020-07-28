@@ -36,7 +36,7 @@ background-size: cover;
 
 <div class="container col-sm-7 shadow-lg p-2 mb-10 bg-white rounded">
    
-		<h2 class="text-secondary  text-center font-weight-bold">Registro de Usuarios</h2>
+		<h2 class="text-secondary  text-center font-weight-bold">Registro de Ejemplares</h2>
     <br>
 
 
