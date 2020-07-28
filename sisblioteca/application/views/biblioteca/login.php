@@ -8,6 +8,7 @@
  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="https://portal.unap.edu.pe/sites/default/files/UNAPUNO.png">
   <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
 
   <style type="text/css">
