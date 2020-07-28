@@ -44,5 +44,6 @@ class Welcome extends CI_Controller {
 		    $this->load->view('biblioteca/footer');
 	   
     }
+
 }
 
