@@ -25,7 +25,26 @@
 		   <th colspan='2'>OPCIONES</th>
 		</thead>
 		<tbody>
-		<tr></tr>
+		<?php foreach($registros as $reg): ?>
+               <tr>
+                  <td><?php echo $reg->ejem_id; ?></td>
+                  <td><?php echo $reg->ejem_titulo; ?></td>
+                  <td><?php echo $reg->ejem_editorial; ?></td>
+                  <td><?php echo $reg->ejem_paginas; ?></td>
+                  <td><?php echo $reg->ejem_isbn; ?></td>
+                  <td><?php echo $reg->ejem_idioma; ?></td>
+                  <td><?php echo $reg->ejem_portada; ?></td>
+                  <td><?php echo $reg->ejem_digital; ?></td>
+                  <td><?php echo $reg->ejem_audio; ?></td>
+                  <td><?php echo $reg->ejem_resumen; ?></td>
+                  <td><?php echo $reg->ejem_tipo_id; ?></td>
+                  <td><?php echo $reg->ejem_cate_id; ?></td>
+                  <td><?php echo $reg->ejem_valoracion; ?></td>
+                  <td><?php echo $reg->ejem_anio; ?></td>                 
+                  <td><?php echo $reg->ejem_nprestamos; ?></td>
+                
+               </tr>
+               <?php endforeach; ?>
 			
 		</tbody>
 	  </table>

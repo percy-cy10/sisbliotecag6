@@ -65,7 +65,9 @@
             </div>
             <input type="number" class="form-control" name="telefono">
           </div>
-          <button  class="btn btn-success" type="submit">ENVIAR</button>
+          <div class="text-center">
+          <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
+          </div>
         </form>
 
           </div>

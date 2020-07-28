@@ -3,12 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ctrlusuarios extends CI_Controller {
 
-	 function __construct(){
-		parent::__construct();
-		
-	}
-
+	public function index(){
+     
+        
+    }
     public function guardar(){
+        $id = $this->input->get('id');
         $login= $this->input->post('login');
         $password= $this->input->post('password');
         $codigo= $this->input->post('codigo');
@@ -30,6 +30,9 @@ class ctrlusuarios extends CI_Controller {
             'telefono'=>$telefono
         );
         $this->model_usuario->guardar($data);
+        $result = $this->model_usuario->consultar();
+        $datos = array('registros'=>$result);
+        $this->load->view('biblioteca/tabUsuario',$datos);
  
 	}
        
