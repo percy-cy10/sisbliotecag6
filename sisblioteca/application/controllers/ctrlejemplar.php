@@ -4,72 +4,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ctrlejemplar extends CI_Controller {
 
 	public function index(){
-        $id = $this->input->get('id');
-    
-        $this->load->model('model_ejemplar');
-
-        $result1 = $this->model_ejemplar->editar($id);
-        $result = $this->model_ejemplar->consultar();
-
-        $datos1= array('registroid'=>$result1);
-        $datos = array('registros'=>$result);
-        
-        if($id>0){
-            $this->load->view('persona/formulario',$datos1);
-        }else{
-            $this->load->view('persona/lista',$datos);
-        }
+     
         
     }
-
-
-    public function registro(){
-        $datos = array('registroid'=>NULL);
-        $this->load->view('persona/formulario',$datos);
-    }
-
 
 
     public function guardar(){
-            $id = $this->input->get('id');
+         
             
-            $nombres = $this->input->post('nombres');
-            $apellidos = $this->input->post('apellidos');
-            $edad = $this->input->post('edad');
-            $email = $this->input->post('email');
-            $contraseña = $this->input->post('contraseña');
-            $direccion = $this->input->post('direccion');
+            $titulo = $this->input->post('titulo');
+            $editorial = $this->input->post('editorial');
+            $paginas = $this->input->post('paginas');
+            $isbn = $this->input->post('isbn');
+            $idioma = $this->input->post('idioma');
+            $postada = $this->input->post('postada');
+            $digital = $this->input->post('digital');
+            $audio = $this->input->post('audio');
+            $resumen = $this->input->post('resumen');
+            $tipo_id = $this->input->post('tipo_id');
+            $cate_id = $this->input->post('cate_id');
+            $valoracion = $this->input->post('valoracion');
+            $anio = $this->input->post('anio');
+            $prestamos = $this->input->post('prestamos');
+
             $this->load->model('model_ejemplar');
             
             $data=array(
-                'nombres'=>$nombres,
-                'apellidos'=>$apellidos,
-                'edad'=>$edad,
-                'email'=>$email,
-                'contraseña'=>$contraseña,
-                'direccion'=>$direccion
+                'ejem_titulo'=>$titulo,
+                'ejem_editorial'=>$editorial,
+                'ejem_paginas'=>$paginas,
+                'ejem_isbn'=>$isbn,
+                'ejem_idioma'=>$idioma,
+                'ejem_portada'=>$postada,
+                'ejem_digital'=>$digital,
+                'ejem_audio'=>$audio,
+                'ejem_resumen'=>$resumen,
+                'ejem_tipo_id'=>$tipo_id,
+                'ejem_cate_id'=>$cate_id,
+                'ejem_valoracion'=>$valoracion,
+                'ejem_anio'=>$anio,
+                'ejem_nprestamos'=>$prestamos
+                
             );
 
-
-        $this->model_ejemplar->guardar($data,$id);
-      
+        echo "hola";
+        $this->model_ejemplar->guardar($data);
+        echo "hola2";
         $result = $this->model_ejemplar->consultar();
         $datos = array('registros'=>$result);
-        $this->load->view('persona/lista',$datos);
+        $this->load->view('biblioteca/tabEjemplar',$datos);
+      
 }
-
-
-public function eliminar(){
-    $id = $this->input->get('id');
-    
-    $this->load->model('model_ejemplar');
-    $this->model_ejemplar->eliminar($id);
-
-    $result = $this->model_ejemplar->consultar();
-    $datos = array('registros'=>$result);
-    $this->load->view('persona/lista',$datos);
-
-   }
 
 
 }
