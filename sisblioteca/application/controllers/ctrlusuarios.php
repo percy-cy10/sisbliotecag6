@@ -10,7 +10,7 @@ class ctrlusuarios extends CI_Controller {
         $result = $this->model_usuario->consultar1($id);
 
         $datos = array('registros'=>$result);
-       var_dump($result);
+       
         $this->load->view('biblioteca/formUsuario',$datos);
         
         
@@ -46,16 +46,14 @@ class ctrlusuarios extends CI_Controller {
         redirect();
  
     }
+
     public function eliminar(){
         $id = $this->input->get('id');
-        
         $this->load->model('model_usuario');
-        $this->model_usuario->eliminar($id);
-    
+        $this->model_usuario->eliminar($id);  
         $result = $this->model_usuario->consultar();
         $datos = array('registros'=>$result);
-        $this->load->view('biblioteca/tabusuarios',$datos);
-    
-       }
+        $this->load->view('biblioteca/tabusuarios',$datos);   
+    }
        
 }
