@@ -1,4 +1,8 @@
 
+<?php 
+ include("estilos.php");
+
+?>
 
 <div class="container shadow p-3 mb-5 bg-white rounded"> 
 
@@ -24,10 +28,16 @@
 
 <div class="card rounded float-right" style="width: 23rem;">
   <div class="card-body">
-  <video width="300" controls>
-   
-   <source src="https://www.youtube.com/watch?v=beqbhd7q5Xw" type="video/mp4">
- </video>
+
+<div id="custom_html-5" class="widget_text widget widget_custom_html">
+  <h3 class="title"></h3>
+  <div class="textwidget custom-html-widget">
+     <iframe src="https://www.youtube.com/embed/ltcFowDPTtQ" allow="autoplay; encrypted-media" allowfullscreen="" width="328" height="150" frameborder="0">
+   </iframe>
+  </div>
+    <div class="clear">
+  </div>
+</div>
   
   </div>
   <ul class="list-group list-group-flush">
@@ -38,7 +48,7 @@
   </ul>
   
   <div class="card-body">
-    <a class="button" href="https://quiurevista.com/por-que-importante-es-la-lectura/#:~:text=La%20lectura%20permite%20mejorar%20nuestra,posibilita%20la%20capacidad%20de%20pensar." class="card-link"><button>MAS INFORMACION</button></a>
+    <a class="button" href="https://quiurevista.com/por-que-importante-es-la-lectura/#:~:text=La%20lectura%20permite%20mejorar%20nuestra,posibilita%20la%20capacidad%20de%20pensar." class="card-link"><button class="btn btn-primary"><li class="fa fa-edit"></li>&nbsp;MAS INFORMACION</button></a>
   </div>
   
 </div>

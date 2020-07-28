@@ -16,7 +16,7 @@
         <div class="card container "style="width: 700px;height: auto;">
           <div class="card-body">
 
-          <form method="post"  action="<?php echo base_url();?>crtlusuarios/guardar"  >
+          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar"  >
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">LOGIN</span>
