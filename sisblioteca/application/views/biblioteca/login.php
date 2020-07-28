@@ -8,6 +8,7 @@
  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
 
   <style type="text/css">
     .password-icon {
@@ -49,7 +50,7 @@
 
 <br>
             <div class="group-material">
-                <select class="material-control-login" required >
+                <select class="form-control" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
                     <option value="estudiante">Estudiante</option>
                     <option value="Admin">Administrador</option>
@@ -60,10 +61,8 @@
           
           </p>
       </form>
-          <a href="#" style="top: 86%;position: absolute;float: left;left: 60%">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 60%">
             REGISTARSE</button>
-          </a>
         <div class="modal" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -129,15 +128,15 @@
                           </div>
                         <div class="input-group mb-3 input-group-lg">
                         <div class="input-group-prepend">
-                              <span class="input-group-text">Surame</span>
+                              <span class="input-group-text">Surname</span>
                             </div>
                             <input type="text" class="form-control" name="usua_apellidos" placeholder="APELLIDO">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="far fa-envelope"></i><i class="fas fa-at"></i></span>
+                              <span class="input-group-text"><i class="far fa-envelope"></i></span>
                             </div>
-                            <input type="email" class="form-control" name="usua_email" placeholder="EMAIL">
+                            <input type="email" class="form-control" name="usua_email" placeholder="EMAIL@Ejemplo.com">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
