@@ -17,14 +17,17 @@
     margin: -25px 10px 0 0;
     cursor: pointer;
   }
+  h1{
+    margin:0 0 0 5%;
+  }
     
   </style>
 
 <body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
   <br>
   <div class="container">
-    <h1 style="color: blue;text-align: center;">BIBLIOTECA GRUPO 6</h1>
-  <div class="card" style="width:30%;float: left;left: 36%">
+    <h1 style="color: red;text-align: center;">BIBLIOTECA GRUPO 6</h1>
+  <div class="card" style="width:35%;float: left;left: 35%">
   <div class="card-body">
         <form action="<?php echo base_url('Biblioteca/evaluar')?>" method="post">
           <p class="text-center" style="margin-top: 17px;">
