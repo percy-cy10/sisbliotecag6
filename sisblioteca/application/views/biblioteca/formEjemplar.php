@@ -1,6 +1,6 @@
 <?php 
- include("estilos.php");
 
+ include("estilos.php");
 ?>
 
 <!DOCTYPE html>

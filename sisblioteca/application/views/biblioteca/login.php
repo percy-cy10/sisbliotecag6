@@ -77,7 +77,124 @@
               </div>
               
               <!-- Modal body -->
-              
+              <div class="card" style="width:400px;">
+                <div class="card-body">
+                </div>
+              </div>
+                <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="register-form-link">Registrar</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar" method="post" role="form" style="display: block;">
+                  <div class="form-group">
+                    <input type="text" name="usernamereg" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="namereg" id="username" tabindex="1" class="form-control" placeholder="Nombre" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="lastnamereg" id="username" tabindex="1" class="form-control" placeholder="Apellido" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="passwordreg" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm-passwordreg" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="btninicio" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Registrar">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+                  <header class="container " >
+                        <br>
+                        <div class="card container "style="width: 100%;height: auto;">
+                          <div class="card-body">
+
+                          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar" >
+                          <div class="input-group mb-3 input-group-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">LOGIN</span>
+                            </div>
+                            <input type="text" class="form-control" name="login" placeholder="Escriba su login" required >
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">PASSWORD</span>
+                            </div>
+                            <input type="password" class="form-control" name="password">
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">CODIGO</span>
+                            </div>
+                            <input type="text" class="form-control" name="codigo">
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">NOMBRES</span>
+                            </div>
+                            <input type="text" class="form-control" name="nombres">
+                          </div>
+                        <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">APELLIDOS</span>
+                            </div>
+                            <input type="text" class="form-control" name="apellidos">
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">E-MAIL</span>
+                            </div>
+                            <input type="email" class="form-control" name="correo">
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">DIRECCION</span>
+                            </div>
+                            <input type="text" class="form-control" name="direccion">
+                          </div>
+                          <div class="input-group mb-3 input-group-lg">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">TELEFONO</span>
+                            </div>
+                            <input type="number" class="form-control" name="telefono">
+                          </div>
+                          <button  class="btn btn-success" type="submit">ENVIAR</button>
+                        </form>
+
+                          </div>
+                        </div>
+                    </header>
               
               <!-- Modal footer -->
               <div class="modal-footer">
@@ -96,6 +213,7 @@
 window.addEventListener("load", function() {
 // icono para poder interaccionar con el elemento
 showPassword = document.querySelector('.show-password');
+
 showPassword.addEventListener('click', () => {
 // elementos input de tipo password
 password1 = document.querySelector('.password1');
@@ -108,24 +226,71 @@ showPassword.classList.toggle("fa-eye-slash");
 }
 })
 });
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
+
+
+//validar contraseña
+
 </script>
+
+  <script type="text/javascript">
+    function validar_clave(e) {
+
+      var caract_invalido = " ";
+      var caract_longitud = 6;
+      var cla1 = $('#register-form #password').val();
+      var cla2 = $('#register-form #confirm-password').val();
+      if (cla1 == '' || cla2 == '') {
+        alert('Debes introducir tu clave en los dos campos.');
+        //document.registro
+        e.preventDefault();
+        return false;
+      }
+      if (cla1.length < caract_longitud) {
+        alert('Tu clave debe constar de ' + caract_longitud + ' carácteres.');
+        //document.registro
+        e.preventDefault();
+        return false;
+      }
+      if (cla1.indexOf(caract_invalido) > -1) {
+        alert("Las claves no pueden contener espacios");
+        //document.registro
+        e.preventDefault();
+        return false;
+      } else {
+        if (cla1 != cla2) {
+          alert("Las claves introducidas no son iguales");
+          //document.registro
+          e.preventDefault();
+          return false;
+        } else {
+          //$('#register-form').trigger('submit');
+          return true;
+        }
+      }
+    }
+
+    $(function() {
+
+      $('#login-form-link').click(function(e) {
+        $("#login-form").delay(100).fadeIn(100);
+        $("#register-form").fadeOut(100);
+        $('#register-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+      $('#register-form-link').click(function(e) {
+        $("#register-form").delay(100).fadeIn(100);
+        $("#login-form").fadeOut(100);
+        $('#login-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+
+      $('#register-form').submit(function(e) {
+        validar_clave(e);
+      });
+    });
+  </script>
 </body>
 </html>
