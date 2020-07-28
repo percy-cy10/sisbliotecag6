@@ -36,7 +36,7 @@ background-size: cover;
 
 <div class="container col-sm-7 shadow-lg p-2 mb-10 bg-white rounded">
    
-		<h2 class="text-secondary  text-center font-weight-bold">Registro de Usuarios</h2>
+		<h2 class="text-secondary  text-center font-weight-bold">Registro de Ejemplares</h2>
     <br>
 
 
@@ -52,9 +52,6 @@ background-size: cover;
         <div class="form-group col-md-6 ">
             <label for="" class="text-primary font-weight-bold ">titulo</label >
             <input type="text" class="form-control" name="titulo"  placeholder="titulo" >
-
-            <div class="valid-feedback"><li class="fa fa-check"></li></div>
-            <div class="invalid-feedback"><li class="fa fa-close"></li></div>
         </div>
         
 

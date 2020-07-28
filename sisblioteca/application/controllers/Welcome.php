@@ -51,8 +51,11 @@ class Welcome extends CI_Controller {
 		
 	}
 	public function tabusuarios()
-	{
-		$this->load->view('biblioteca/tabusuarios');
+	{ 
+		$this->load->model('model_usuario');
+        $result = $this->model_usuario->consultar();
+        $datos = array('registros'=>$result);
+		$this->load->view('biblioteca/tabusuarios',$datos);
 		
 	}
 	public function ejemplar()
@@ -62,7 +65,10 @@ class Welcome extends CI_Controller {
 	}
 	public function tabejemplar()
 	{
-		$this->load->view('biblioteca/tabEjemplar');
+		$this->load->model('model_ejemplar');
+        $result = $this->model_ejemplar->consultar();
+        $datos = array('registros'=>$result);
+		$this->load->view('biblioteca/tabEjemplar',$datos);
 		
 	}
 }

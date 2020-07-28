@@ -22,10 +22,25 @@
 		   <th>CORREO</th>
 		   <th>DIRECCION</th>
            <th>TELEFONO</th>
+           <th>ESADMIN</th>
 		   <th colspan='2'>OPCIONES</th>
 		</thead>
 		<tbody>
-		<tr></tr>
+		<?php foreach($registros as $reg): ?>
+               <tr>
+                  <td><?php echo $reg->usua_id; ?></td>
+                  <td><?php echo $reg->usua_login; ?></td>
+                  <td><?php echo $reg->usua_password; ?></td>
+                  <td><?php echo $reg->usua_codigo; ?></td>
+                  <td><?php echo $reg->usua_nombres; ?></td>
+                  <td><?php echo $reg->usua_apellidos; ?></td>
+                  <td><?php echo $reg->usua_direccion; ?></td>
+                  <td><?php echo $reg->usua_email; ?></td>
+                  <td><?php echo $reg->usua_telefono; ?></td>
+                  <td><?php echo $reg->usua_esadmin; ?></td>
+                
+               </tr>
+               <?php endforeach; ?>
 			
 		</tbody>
 	  </table>
