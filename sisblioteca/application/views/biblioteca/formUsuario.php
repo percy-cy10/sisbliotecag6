@@ -55,7 +55,7 @@
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
-              <span class="input-group-text">email</span>
+              <span class="input-group-text">EMAIL</span>
             </div>
             <input type="text" class="form-control" name="usua_email">
           </div>
@@ -68,7 +68,7 @@
           
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
-              <span class="input-group-text">esadmin</span>
+              <span class="input-group-text">ESAADMIN</span>
             </div>
             <input type="text" class="form-control" name="usua_esadmin">
           </div>
