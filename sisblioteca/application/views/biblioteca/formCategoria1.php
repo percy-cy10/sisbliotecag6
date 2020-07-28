@@ -16,18 +16,18 @@
         <div class="card container "style="width: 700px;height: auto;">
           <div class="card-body">
 
-          <form method="post"  action="<?php echo base_url();?>ctrlcategoria/guardar?cate_id=<?php echo $registros->cate_id;?> "  >
+          <form method="post"  action="<?php echo base_url();?>ctrlcategoria/guardar?cate_id=0"  >
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">CATEGORIA ID</span>
             </div>
-            <input type="number" class="form-control" name="cate_id" value="<?php echo $registros->cate_id;?>">
+            <input type="number" class="form-control" name="cate_id" >
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
               <span class="input-group-text">CATEGORIA NOMBRES</span>
             </div>
-            <input type="text" class="form-control" name="cate_nombre" value="<?php echo $registros->cate_nombre;?>">
+            <input type="text" class="form-control" name="cate_nombre" >
           </div>
           <div class="text-center">
           <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
