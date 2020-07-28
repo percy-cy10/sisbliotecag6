@@ -32,9 +32,6 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabejemplar') ?>">TBEJEMPLAR&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-<<<<<<< HEAD
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
-=======
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>">CATEGORIA&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
@@ -42,7 +39,6 @@
         </li>
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
->>>>>>> 52067c9513cc69379adc0642bde014d7ce412ec4
         </li>
 
       </ul>
