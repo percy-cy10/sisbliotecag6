@@ -1,6 +1,6 @@
 <?php 
  include("estilos.php");
-  //var_dump($registros);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -93,7 +93,7 @@
           <div class="input-group-prepend">
               <span class="input-group-text">AÑO</span>
             </div>
-            <input type="number" class="form-control" name="ejem_anio">
+            <input type="date" class="form-control" name="ejem_anio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
