@@ -8,14 +8,17 @@ class Welcome extends CI_Controller {
 		
 		
 		if($this->session->userdata('auth')!=true){
-				redirect('biblioteca');
+				redirect('Biblioteca');
 				dic("");
 		};
 	}
 
 	public function index()
 	{
-		$this->load->view('biblioteca/login');
+		$this->load->view('biblioteca/header');
+		$this->load->view('biblioteca/menu');
+		$this->load->view('biblioteca/welcome_message');
+		$this->load->view('biblioteca/footer');
 		
 	}
 	public function confidencial(){
@@ -29,33 +32,17 @@ class Welcome extends CI_Controller {
 		    $this->load->view('biblioteca/footer');
 	   }
 	}
-	public function tabusuarios(){
+	public function confidencial2(){
 		
 	    if($this->session->userdata('auth')!=true) die("ascesso denegado");
 		if($this->session->userdata('id')!=1) die("ascesso denegado");
 		
 		    $data['usuario'] = $this->db->query("SELECT * FROM usuario")->result();
 			$this->load->view('biblioteca/header');
-			$this->load->view('biblioteca/tabusuarios',$data);
+		    $this->load->view('biblioteca/menu');
+			$this->load->view('biblioteca/confidencial2',$data);
 		    $this->load->view('biblioteca/footer');
 	   
-	}
-	public function registro()
-	{
-		$this->load->view('biblioteca/header');
-		$this->load->view('biblioteca/menu');
-		$this->load->view('biblioteca/Registro');
-		$this->load->view('biblioteca/footer');
-		
-	}
-	public function usuario(){
-        $this->load->view('biblioteca/formUsuario');
-	}
-	public function ejemplar(){
-        $this->load->view('biblioteca/formEjemplar');
-	}
-	public function tabejemplar(){
-        $this->load->view('biblioteca/tabEjemplar');
-	}
+    }
 }
 
