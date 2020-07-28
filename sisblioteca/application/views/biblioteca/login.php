@@ -26,7 +26,7 @@
 <body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
   <br>
   <div class="container">
-    <h1 style="color: red;text-align: center;">BIBLIOTECA GRUPO 6</h1>
+    <h1 style="color: blue;text-align: center;">BIBLIOTECA GRUPO 6</h1>
   <div class="card" style="width:35%;float: left;left: 35%">
   <div class="card-body">
         <form action="<?php echo base_url('Biblioteca/evaluar')?>" method="post">
@@ -60,19 +60,19 @@
                 </select>
             </div><br>
          <p>
-           <input class="btn btn-success" type="submit" value="ingresar">
+          <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
           
           </p>
       </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 60%">
-            REGISTARSE</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 55%">
+            REGISTRARSE <i class="fas fa-file-signature fa-lg"></i></button>
         <div class="modal" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
             
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">REGISTARASE</h4>
+                <h4 class="modal-title">REGISTRARSE</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               
@@ -160,7 +160,7 @@
                             </div>
                             <input type="text" class="form-control" name="usua_esadmin"placeholder="ESADMIN">
                           </div>
-                              <button  class="btn btn-success" type="submit">ENVIAR</button>
+                              <button  class="btn btn-success" type="submit">ENVIAR <i class="fas fa-paper-plane fa-lg"></i></i></button>
                 </form>
    </div>
 
@@ -169,8 +169,8 @@
 
               
               <!-- Modal footer -->
-              <div class="modal-footer" style="top: 90%;position: absolute;float: left;left: 75%">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <div class="modal-footer" style="top: 90%;position: absolute;float: left;left: 70%">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close <i class="fas fa-window-close fa-lg"></i></button>
               </div>
               
             </div>
