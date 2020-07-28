@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ctrlejemplar extends CI_Controller {
 
 	public function index(){
-     
         
     }
 
@@ -24,6 +23,7 @@ class ctrlejemplar extends CI_Controller {
          $valoracion = $this->input->post('valoracion');
          $anio = $this->input->post('anio');
          $prestamos = $this->input->post('prestamos');
+
          $this->load->model('model_ejemplar');
          
          $data=array(
@@ -47,4 +47,5 @@ class ctrlejemplar extends CI_Controller {
        
       
     }
+    
 }

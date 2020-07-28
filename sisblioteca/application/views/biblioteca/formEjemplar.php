@@ -15,7 +15,7 @@
         <div class="card container "style="width: 700px;height: auto;" method="post">
           <div class="card-body">
 
-        <form method="post"  action="<?php echo base_url();?>ctrlejemplar/guardar">
+        <form method="post"  action="<?php echo base_url();?>ctrlejemplar/guardar?id=0">
             
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
@@ -51,19 +51,19 @@
           <div class="input-group-prepend">
               <span class="input-group-text">PORTADA</span>
             </div>
-            <input type="text" class="form-control" name="ejem_portada">
+            <input type="file" class="form-control" name="ejem_portada">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">DIGITAL</span>
             </div>
-            <input type="text" class="form-control" name="ejem_digital">
+            <input type="file" class="form-control" name="ejem_digital">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">AUDIO</span>
             </div>
-            <input type="text" class="form-control" name="ejem_audio">
+            <input type="file" class="form-control" name="ejem_audio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
@@ -93,7 +93,7 @@
           <div class="input-group-prepend">
               <span class="input-group-text">AÑO</span>
             </div>
-            <input type="number" class="form-control" name="ejem_anio">
+            <input type="date" class="form-control" name="ejem_anio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
