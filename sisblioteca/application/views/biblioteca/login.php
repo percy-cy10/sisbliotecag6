@@ -79,15 +79,6 @@
               <!-- Modal body -->
               <div class="card" style="width:400px;">
                 <div class="card-body">
-                <form class="container" method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar">
-                    <label for="usuario">LOGIN:</label>
-                    <input type="text" class="form-control" name="login" placeholder="Escriba su login" required >
-                    <label for="password">CONTRASEÑA</label>
-                     <input type="password" id="passwd" name="password" class="form-control password2" value="" placeholder="crea su contraseña" required/>
-                      <label for="password3">REPITA SU CONTRASEÑA</label>
-                     <input type="password" id="passwd2" name="password3" class="form-control password3" value="" placeholder="repita su contraseña" required/>
-                 
-              </form>
                 </div>
               </div>
                 <div class="container">
@@ -105,22 +96,7 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="MenuServlet" method="post" role="form" style="display: block;">
-                  <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                  </div>
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="btninicio" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Ingresar">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <form name="registro" id="register-form" action="LoginServlet" method="post" role="form" style="display: none;">
+                <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar" method="post" role="form" style="display: block;">
                   <div class="form-group">
                     <input type="text" name="usernamereg" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
                   </div>
@@ -164,12 +140,12 @@
                         <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
 
-                          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar"  >
+                          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar" >
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
                               <span class="input-group-text">LOGIN</span>
                             </div>
-                            <input >
+                            <input type="text" class="form-control" name="login" placeholder="Escriba su login" required >
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
