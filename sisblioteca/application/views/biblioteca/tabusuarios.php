@@ -1,6 +1,5 @@
 <?php 
  include("estilos.php");
-
 ?>
 <style>
     
@@ -8,8 +7,6 @@
        margin:0 0 0 2.5%;
        border-radius:1%;
   }
-
-
 </style>
 
 <div class="row">
@@ -18,25 +15,25 @@
         
          
 
-            <table class="table table-bordered table-active">
-            <thead class="thead-dark">
+      <table class="table table-bordered table-active">
+      <thead class="thead-dark">
 
-      <tr>
-		   <th>ID</th>
-         <th>LOGIN</th>
-         <th>PASSWORD</th>
-         <th>CODIGO</th>
-		   <th>NOMBRES</th>
-		   <th>APELLIDO</th>
-		   <th>CORREO</th>
-		   <th>DIRECCION</th>
-         <th>TELEFONO</th>
-         <th>ESADMIN</th>
-		   <th colspan='2'>OPCIONES</th>
-      </tr>
+            <tr>
+               <th>ID</th>
+               <th>LOGIN</th>
+               <th>PASSWORD</th>
+               <th>CODIGO</th>
+               <th>NOMBRES</th>
+               <th>APELLIDO</th>
+               <th>CORREO</th>
+               <th>DIRECCION</th>
+               <th>TELEFONO</th>
+               <th>ESADMIN</th>
+               <th colspan='2'>OPCIONES</th>
+            </tr>
 		</thead>
 		<tbody>
-		<?php foreach($registros as $reg): ?>
+	    	<?php foreach($registros as $reg): ?>
                <tr>
                   <td><?php echo $reg->usua_id; ?></td>
                   <td><?php echo $reg->usua_login; ?></td>
@@ -52,7 +49,7 @@
                </tr>
                <?php endforeach; ?>
 			
-		</tbody>
-	  </table>
-     </div>
+		   </tbody>
+	   </table>
+   </div>
 </div>
