@@ -55,8 +55,11 @@ class Welcome extends CI_Controller {
 	public function usuario(){
         $this->load->view('biblioteca/formUsuario');
 	}
-	public function usuari(){
+	public function ejemplar(){
         $this->load->view('biblioteca/formEjemplar');
+	}
+	public function tabejemplar(){
+        $this->load->view('biblioteca/tabEjemplar');
 	}
 }
 

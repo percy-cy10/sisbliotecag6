@@ -14,14 +14,20 @@
       <table class="table table-bordered table-striped" >
 	    <thead class="thead-dark">
 		   <th>ID</th>
-           <th>LOGIN</th>
-           <th>PASSWORD</th>
-           <th>CODIGO</th>
-		   <th>NOMBRES</th>
-		   <th>APELLIDO</th>
-		   <th>CORREO</th>
-		   <th>DIRECCION</th>
-           <th>TELEFONO</th>
+           <th>TITULO</th>
+           <th>EDITORIAL</th>
+           <th>PAGINAS</th>
+		   <th>ISBN</th>
+		   <th>IDIOMA</th>
+		   <th>PORTADA</th>
+		   <th>DIGITAL</th>
+           <th>AUDIO</th>
+           <th>RESUMEN</th>
+           <th>TIP ID</th>
+           <th>CAT ID</th>
+           <th>VALORACION</th>
+           <th>AÑO</th>
+           <th>NUMERO DE PRESTAMOS</th>
 		   <th colspan='2'>OPCIONES</th>
 		</thead>
 		<tbody>

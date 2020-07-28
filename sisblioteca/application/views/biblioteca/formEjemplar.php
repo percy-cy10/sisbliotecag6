@@ -86,12 +86,6 @@
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
-              <span class="input-group-text">CATEGORIA ID</span>
-            </div>
-            <input type="number" class="form-control" name="cate_id">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
               <span class="input-group-text">VALORACION</span>
             </div>
             <input type="text" class="form-control" name="valoracion">
