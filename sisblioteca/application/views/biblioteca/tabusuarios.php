@@ -2,52 +2,57 @@
  include("estilos.php");
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<div>
-      <table class="table table-bordered table-striped" >
-	    <thead class="thead-dark">
+<style>
+    
+    #div{
+       margin:0 0 0 2.5%;
+       border-radius:1%;
+  }
+
+
+</style>
+
+<div class="row">
+  <div class=" col-sm-8.2 p-3 bg-white " id="div">
+     <h1 class="text-warning text-center font-weight-bold">Lista de Usuarios</h1>
+        
+         
+
+            <table class="table table-bordered table-active">
+            <thead class="thead-dark">
+
+      <tr>
 		   <th>ID</th>
-           <th>LOGIN</th>
-           <th>PASSWORD</th>
-           <th>CODIGO</th>
+         <th>LOGIN</th>
+         <th>PASSWORD</th>
+         <th>CODIGO</th>
 		   <th>NOMBRES</th>
 		   <th>APELLIDO</th>
 		   <th>CORREO</th>
 		   <th>DIRECCION</th>
-           <th>TELEFONO</th>
+         <th>TELEFONO</th>
+         <th>ESADMIN</th>
 		   <th colspan='2'>OPCIONES</th>
+      </tr>
 		</thead>
 		<tbody>
 		<?php foreach($registros as $reg): ?>
                <tr>
-                  <td><?php echo $reg->ejem_id; ?></td>
-                  <td><?php echo $reg->ejem_titulo; ?></td>
-                  <td><?php echo $reg->ejem_editorial; ?></td>
-                  <td><?php echo $reg->ejem_paginas; ?></td>
-                  <td><?php echo $reg->ejem_isbn; ?></td>
-                  <td><?php echo $reg->ejem_idioma; ?></td>
-                  <td><?php echo $reg->ejem_portada; ?></td>
-                  <td><?php echo $reg->ejem_digital; ?></td>
-                  <td><?php echo $reg->ejem_audio; ?></td>
-                  <td><?php echo $reg->ejem_resumen; ?></td>
-                  <td><?php echo $reg->ejem_tipo_id; ?></td>
-                  <td><?php echo $reg->ejem_cate_id; ?></td>
-                  <td><?php echo $reg->ejem_valoracion; ?></td>
-                  <td><?php echo $reg->ejem_anio; ?></td>                 
-                  <td><?php echo $reg->ejem_nprestamos; ?></td>
+                  <td><?php echo $reg->usua_id; ?></td>
+                  <td><?php echo $reg->usua_login; ?></td>
+                  <td><?php echo $reg->usua_password; ?></td>
+                  <td><?php echo $reg->usua_codigo; ?></td>
+                  <td><?php echo $reg->usua_nombres; ?></td>
+                  <td><?php echo $reg->usua_apellidos; ?></td>
+                  <td><?php echo $reg->usua_direccion; ?></td>
+                  <td><?php echo $reg->usua_email; ?></td>
+                  <td><?php echo $reg->usua_telefono; ?></td>
+                  <td><?php echo $reg->usua_esadmin; ?></td>
                 
                </tr>
                <?php endforeach; ?>
 			
 		</tbody>
 	  </table>
-	</div>
-</body>
-</html>
+     </div>
+</div>
