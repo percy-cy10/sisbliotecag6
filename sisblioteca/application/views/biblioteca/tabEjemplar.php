@@ -25,22 +25,21 @@
 
 
                   <tr>
-                     <th>id</th>
-                     <th>nombres</th>
-                     <th>apellidos</th>
-                     <th>edad</th>
-                     <th>email</th>
-                     <th>contraseña</th>
-                     <th>direccion</th>
-                     <th>id</th>
-                     <th>nombres</th>
-                     <th>apellidos</th>
-                     <th>edad</th>
-                     <th>email</th>
-                     <th>contraseña</th>
-                     <th>direccion</th>
-                     <th>contraseña</th>
-                     <th>direccion</th>
+                     <th>ID</th>
+                     <th>TITULO</th>
+                     <th>EDITORIAL</th>
+                     <th>PAGINAS</th>
+                     <th>ISBN</th>
+                     <th>IDIOMA</th>
+                     <th>PORTADA</th>
+                     <th>DIGITAL</th>
+                     <th>AUDIO</th>
+                     <th>RESUMEM</th>
+                     <th>TIPO_ID</th>
+                     <th>CATE_ID</th>
+                     <th>VALORACION</th>
+                     <th>AÑO</th>
+                     <th>PRESTAMOS</th>
                   </tr>
             </thead>
             <tbody>
