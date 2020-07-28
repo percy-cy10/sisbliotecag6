@@ -78,69 +78,66 @@
               </div>
               
               <!-- Modal body -->
-              <div class="modal-body">
-                    <header class="container " >
-                      <br>
-                      <div class="card container "style="width: 100%;height: auto;">
-                        <div class="card-body">
+              <header >
+                  <br>
+                  <div class="card container "style="width: 100%;height: auto;">
+                    <div class="card-body">
 
-                        <form method="post"  action="<?php echo base_url();?>crtlusuarios/guardar"  >
-                        <div class="input-group mb-3 input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">LOGIN</span>
-                          </div>
-                          <input type="text" class="form-control" name="login">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">PASSWORD</span>
-                          </div>
-                          <input type="password" class="form-control" name="password">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">CODIGO</span>
-                          </div>
-                          <input type="text" class="form-control" name="codigo">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">NOMBRES</span>
-                          </div>
-                          <input type="text" class="form-control" name="nombres">
-                        </div>
-                      <div class="input-group mb-3 input-group-lg">
+                    <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar"  >
+                    <div class="input-group mb-3 input-group-lg">
                       <div class="input-group-prepend">
-                            <span class="input-group-text">APELLIDOS</span>
-                          </div>
-                          <input type="text" class="form-control" name="apellidos">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">E-MAIL</span>
-                          </div>
-                          <input type="email" class="form-control" name="correo">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">DIRECCION</span>
-                          </div>
-                          <input type="text" class="form-control" name="direccion">
-                        </div>
-                        <div class="input-group mb-3 input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">TELEFONO</span>
-                          </div>
-                          <input type="number" class="form-control" name="telefono">
-                        </div>
-                        <button  class="btn btn-success" type="submit">ENVIAR</button>
-                      </form>
-
-                        </div>
+                        <span class="input-group-text">LOGIN</span>
                       </div>
-                  </header>
-              
-              </div>
+                      <input type="text" class="form-control" name="login">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">PASSWORD</span>
+                      </div>
+                      <input type="password" class="form-control" name="password">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">CODIGO</span>
+                      </div>
+                      <input type="text" class="form-control" name="codigo">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">NOMBRES</span>
+                      </div>
+                      <input type="text" class="form-control" name="nombres">
+                    </div>
+                  <div class="input-group mb-3 input-group-lg">
+                  <div class="input-group-prepend">
+                        <span class="input-group-text">APELLIDOS</span>
+                      </div>
+                      <input type="text" class="form-control" name="apellidos">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">E-MAIL</span>
+                      </div>
+                      <input type="email" class="form-control" name="correo">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">DIRECCION</span>
+                      </div>
+                      <input type="text" class="form-control" name="direccion">
+                    </div>
+                    <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">TELEFONO</span>
+                      </div>
+                      <input type="number" class="form-control" name="telefono">
+                    </div>
+                    <button  class="btn btn-success" type="submit">ENVIAR</button>
+                  </form>
+
+                    </div>
+                  </div>
+              </header>
               
               <!-- Modal footer -->
               <div class="modal-footer">
@@ -171,6 +168,24 @@ showPassword.classList.toggle("fa-eye-slash");
 }
 })
 });
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 </script>
 </body>
 </html>

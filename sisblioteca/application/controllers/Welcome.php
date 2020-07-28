@@ -15,10 +15,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('biblioteca/header');
-		$this->load->view('biblioteca/menu');
-		$this->load->view('biblioteca/welcome_message');
-		$this->load->view('biblioteca/footer');
+		$this->load->view('biblioteca/login');
 		
 	}
 	public function confidencial(){
