@@ -1,14 +1,13 @@
+<?php
+  include('estilos.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <title>Inicio</title>
-  <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
     .password-icon {
@@ -81,6 +80,7 @@
                 <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar?id=0" method="post" role="form" style="display: block;">
                       <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
+
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
