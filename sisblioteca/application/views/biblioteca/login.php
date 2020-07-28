@@ -23,11 +23,12 @@
     
   </style>
 
-<body class="full-cover-background" style="background-image:url(https://libreriaesoterica.net/wp-content/uploads/2019/12/biblioteca.jpg);">
+<body class="full-cover-background" style="background-image:url(https://miro.medium.com/max/3840/1*xGRARo3EeGInuRswvv86yA.jpeg);">
   <br>
   <div class="container">
-    <h1 style="color: blue;text-align: center;">BIBLIOTECA GRUPO 6</h1>
-  <div class="card" style="width:35%;float: left;left: 35%">
+    <h1 style="color: #fff;text-align: center;">BIBLIOTECA GRUPO 6</h1>
+    <br>
+  <div class="card" style="width:35%;float: left;left: 35%;" >
   <div class="card-body">
         <form action="<?php echo base_url('Biblioteca/evaluar')?>" method="post">
           <p class="text-center" style="margin-top: 17px;">
@@ -61,7 +62,7 @@
             </div><br>
           <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
       </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 88.5%;position: absolute;float: left;left: 55%">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"style="top: 88.5%;position: absolute;float: left;left: 55%;color: #fff">
             REGISTRARSE <i class="fas fa-file-signature fa-lg"></i></button>
         <div class="modal" id="myModal">
           <div class="modal-dialog">
