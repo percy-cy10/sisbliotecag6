@@ -31,7 +31,7 @@
                   <td><?php echo $reg->cate_id; ?></td>
                   <td><?php echo $reg->cate_nombre; ?></td>
                   <td>
-                     <a href="<?php echo base_url();?>ctrlusuarios/index?id=<?php echo $reg->usua_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                     <a href="<?php echo base_url();?>ctrlcategoria/index?id=<?php echo $reg->usua_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
                   </td>
                </tr>
                <?php endforeach; ?>
