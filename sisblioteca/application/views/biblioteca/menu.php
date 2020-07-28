@@ -18,20 +18,21 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>">INICIO&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuario') ?>">REGISTRO&nbsp;&nbsp;</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuario') ?>">USUARIOS&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/usuarios') ?>">USUARIOS&nbsp;&nbsp;</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>">TABUSUARIOS&nbsp;&nbsp;</a>
         </li>
-        <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
-        </li>
+       
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/ejemplar') ?>">EJEMPLAR&nbsp;&nbsp;</a>
         </li>
         </li>
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabejemplar') ?>">TBEJEMPLAR&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item active">
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
         </li>
 
       </ul>

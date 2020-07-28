@@ -32,14 +32,14 @@ class Welcome extends CI_Controller {
 		    $this->load->view('biblioteca/footer');
 	   }
 	}
-	public function usuarios(){
+	public function tabusuarios(){
 		
 	    if($this->session->userdata('auth')!=true) die("ascesso denegado");
 		if($this->session->userdata('id')!=1) die("ascesso denegado");
 		
 		    $data['usuario'] = $this->db->query("SELECT * FROM usuario")->result();
 			$this->load->view('biblioteca/header');
-			$this->load->view('biblioteca/usuarios',$data);
+			$this->load->view('biblioteca/tabusuarios',$data);
 		    $this->load->view('biblioteca/footer');
 	   
 	}
