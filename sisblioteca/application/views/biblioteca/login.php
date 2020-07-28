@@ -59,12 +59,9 @@
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
-         <p>
           <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
-          
-          </p>
       </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 86%;position: absolute;float: left;left: 55%">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style="top: 88.5%;position: absolute;float: left;left: 55%">
             REGISTRARSE <i class="fas fa-file-signature fa-lg"></i></button>
         <div class="modal" id="myModal">
           <div class="modal-dialog">

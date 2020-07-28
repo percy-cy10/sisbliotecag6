@@ -1,7 +1,7 @@
 <style>
     
     #div{
-       margin:0 0 0 2.5%;
+       margin:0 0 0 -9%;
        border-radius:1%;
   }
 
@@ -13,7 +13,7 @@
 
  <br>
 
-
+<div class="container">
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
      <h1 class="text-warning text-center font-weight-bold">Lista de Ejemplares</h1>
@@ -66,6 +66,7 @@
             </tbody>
          </table>
   </div>
+</div>
 </div>
 
 
