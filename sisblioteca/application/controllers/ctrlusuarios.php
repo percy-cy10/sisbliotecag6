@@ -8,12 +8,7 @@ class ctrlusuarios extends CI_Controller {
 		
 	}
 
-	public function index()
-	{
-		$this->load->view('biblioteca/header');
-		$this->load->view('biblioteca/menu');
-		$this->load->view('biblioteca/tabusuarios');
-		$this->load->view('biblioteca/footer');
+	public function index(){
 		
     }
     public function guardar(){

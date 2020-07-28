@@ -32,7 +32,7 @@
 <div id="custom_html-5" class="widget_text widget widget_custom_html">
   <h3 class="title"></h3>
   <div class="textwidget custom-html-widget">
-     <iframe src="https://www.youtube.com/embed/ltcFowDPTtQ" allow="autoplay; encrypted-media" allowfullscreen="" width="300" height="150" frameborder="0">
+     <iframe src="https://www.youtube.com/embed/ltcFowDPTtQ" allow="autoplay; encrypted-media" allowfullscreen="" width="328" height="150" frameborder="0">
    </iframe>
   </div>
     <div class="clear">

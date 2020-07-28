@@ -42,4 +42,7 @@ class biblioteca extends CI_Controller {
         }
         
     }
+    public function usuario(){
+        $this->load->view('biblioteca/formUsuario');
+	}
 }
