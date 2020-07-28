@@ -52,8 +52,7 @@
             <div class="group-material">
                 <select class="material-control-login" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="Student">Estudiante</option>
-                    <option value="Teacher">Docente</option>
+                    <option value="estudiante">Estudiante</option>
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
@@ -77,91 +76,52 @@
               </div>
               
               <!-- Modal body -->
-              <div class="card" style="width:400px;">
-                <div class="card-body">
-                </div>
-              </div>
                 <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="panel panel-login">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-6">
-                <a href="#" class="active" id="register-form-link">Registrar</a>
-              </div>
-            </div>
-            <hr>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-lg-12">
+
                 <form name="registro" id="register-form" action="<?php echo base_url();?>ctrlusuarios/guardar" method="post" role="form" style="display: block;">
-                  <div class="form-group">
-                    <input type="text" name="usernamereg" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="namereg" id="username" tabindex="1" class="form-control" placeholder="Nombre" value="">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="lastnamereg" id="username" tabindex="1" class="form-control" placeholder="Apellido" value="">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="passwordreg" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="confirm-passwordreg" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
-                  </div>
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="btninicio" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Registrar">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-                  <header class="container " >
-                        <br>
-                        <div class="card container "style="width: 100%;height: auto;">
+                      <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
 
                           <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar" >
                           <div class="input-group mb-3 input-group-lg">
-                            <div class="input-group-prepend">
+                           <div class="input-group-prepend">
                               <span class="input-group-text">LOGIN</span>
                             </div>
                             <input type="text" class="form-control" name="login" placeholder="Escriba su login" required >
                           </div>
-                          <div class="input-group mb-3 input-group-lg">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">PASSWORD</span>
-                            </div>
-                            <input type="password" class="form-control" name="password">
-                          </div>
+
+                                    <div class="input-group mb-3 input-group-lg">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text">contraseña</span>
+                                        </div>                                   
+                                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                  </div>
+                                  <div class="input-group mb-3 input-group-lg">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text"> confirmar contraseña</span>
+                                        </div>                                   
+
+                                          <input type="password" name="confirm-passwordreg" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
+                                    </div>
+
+
+
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
                               <span class="input-group-text">CODIGO</span>
                             </div>
                             <input type="text" class="form-control" name="codigo">
                           </div>
+
+
+
+
+
+
+
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
-                              <span class="input-group-text">NOMBRES</span>
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" class="form-control" name="nombres">
                           </div>
@@ -190,14 +150,15 @@
                             <input type="number" class="form-control" name="telefono">
                           </div>
                           <button  class="btn btn-success" type="submit">ENVIAR</button>
-                        </form>
+                </form>
+   </div>
 
-                          </div>
-                        </div>
-                    </header>
+
+
+
               
               <!-- Modal footer -->
-              <div class="modal-footer">
+              <div class="modal-footer" style="top: 88.3%;position: absolute;float: left;left: 75%">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>
               
