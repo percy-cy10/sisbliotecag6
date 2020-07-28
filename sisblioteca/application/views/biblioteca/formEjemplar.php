@@ -1,5 +1,5 @@
 <?php 
-<<<<<<< HEAD
+
    include('estilos.php');
 ?>
 
@@ -115,8 +115,9 @@ background-size: cover;
             <label for="" class="text-primary font-weight-bold">prestamos</label>
             <input type="text" class="form-control" id=""name="prestamos"  placeholder="prestamos" >     
         </div>
-=======
->>>>>>> 9076cbe91b651816b0ea381d5c334d6745c82032
+
+
+
 
  include("estilos.php");
 ?>

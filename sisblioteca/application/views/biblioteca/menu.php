@@ -36,11 +36,7 @@
         </li>
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
-<<<<<<< HEAD
-
-=======
->>>>>>> 9076cbe91b651816b0ea381d5c334d6745c82032
-        </li>
+    </li>
 
       </ul>
       
