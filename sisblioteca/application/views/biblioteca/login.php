@@ -81,7 +81,7 @@
               <div class="modal-body">
                     <header class="container " >
                       <br>
-                      <div class="card container "style="width: 700px;height: auto;">
+                      <div class="card container "style="width: 100%;height: auto;">
                         <div class="card-body">
 
                         <form method="post"  action="<?php echo base_url();?>crtlusuarios/guardar"  >
