@@ -82,9 +82,12 @@
                       <div class="card container "style="width: 100%;height: auto;">
                           <div class="card-body">
 
+<<<<<<< HEAD
                           <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar?id=0" >
+=======
+>>>>>>> 5026b5c17a2f94db1cce3856c6e416c90a4c5eb1
                           <div class="input-group mb-3 input-group-lg">
-                           <div class="input-group-prepend">
+                            <div class="input-group-prepend">
                               <span class="input-group-text">LOGIN</span>
                             </div>
                             <input type="text" class="form-control" name="usua_login" placeholder="Escriba su login" required >
@@ -121,7 +124,7 @@
 
                           <div class="input-group mb-3 input-group-lg">
                             <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              <span class="input-group-text">NOMBRES</span>
                             </div>
                             <input type="text" class="form-control" name="usua_nombres">
                           </div>
@@ -156,6 +159,12 @@
                             </div>
                             <input type="text" class="form-control" name="usua_esadmin">
                           </div>
+                          <div class="input-group mb-3 input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">ESAADMIN</span>
+                              </div>
+                              <input type="text" class="form-control" name="usua_esadmin">
+                            </div>
                           <button  class="btn btn-success" type="submit">ENVIAR</button>
                 </form>
    </div>
