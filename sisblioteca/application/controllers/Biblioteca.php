@@ -17,11 +17,10 @@ class Biblioteca extends CI_Controller {
     public function evaluar(){
         $usuario = $this->input->post('usuario');
         $password = $this->input->post('password');
-
+        $vere = $this->input->post('verificador');
+        var_dump($vere);
         
-       
         
-       
      $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usuario}' AND usua_password ='{$password}'");
         if($result -> num_rows()>0){
             $row = $result->row();
