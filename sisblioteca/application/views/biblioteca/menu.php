@@ -58,21 +58,14 @@
 
         </li>
         <?php endif;?>
-
-<<<<<<< HEAD
         
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/buscar') ?>"><i class="far fa-info-circle fa-lg"></i>BUSCAR&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/buscar') ?>"><i class="fal fa-search fa-lg"></i> BUSCAR&nbsp;&nbsp;</a>
 
         </li>
      
-
-        <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> SALIR&nbsp;&nbsp;</a>
-=======
         <li class="nav-item active" >
             <a class="flex-sm-fill text-sm-center nav-link " style="float: right;right: 7%;position: absolute;"href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> CERRAR SECCION&nbsp;&nbsp;</a>
->>>>>>> 0da4262bc98cea4f37cbdab6f492f8def150d40f
 
         </li>
 
