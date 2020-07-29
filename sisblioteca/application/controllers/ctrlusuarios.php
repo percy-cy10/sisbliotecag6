@@ -43,7 +43,15 @@ class ctrlusuarios extends CI_Controller {
             'usua_esadmin'=>$usua_esadmin
         );
         $this->model_usuario->guardar($data,$id);
-        redirect();
+        if($id>0){
+            $this->load->model('model_usuario');
+            $result = $this->model_usuario->consultar();
+            $datos = array('registros'=>$result);
+		    $this->load->view('biblioteca/tabusuarios',$datos);
+        }else{
+            redirect();
+        }
+        
  
     }
 
