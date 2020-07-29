@@ -1,6 +1,7 @@
 
 <?php 
  include("estilos.php");
+ //var_dump($verificador);
 
 ?>
 

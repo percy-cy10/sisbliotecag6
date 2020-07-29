@@ -16,7 +16,8 @@ class ctrlusuarios extends CI_Controller {
         
     }
     public function guardar(){
-
+    
+        
         $id = $this->input->get('id');
 
         $usua_login= $this->input->post('usua_login');
@@ -67,10 +68,7 @@ class ctrlusuarios extends CI_Controller {
         $id = $this->input->get('id');
         $this->load->model('model_usuario');
         $this->model_usuario->eliminar($id); 
-
-        $this->load->view('biblioteca/header');
-        $this->load->view('biblioteca/login');
-        $this->load->view('biblioteca/footer');
+        redirect('Biblioteca/salir');
 
     }
        

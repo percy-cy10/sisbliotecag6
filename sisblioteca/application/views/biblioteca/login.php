@@ -57,8 +57,12 @@
             <div class="group-material">
                 <select class="form-control" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="estudiante">Estudiante</option>
-                    <option value="Admin">Administrador</option>
+                    <option value="estudiante">Estudiante
+                      
+                    </option>
+                    <option value="Admin">Administrador
+                      
+                    </option>
                 </select>
             </div><br>
             <div>
