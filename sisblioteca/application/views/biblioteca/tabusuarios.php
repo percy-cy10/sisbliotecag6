@@ -44,8 +44,8 @@
                   <td><?php echo $reg->usua_codigo; ?></td>
                   <td><?php echo $reg->usua_nombres; ?></td>
                   <td><?php echo $reg->usua_apellidos; ?></td>
-                  <td><?php echo $reg->usua_direccion; ?></td>
                   <td><?php echo $reg->usua_email; ?></td>
+                  <td><?php echo $reg->usua_direccion; ?></td>
                   <td><?php echo $reg->usua_telefono; ?></td>
                   <td><?php echo $reg->usua_esadmin; ?></td>
                   <td>
