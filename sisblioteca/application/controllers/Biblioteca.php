@@ -15,8 +15,8 @@ class Biblioteca extends CI_Controller {
     public function evaluar(){
         $usuario = $this->input->post('usuario');
         $password = $this->input->post('password');
-        $vere = $this->input->post('verificador');
-        var_dump($vere);
+        $verificacion = $this->input->post('verificacion');
+        
         
         
      $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usuario}' AND usua_password ='{$password}'");
@@ -30,6 +30,7 @@ class Biblioteca extends CI_Controller {
         }else{
            
             echo "Registrese antes de ingresar";
+            var_dump($verificacion);
 
         }
     }

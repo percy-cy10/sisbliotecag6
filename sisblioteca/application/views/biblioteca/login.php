@@ -55,17 +55,14 @@
 
 <br>
             <div class="group-material">
-                <select class="form-control" required >
+                <select class="form-control"  name="verificacion" required >
                     <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="estudiante">Estudiante
-                      
-                    </option>
-                    <option value="Admin">Administrador
-                      
-                    </option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Administrador</option>
                 </select>
             </div><br>
             <div>
+
                 <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
         </div>
       </form>
