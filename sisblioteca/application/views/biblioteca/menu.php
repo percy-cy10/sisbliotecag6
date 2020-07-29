@@ -4,6 +4,7 @@
   $posicion=$this->session->userdata('veri'); 
   
 ?>
+<link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
 <div >
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -17,44 +18,55 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>">INICIO&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>"><i class="fas fa-home fa-lg"></i> INICIO&nbsp;&nbsp;</a>
         </li>
+<<<<<<< HEAD
 
         <?php if($posicion==2):?>
          <li class="nav-item active">
           <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>">TABUSUARIOS&nbsp;&nbsp;</a>
          </li>
        <?php endif;?>
+=======
+        <li class="nav-item active">
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>"><i class="fas fa-users fa-lg"></i> USUARIOS&nbsp;&nbsp;</a>
+        </li>
+>>>>>>> 4ffe97652a22c89a409c97a95969843e57fbb4f0
        
       
       <?php if($posicion==2):?>
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/ejemplar') ?>">EJEMPLAR&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/ejemplar') ?>"> <i class="fas fa-book fa-lg"></i> EJEMPLAR&nbsp;&nbsp;</a>
         </li>
       <?php endif;?>
 
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabejemplar') ?>">TBEJEMPLAR&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabejemplar') ?>"><i class="fas fa-books fa-lg"></i> EJEMPLARES&nbsp;&nbsp;</a>
         </li>
      <?php if($posicion==2):?>
         <li class="nav-item active">
+<<<<<<< HEAD
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>">CATEGORIA&nbsp;&nbsp;</a>
         </li>
       <?php endif;?>
 
+=======
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>"><i class="fad fa-send-backward fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
+        </li> 
+>>>>>>> 4ffe97652a22c89a409c97a95969843e57fbb4f0
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>">TBCATEGORIA&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
         </li>
 
         <?php if($posicion==1):?>
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Biblioteca/mostrar') ?>">INFORMACION PERSONAL&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Biblioteca/mostrar') ?>"><i class="far fa-info-circle fa-lg"></i> INFORMACION PERSONAL&nbsp;&nbsp;</a>
 
         </li>
         <?php endif;?>
 
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>">LOGOUT&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> SALIR&nbsp;&nbsp;</a>
 
         </li>
 
