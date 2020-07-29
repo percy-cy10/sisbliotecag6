@@ -1,5 +1,8 @@
 <?php 
  include("estilos.php");
+      $this->load->view('biblioteca/header');
+		$this->load->view('biblioteca/menu');
+		$this->load->view('biblioteca/footer');
 ?>
 <style>
     

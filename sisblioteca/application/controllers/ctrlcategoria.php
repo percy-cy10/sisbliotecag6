@@ -29,8 +29,14 @@ class ctrlcategoria extends CI_Controller {
              'cate_nombre'=>$cate_nombre            
          );
      $this->model_categoria->guardar($data,$id);
-    
+     if($id>0){
+        $this->load->model('model_usuario');
+        $result = $this->model_usuario->consultar();
+        $datos = array('registros'=>$result);
+        $this->load->view('biblioteca/tabusuarios',$datos);
+    }else{
         redirect();
+    }
      
     
        

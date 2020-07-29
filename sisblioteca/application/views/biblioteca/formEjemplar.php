@@ -51,19 +51,19 @@
           <div class="input-group-prepend">
               <span class="input-group-text">PORTADA</span>
             </div>
-            <input type="file" class="form-control" name="ejem_portada">
+            <input type="text" class="form-control" name="ejem_portada">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">DIGITAL</span>
             </div>
-            <input type="file" class="form-control" name="ejem_digital">
+            <input type="text" class="form-control" name="ejem_digital">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">AUDIO</span>
             </div>
-            <input type="file" class="form-control" name="ejem_audio">
+            <input type="text" class="form-control" name="ejem_audio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
