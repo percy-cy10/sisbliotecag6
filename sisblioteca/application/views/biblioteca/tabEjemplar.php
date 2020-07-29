@@ -25,7 +25,7 @@
 <div class="container">
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
-     <h1 class="text-warning text-center font-weight-bold">Lista de Ejemplares</h1>
+     <h1 class="text-warning text-center font-weight-bold">LISTA DE EJEMPLARES</h1>
         
          
 
