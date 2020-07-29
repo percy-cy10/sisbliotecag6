@@ -89,16 +89,16 @@
                             </div>
                             <input type="text" class="form-control" name="usua_login" placeholder="Escriba su login" required >
                           </div>
-                          <div>
-                            <p>Tu contraseña debe constar de 6 caracteres</p>
-                          </div>
-
+                       
+                          <small  class="form-text text-muted">Tu contraseña debe de tener mas de 6 carracteres!</small>
                                     <div class="input-group mb-3 input-group-lg">
                                         <div class="input-group-prepend">
                                           <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                         </div>                                   
                                          <input type="password" name="usua_password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                         
                                   </div>
+                                   
                                   <div class="input-group mb-3 input-group-lg">
                                         <div class="input-group-prepend">
                                           <span class="input-group-text"><i class="fas fa-lock"></i></span>
@@ -113,7 +113,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-code"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="usua_codigo" placeholder="INGRESE SU CODIGO">
+                            <input type="text" class="form-control" name="usua_codigo" placeholder="ingrese su codigo">
                           </div>
 
 
@@ -126,38 +126,38 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text">Name</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_nombres" placeholder="NOMBRE">
+                            <input type="text" class="form-control" name="usua_nombres" placeholder="nombre">
                           </div>
                         <div class="input-group mb-3 input-group-lg">
                         <div class="input-group-prepend">
                               <span class="input-group-text">Surname</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_apellidos" placeholder="APELLIDO">
+                            <input type="text" class="form-control" name="usua_apellidos" placeholder="apellido">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="far fa-envelope"></i></span>
                             </div>
-                            <input type="email" class="form-control" name="usua_email" placeholder="EMAIL@Ejemplo.com">
+                            <input type="email" class="form-control" name="usua_email" placeholder="email@Ejemplo.com">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="far fa-address-card"></i></span>
                             </div>
-                            <input type="text" class="form-control" name="usua_direccion" placeholder="DIRECCION">
+                            <input type="text" class="form-control" name="usua_direccion" placeholder="direccion">
                           </div>
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="number" class="form-control" name="usua_telefono" placeholder="TELEFONO/CELULAR">
+                            <input type="number" class="form-control" name="usua_telefono" placeholder="telefono/celular">
                           </div>
                           
                           <div class="input-group mb-3 input-group-lg">
                           <div class="input-group-prepend">
                               <span class="input-group-text">Esadmin</span>
                             </div>
-                            <input type="text" class="form-control" name="usua_esadmin"placeholder="ESADMIN">
+                            <input type="text" class="form-control" name="usua_esadmin"placeholder="esAdmin">
                           </div>
                               <button  class="btn btn-success" type="submit">ENVIAR <i class="fas fa-paper-plane fa-lg"></i></i></button>
                 </form>
