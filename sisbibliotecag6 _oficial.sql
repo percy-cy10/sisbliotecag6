@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-07-2020 a las 04:44:33
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.3.18
+-- Tiempo de generación: 30-07-2020 a las 00:30:54
+-- Versión del servidor: 10.4.10-MariaDB
+-- Versión de PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -52,7 +53,9 @@ CREATE TABLE `categoria` (
 INSERT INTO `categoria` (`cate_id`, `cate_nombre`) VALUES
 (1, 'Biomedicas'),
 (2, 'Sociales'),
-(3, 'Ignenierias');
+(3, 'Igenierias'),
+(4, 'Psicologia'),
+(5, 'ingles');
 
 -- --------------------------------------------------------
 
@@ -83,10 +86,11 @@ CREATE TABLE `ejemplar` (
 --
 
 INSERT INTO `ejemplar` (`ejem_id`, `ejem_titulo`, `ejem_editorial`, `ejem_paginas`, `ejem_isbn`, `ejem_idioma`, `ejem_portada`, `ejem_digital`, `ejem_audio`, `ejem_resumen`, `ejem_tipo_id`, `ejem_cate_id`, `ejem_valoracion`, `ejem_anio`, `ejem_nprestamos`) VALUES
-(52, 'hola', 'sasasa', 12, 'sddsds', 'español', 'dsdssd', 'dsds', 'sddsds', 'cccc', 1, 3, 1, 2020, 2),
-(53, 'ol', 'sasasa', 12, 'sddsds', 'español', 'dsdssd', 'dsds', 'sddsds', 'esr', 2, 1, 1, 24072020, 2),
-(65, 'odisea', 'sigloxx', 8, '3-123', 'español', 'super', 'los', 'nada', 'estasuper', 2, 1, 1, 2020, 2),
-(66, 'odisea', 'sigloxx', 8, '3-123', 'español', 'super', 'los', 'nada', 'estasuper', 2, 1, 1, 2020, 2);
+(68, 'ANALISIS MATEMATICO', '3ra EDICION', 123, '12_34', 'español', 'tapa', 'SI', 'no', 'si', 4, 3, 127, 2021, 3),
+(69, 'CONSTITUCIÓN POLÍTICA', '4ta EDICION', 12, '234_567', 'español', 'PRIMER', 'SI', 'SI', 'NO', 5, 2, 127, 2020, 1),
+(70, 'ANATOMÍA', '1ra EDICCION', 9, '12_34', 'español', 'folder', 'SI', 'SI', 'SI', 6, 1, 127, 2010, 2),
+(71, 'OXFORD', '4ta ED', 123, '12_34', 'español', 'porta', 'SI', 'SI', 'SI', 6, 5, 127, 2010, 5),
+(72, 'PENSAR RÁPIDO', '3ra EDICCION', 58, '234_5', 'español', 'tapa', 'SI', 'SI', 'SI', 6, 4, 45, 2019, 1);
 
 -- --------------------------------------------------------
 
@@ -189,7 +193,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usua_id`, `usua_login`, `usua_password`, `usua_codigo`, `usua_nombres`, `usua_apellidos`, `usua_direccion`, `usua_email`, `usua_telefono`, `usua_esadmin`) VALUES
-(1, 'dany1234', 'dany1234', 1234, 'dany', ' salcca lagar', 'calle jose olaya', 'dany@gmail.com', '987654321', 127);
+(1, 'admin', 'admin', 1234567890, 'ADMIN', 'ADMIN', 'ADMIN', 'admin@gmail.com', '910533726', 1),
+(2, 'percy', 'percycondoriyucra', 191944, 'PERCY', 'CONDORI YUCRA', 'Av. AYMAÑA', 'percycondori11y@gmail.com', '910533726', 0),
+(16, 'juan', '1234567', 191944, 'JUANCITO', 'HUALLIPE', 'AYMAÑA', '@gjuancitomailcom', '987654321', 127),
+(17, 'honorio', '123456789', 191364, 'honorio', 'condori', 'AYMAÑA', 'honorio2019@hotmail.com', '951531079', 0);
 
 --
 -- Índices para tablas volcadas
@@ -277,13 +284,13 @@ ALTER TABLE `autor`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar`
 --
 ALTER TABLE `ejemplar`
-  MODIFY `ejem_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `ejem_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar_tipo`
@@ -307,7 +314,7 @@ ALTER TABLE `prestamo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas

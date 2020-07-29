@@ -21,22 +21,18 @@ class model_categoria extends CI_Model {
         
     } 
     public function consultarvarios($id){
-<<<<<<< HEAD
+
      
       if(!$this->db->get_where("ejemplar", array("ejem_cate_id" => $id))->row()){
            echo "incorrecto";
       }else{
-=======
-
->>>>>>> d0b263e991938b2c027633c5426840b9c476f985
         return $this->db->get_where("ejemplar", array("ejem_cate_id" => $id))->row();
       
-        
-<<<<<<< HEAD
+ 
     }
-=======
+
     } 
 
->>>>>>> d0b263e991938b2c027633c5426840b9c476f985
+
    
 }
