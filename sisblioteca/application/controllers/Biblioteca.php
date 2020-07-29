@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Biblioteca extends CI_Controller {
 
 	public function index()
@@ -20,13 +21,13 @@ class Biblioteca extends CI_Controller {
         
         if($result -> num_rows()>0){
             $row = $result->row();
-            echo "bienvenido {$row->usua_login}";
+            //echo "bienvenido {$row->usua_login}";
             $data=array('user'=>$row->usua_login,'id'=>$row->usua_id,'auth'=>true);
             $this->session->set_userdata($data);
             redirect();
 
         }else{
-            echo "incorrecto";
+            echo "contraseña incorecto";
         }
     }
 
