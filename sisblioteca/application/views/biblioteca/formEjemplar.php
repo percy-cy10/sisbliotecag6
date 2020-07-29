@@ -33,7 +33,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">PAGINAS</span>
             </div>
-            <input type="text" class="form-control" name="ejem_paginas">
+            <input type="number" class="form-control" name="ejem_paginas">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
@@ -87,7 +87,7 @@
           <div class="input-group-prepend">
               <span class="input-group-text">VALORACION</span>
             </div>
-            <input type="text" class="form-control" name="ejem_valoracion">
+            <input type="number" class="form-control" name="ejem_valoracion">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">

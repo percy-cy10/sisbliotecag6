@@ -1,5 +1,6 @@
 <?php
-class Model_ejemplar extends CI_Model {
+defined('BASEPATH') OR exit('No direct script access allowed');
+class model_ejemplar extends CI_Model {
 
      
 
