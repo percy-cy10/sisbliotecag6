@@ -43,9 +43,9 @@ class ctrlejemplar1 extends CI_Controller {
              'ejem_nprestamos'=>$ejem_nprestamos              
          );
      $this->model_ejemplar1->guardar($data,$idbs);
-     if($id>0){
+     if($idbs>0){
         $this->load->model('model_ejemplar1');
-        $result = $this->model_ejemplar1->consultar();
+        $result = $this->model_ejemplar1->consultarvarios($idbs);
         $datos = array('registros'=>$result);
         $this->load->view('biblioteca/tabcategoria1',$datos);
     }else{
