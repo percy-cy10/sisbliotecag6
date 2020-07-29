@@ -74,8 +74,8 @@ CREATE TABLE IF NOT EXISTS `ejemplar` (
   `ejem_anio` int(11) DEFAULT NULL,
   `ejem_nprestamos` int(11) DEFAULT NULL,
   PRIMARY KEY (`ejem_id`),
-  KEY `fk_ejemplar_ejemplar_tipo_idx` (`ejem_tipo_id`),
   KEY `fk_ejemplar_categoria1_idx` (`ejem_cate_id`)
+  KEY `fk_ejemplar_ejemplar_tipo_idx` (`ejem_tipo_id`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
