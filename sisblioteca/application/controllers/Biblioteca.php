@@ -30,12 +30,7 @@ class Biblioteca extends CI_Controller {
             redirect();
 
         }else{
-<<<<<<< HEAD
            
-            echo "Registrese antes de ingresar";
-            var_dump($verificacion);
-=======
->>>>>>> 6f30267b6b5a67eb67a22a7f018bce906eabca3a
 
         ?>
                 <script type="text/javascript">
