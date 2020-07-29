@@ -31,7 +31,6 @@ class Biblioteca extends CI_Controller {
 
         }else{
 
-
         ?>
                 <script type="text/javascript">
                     alert("las contraseña incorrecto");
