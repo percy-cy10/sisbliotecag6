@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Biblioteca extends CI_Controller {
 
 	public function index()
@@ -28,7 +29,9 @@ class Biblioteca extends CI_Controller {
             redirect();
 
         }else{
+
             echo "Registrese antes de ingresar";
+
         }
     }
 

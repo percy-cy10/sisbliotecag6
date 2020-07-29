@@ -61,10 +61,15 @@
                     <option value="Admin">Administrador</option>
                 </select>
             </div><br>
-          <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
+            <div>
+                <button class="btn btn-success" type="submit">INGRESAR <i class="fas fa-sign-in-alt fa-lg"></i></i> </button>
+        </div>
       </form>
             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"style="top: 88.5%;position: absolute;float: left;left: 55%;color: #fff">
             REGISTRARSE <i class="fas fa-file-signature fa-lg"></i></button>
+
+
+
         <div class="modal" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -197,7 +202,6 @@ showPassword.classList.toggle("fa-eye-slash");
 }
 })
 });
-
 
 
 //validar contraseña
