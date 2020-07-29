@@ -55,8 +55,11 @@ class ctrlcategoria extends CI_Controller {
         $this->load->model('model_categoria');
         $result = $this->model_categoria->consultarvarios($cate_id);
         $datos = array('registros'=>$result);
-      
-        $this->load->view('biblioteca/tabcategoria1',$datos);
+        
+        if($result!=NULL){
+            $this->load->view('biblioteca/tabcategoria1',$datos);
+        }
+          
          
     }
 }
