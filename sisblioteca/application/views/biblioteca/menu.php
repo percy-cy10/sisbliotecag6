@@ -35,7 +35,7 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>">TBCATEGORIA&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/infopersonal') ?>">INFORMACION PERSONAL&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Biblioteca/mostrar') ?>">INFORMACION PERSONAL&nbsp;&nbsp;</a>
 
         </li>
         <li class="nav-item active">

@@ -16,17 +16,19 @@ class Biblioteca extends CI_Controller {
         $password = $this->input->post('password');
 
         
-        $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usuario}' AND usua_password ='{$password}'");
+       
         
+       
+     $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usuario}' AND usua_password ='{$password}'");
         if($result -> num_rows()>0){
             $row = $result->row();
-            echo "bienvenido {$row->usua_login}";
+            //echo "bienvenido {$row->usua_login}";
             $data=array('user'=>$row->usua_login,'id'=>$row->usua_id,'auth'=>true);
             $this->session->set_userdata($data);
             redirect();
 
         }else{
-            echo "incorrecto";
+            echo "Registrese antes de ingresar";
         }
     }
 
@@ -36,9 +38,9 @@ class Biblioteca extends CI_Controller {
     }
     public function mostrar(){
         if($this->session->userdata('auth')==true){
-            echo "informacion confidencial";
+            redirect('Welcome/infopersonal');
         }else{
-            echo "no tienes prvilegios para ver esta informacion";
+            echo "no tienes privilegios para ver esta informacion";
         }
         
     }
