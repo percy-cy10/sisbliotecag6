@@ -40,16 +40,13 @@
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabejemplar') ?>"><i class="fas fa-books fa-lg"></i> EJEMPLARES&nbsp;&nbsp;</a>
         </li>
      <?php if($posicion==2):?>
-        <li class="nav-item active">
-
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>">CATEGORIA&nbsp;&nbsp;</a>
+      <li class="nav-item active">
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
         </li>
       <?php endif;?>
 
 
-        <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
-        </li>
+        
 
         <?php if($posicion==1):?>
         <li class="nav-item active">
