@@ -9,6 +9,7 @@
 
 </style>
 <?php 
+ $posicion=$this->session->userdata('veri'); 
    include('estilos.php');
       $this->load->view('biblioteca/header');
 		$this->load->view('biblioteca/menu');
@@ -40,7 +41,10 @@
                      <th>CATE_ID</th>
                      <th>AÑO</th>
                      <th>PRESTAMOS</th>
-                     <th>OPCIONES</th>
+
+                     <?php if($posicion==2):?>
+                       <th>OPCIONES</th>
+                      <?php endif;?>
                   </tr>
             </thead>
             <tbody>
@@ -57,11 +61,13 @@
                   <td><?php echo $reg->ejem_cate_id; ?></td>
                   <td><?php echo $reg->ejem_anio; ?></td>                 
                   <td><?php echo $reg->ejem_nprestamos; ?></td>
-                  <td>
-                     <a href="<?php echo base_url();?>ctrlejemplar/editar?id=<?php echo $reg->ejem_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
-                     <a href="<?php echo base_url();?>ctrlejemplar/eliminar?id=<?php echo $reg->ejem_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
-                  </td>
-                
+
+                  <?php if($posicion==2):?>
+                     <td>
+                        <a href="<?php echo base_url();?>ctrlejemplar/editar?id=<?php echo $reg->ejem_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                        <a href="<?php echo base_url();?>ctrlejemplar/eliminar?id=<?php echo $reg->ejem_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
+                     </td>
+                 <?php endif;?>
                </tr>
                <?php endforeach; ?>
             </tbody>
