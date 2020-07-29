@@ -9,7 +9,7 @@ class Model_ejemplar extends CI_Model {
             return $query->result();
     }
     public function guardar($data){
-        
+            var_dump($data);
             $this->db->insert('ejemplar',$data);
         
     }

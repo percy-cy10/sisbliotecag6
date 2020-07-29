@@ -36,7 +36,7 @@
                   <td>
                      <a href="<?php echo base_url();?>ctrlcategoria/index?cate_id=<?php echo $reg->cate_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
                      <a href="<?php echo base_url();?>ctrlcategoria/eliminar?cate_id=<?php echo $reg->cate_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
-                  </td>
+                 </td>
                </tr>
                <?php endforeach; ?>
 			
