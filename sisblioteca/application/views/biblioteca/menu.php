@@ -59,8 +59,8 @@
         </li>
         <?php endif;?>
 
-        <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> SALIR&nbsp;&nbsp;</a>
+        <li class="nav-item active" >
+            <a class="flex-sm-fill text-sm-center nav-link " style="float: right;right: 7%;position: absolute;"href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> CERRAR SECCION&nbsp;&nbsp;</a>
 
         </li>
 
