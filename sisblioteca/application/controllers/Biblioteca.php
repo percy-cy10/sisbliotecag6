@@ -1,3 +1,5 @@
+
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -30,8 +32,16 @@ class Biblioteca extends CI_Controller {
 
         }else{
 
-            echo "Registrese antes de ingresar";
+        ?>
+                <script type="text/javascript">
+                    alert("las contraseña incorrecto");
+                    <?php
+                    redirect();
+                    ?>
 
+                </script>
+            <?php
+            
         }
     }
 
