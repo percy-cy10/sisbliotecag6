@@ -25,9 +25,16 @@
 <div class="container">
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
-     <h1 class="text-warning text-center font-weight-bold">Lista de los Ejemplares</h1>
-        
-         
+
+  <?php if($registros->ejem_cate_id==1): ?>?>
+     <h1 class="text-warning text-center font-weight-bold">Libros de Biomedicas</h1>
+  <?php endif; ?>     
+  <?php if($registros->ejem_cate_id==2): ?>?>
+     <h1 class="text-warning text-center font-weight-bold">Libros de Sociales</h1>
+  <?php endif; ?> 
+  <?php if($registros->ejem_cate_id==3): ?>?>
+     <h1 class="text-warning text-center font-weight-bold">Libros de Ingenierias</h1>
+  <?php endif; ?> 
 
             <table class="table table-bordered table-active">
             <thead class="thead-dark">
