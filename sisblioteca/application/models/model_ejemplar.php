@@ -24,5 +24,9 @@ class model_ejemplar extends CI_Model {
         return $this->db->get_where("ejemplar", array("ejem_id" => $id))->row();
         
     }
+    public function consultarvarios($id){
+        return $this->db->get_where("ejemplar", array("ejem_cate_id" => $id))->row();
+        
+    }
           
 }

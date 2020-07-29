@@ -75,5 +75,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('biblioteca/tabCategoria',$datos);
 		
 	}
+	public function buscar(){
+		$this->load->model('model_ejemplar');
+		$result = $this->model_ejemplar->consultarvarios($id=1);
+		
+        $datos = array('registros'=>$result);
+		$this->load->view('biblioteca/tabCategoria1',$datos);
+	}
 }
 

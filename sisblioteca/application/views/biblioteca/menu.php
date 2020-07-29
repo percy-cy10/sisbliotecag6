@@ -64,6 +64,13 @@
         </li>
         <?php endif;?>
 
+        
+        <li class="nav-item active">
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/buscar') ?>"><i class="far fa-info-circle fa-lg"></i>BUSCAR&nbsp;&nbsp;</a>
+
+        </li>
+     
+
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> SALIR&nbsp;&nbsp;</a>
 
