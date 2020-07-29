@@ -1,5 +1,5 @@
 <?php
-class Model_ejemplar extends CI_Model {
+class model_ejemplar extends CI_Model {
 
      
 
