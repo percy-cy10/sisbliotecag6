@@ -40,9 +40,10 @@
                      <th>RESUMEM</th>
                      <th>TIPO_ID</th>
                      <th>CATE_ID</th>
-                     <th>VALORACION</th>
+                     <th>VLRCN</th>
                      <th>AÑO</th>
-                     <th>PRESTAMOS</th>
+                     <th>PRSTMS</th>
+                     <th>OPCIONES</th>
                   </tr>
             </thead>
             <tbody>
@@ -63,6 +64,10 @@
                   <td><?php echo $reg->ejem_valoracion; ?></td>
                   <td><?php echo $reg->ejem_anio; ?></td>                 
                   <td><?php echo $reg->ejem_nprestamos; ?></td>
+                  <td>
+                     <a href="<?php echo base_url();?>ctrlejemplar/editar?id=<?php echo $reg->ejem_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                     <a href="<?php echo base_url();?>ctrlejemplar/eliminar?id=<?php echo $reg->ejem_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
+                  </td>
                 
                </tr>
                <?php endforeach; ?>

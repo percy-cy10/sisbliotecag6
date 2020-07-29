@@ -8,7 +8,7 @@ class ctrlejemplar extends CI_Controller {
     }
 
     public function guardar(){
-      
+         $id = $this->input->get('id');
          $ejem_titulo = $this->input->post('ejem_titulo');
          $ejem_editorial = $this->input->post('ejem_editorial');
          $ejem_paginas = $this->input->post('ejem_paginas');
@@ -42,10 +42,39 @@ class ctrlejemplar extends CI_Controller {
              'ejem_anio'=>$ejem_anio,
              'ejem_nprestamos'=>$ejem_nprestamos              
          );
-     $this->model_ejemplar->guardar($data);
-     redirect();
+     $this->model_ejemplar->guardar($data,$id);
+     if($id>0){
+        $this->load->model('model_ejemplar');
+        $result = $this->model_ejemplar->consultar();
+        $datos = array('registros'=>$result);
+        $this->load->view('biblioteca/tabEjemplar',$datos);
+    }else{
+        redirect();
+    }
        
       
+    }
+
+
+    public function editar(){
+        $id = $this->input->get('id');
+    
+        $this->load->model('model_ejemplar');
+        $result = $this->model_ejemplar->consultar1($id);
+
+        $datos = array('registros'=>$result);
+       
+        $this->load->view('biblioteca/formEjemplar1',$datos);
+    }
+
+
+    public function eliminar(){
+        $id = $this->input->get('id');
+        $this->load->model('model_ejemplar');
+        $this->model_ejemplar->eliminar($id);  
+        $result = $this->model_ejemplar->consultar();
+        $datos = array('registros'=>$result);
+        $this->load->view('biblioteca/tabEjemplar',$datos);  
     }
     
 }
