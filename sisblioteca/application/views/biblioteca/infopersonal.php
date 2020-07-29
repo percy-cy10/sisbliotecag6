@@ -11,7 +11,7 @@
 <br>
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
-     <h1 class="text-warning text-center font-weight-bold">Datos del estudiante <?php echo $usuario->usua_nombres; ?></h1>
+     <h1 class="text-warning text-center font-weight-bold">MIS DATOS PERSONALES</h1>
         
          
 
