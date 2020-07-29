@@ -49,4 +49,7 @@ class ctrlcategoria extends CI_Controller {
         }
        
     }
+    public function buscar(){
+        echo "hola";
+    }
 }
