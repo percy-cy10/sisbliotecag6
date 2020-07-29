@@ -59,7 +59,6 @@
                   </tr>
             </thead>
             <tbody>
-              
                <tr>
                   <td><?php echo $registros->ejem_id; ?></td>
                   <td><?php echo $registros->ejem_titulo; ?></td>
