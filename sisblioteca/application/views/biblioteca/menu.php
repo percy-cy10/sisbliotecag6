@@ -1,6 +1,7 @@
 <?php 
  include("estilos.php");
 
+  echo "este es la verificaion=",$this->session->userdata('veri'); 
 ?>
 <div >
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

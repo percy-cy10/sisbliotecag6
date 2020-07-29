@@ -25,17 +25,12 @@ class Biblioteca extends CI_Controller {
         if($result -> num_rows()>0){
             $row = $result->row();
             //echo "bienvenido {$row->usua_login}";
-            $data=array('user'=>$row->usua_login,'id'=>$row->usua_id,'auth'=>true);
+            $data=array('user'=>$row->usua_login,'id'=>$row->usua_id,'auth'=>true,'veri'=>$verificacion);
             $this->session->set_userdata($data);
             redirect();
 
         }else{
-<<<<<<< HEAD
-           
-            echo "Registrese antes de ingresar";
-            var_dump($verificacion);
-=======
->>>>>>> 6f30267b6b5a67eb67a22a7f018bce906eabca3a
+
 
         ?>
                 <script type="text/javascript">
