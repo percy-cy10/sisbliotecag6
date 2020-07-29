@@ -58,6 +58,8 @@ class ctrlcategoria extends CI_Controller {
         
         if($result!=NULL){
             $this->load->view('biblioteca/tabcategoria1',$datos);
+        }else{
+            echo "No hay ningun Libro con ese EJEM_CATE_ID";
         }
           
          
