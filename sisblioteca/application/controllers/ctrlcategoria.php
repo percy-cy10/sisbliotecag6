@@ -4,20 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ctrlcategoria extends CI_Controller {
 
 	public function index(){
-       
-        
         
     }
     
     public function editar(){
         $id = $this->input->get('cate_id');
     
-       $this->load->model('model_categoria');
-       $result = $this->model_categoria->consultar1($id=0);
+        $this->load->model('model_categoria');
+        $result = $this->model_categoria->consultar1($id);
    
-       $datos = array('registros'=>$result);
-      
-      $this->load->view('biblioteca/formCategoria',$datos);
+        $datos = array('registros'=>$result);
+        
+        $this->load->view('biblioteca/formCategoria',$datos);
        
     }
 
@@ -32,26 +30,15 @@ class ctrlcategoria extends CI_Controller {
              'cate_id'=>$cate_id,
              'cate_nombre'=>$cate_nombre            
          );
-     $this->model_categoria->guardar($data,$id);
-     if($id>0){
-        $this->load->model('model_usuario');
-        $result = $this->model_usuario->consultar();
-        $datos = array('registros'=>$result);
-        $this->load->view('biblioteca/tabusuarios',$datos);
-    }else{
-        redirect();
-    }
-     
-    
+        $this->model_categoria->guardar($data,$id);
+        if($id>0){
+            $this->load->model('model_categoria');
+            $result = $this->model_categoria->consultar();
+            $datos = array('registros'=>$result);
+            $this->load->view('biblioteca/tabcategoria',$datos);
+        }else{
+            redirect();
+        }
        
-      
-    }
-   public function eliminar(){
-        $id = $this->input->get('cate_id');
-        $this->load->model('model_categoria');
-        $this->model_categoria->eliminar($id);  
-        $result = $this->model_categoria->consultar();
-        $datos = array('registros'=>$result);
-        $this->load->view('biblioteca/tabcategoria',$datos);   
     }
 }

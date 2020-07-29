@@ -19,9 +19,9 @@
           <form method="post"  action="<?php echo base_url();?>ctrlcategoria/guardar?cate_id=<?php echo $registros->cate_id;?> "  >
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
-              <span class="input-group-text">CATEGORIA ID</span>
+             
             </div>
-            <input type="number" class="form-control" name="cate_id" value="<?php echo $registros->cate_id;?>">
+            <input type="hidden" class="form-control" name="cate_id" value="<?php echo $registros->cate_id;?>">
           </div>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
