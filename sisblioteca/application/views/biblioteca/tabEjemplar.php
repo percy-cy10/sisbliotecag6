@@ -34,13 +34,13 @@
                      <th>PAGINAS</th>
                      <th>ISBN</th>
                      <th>IDIOMA</th>
-                     <th>PORTADA</th>
-                     <th>DIGITAL</th>
-                     <th>AUDIO</th>
                      <th>RESUMEM</th>
                      <th>TIPO_ID</th>
                      <th>CATE_ID</th>
+<<<<<<< HEAD
                      <th>VLRCN</th>
+=======
+>>>>>>> 270148a8425d4c4a926e1305841e1f9092f7a896
                      <th>AÑO</th>
                      <th>PRSTMS</th>
                      <th>OPCIONES</th>
@@ -55,13 +55,9 @@
                   <td><?php echo $reg->ejem_paginas; ?></td>
                   <td><?php echo $reg->ejem_isbn; ?></td>
                   <td><?php echo $reg->ejem_idioma; ?></td>
-                  <td><?php echo $reg->ejem_portada; ?></td>
-                  <td><?php echo $reg->ejem_digital; ?></td>
-                  <td><?php echo $reg->ejem_audio; ?></td>
                   <td><?php echo $reg->ejem_resumen; ?></td>
                   <td><?php echo $reg->ejem_tipo_id; ?></td>
                   <td><?php echo $reg->ejem_cate_id; ?></td>
-                  <td><?php echo $reg->ejem_valoracion; ?></td>
                   <td><?php echo $reg->ejem_anio; ?></td>                 
                   <td><?php echo $reg->ejem_nprestamos; ?></td>
                   <td>
