@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
     <title>CREAR EJEMPLAR</title>
 </head>
 <body>
@@ -101,7 +102,9 @@
             </div>
             <input type="text" class="form-control" name="ejem_nprestamos" value="<?php echo $registros->ejem_nprestamos;?>">
           </div>
-          <button  class="btn btn-success" type="submit">ENVIAR</button>
+          <div class="text-center">
+            <button  class="btn btn-success" type="submit" >ENVIAR <i class="fas fa-paper-plane fa-lg"></i></i></button></div>
+          
         </form>
 
           </div>
