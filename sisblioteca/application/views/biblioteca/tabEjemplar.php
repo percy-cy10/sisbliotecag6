@@ -1,9 +1,10 @@
 <style>
     
     #div{
-       margin:0 0 0 -5%;
+      margin:0 0 0 -8%;
        border-radius:1%;
   }
+  
 
 
 </style>
@@ -38,7 +39,7 @@
                      <th>TIPO_ID</th>
                      <th>CATE_ID</th>
                      <th>AÑO</th>
-                     <th>PRSTMS</th>
+                     <th>PRESTAMOS</th>
                      <th>OPCIONES</th>
                   </tr>
             </thead>

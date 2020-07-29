@@ -15,7 +15,7 @@
         background-color: #ddd;
     }
     .video-fluid {
-  width: 100%;
-  height: auto;
-}
+       width: 100%;
+       height: auto;
+    }
   </style>

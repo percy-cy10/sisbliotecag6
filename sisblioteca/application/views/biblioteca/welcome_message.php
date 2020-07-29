@@ -11,7 +11,7 @@
   <h5 class="card-header font-weight-bold">HOLA, Bienvenido seas <?php echo $this->session->userdata('user'); ?></h5>
   <div class="card-body">
   <h5 class="card-title">Finalidad de nuestro Sistema Bibliotecario</h5>
-  <p class="card-text text-primary">
+  <p class="card-text text-primary ">
   El éxito de los estudiantes también reside en la presencia y utilización de las 
   bibliotecas escolares. Son éstas las encargadas de proporcionar información e ideas 
   a su comunidad educativa, además de proporcionar las competencias necesarias para 
