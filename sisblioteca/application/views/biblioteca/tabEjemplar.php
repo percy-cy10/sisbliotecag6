@@ -37,6 +37,7 @@
                      <th>RESUMEM</th>
                      <th>TIPO_ID</th>
                      <th>CATE_ID</th>
+                     <th>VLRCN</th>
                      <th>AÑO</th>
                      <th>PRSTMS</th>
                      <th>OPCIONES</th>
