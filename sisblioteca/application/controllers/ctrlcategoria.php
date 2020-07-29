@@ -50,6 +50,13 @@ class ctrlcategoria extends CI_Controller {
        
     }
     public function buscar(){
-        echo "hola";
+        $cate_id = $this->input->post('cate_id');
+
+        $this->load->model('model_categoria');
+        $result = $this->model_categoria->consultarvarios($cate_id);
+        $datos = array('registros'=>$result);
+      
+        $this->load->view('biblioteca/tabcategoria1',$datos);
+         
     }
 }

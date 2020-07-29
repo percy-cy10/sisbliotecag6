@@ -25,7 +25,7 @@
 <div class="container">
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
-     <h1 class="text-warning text-center font-weight-bold">Lista de Ejemplares</h1>
+     <h1 class="text-warning text-center font-weight-bold">Lista de los Ejemplares</h1>
         
          
 
@@ -52,28 +52,28 @@
                   </tr>
             </thead>
             <tbody>
-               <?php foreach($registros as $reg): ?>
+              
                <tr>
-                  <td><?php echo $reg->ejem_id; ?></td>
-                  <td><?php echo $reg->ejem_titulo; ?></td>
-                  <td><?php echo $reg->ejem_editorial; ?></td>
-                  <td><?php echo $reg->ejem_paginas; ?></td>
-                  <td><?php echo $reg->ejem_isbn; ?></td>
-                  <td><?php echo $reg->ejem_idioma; ?></td>
-                  <td><?php echo $reg->ejem_resumen; ?></td>
-                  <td><?php echo $reg->ejem_tipo_id; ?></td>
-                  <td><?php echo $reg->ejem_cate_id; ?></td>
-                  <td><?php echo $reg->ejem_anio; ?></td>                 
-                  <td><?php echo $reg->ejem_nprestamos; ?></td>
+                  <td><?php echo $registros->ejem_id; ?></td>
+                  <td><?php echo $registros->ejem_titulo; ?></td>
+                  <td><?php echo $registros->ejem_editorial; ?></td>
+                  <td><?php echo $registros->ejem_paginas; ?></td>
+                  <td><?php echo $registros->ejem_isbn; ?></td>
+                  <td><?php echo $registros->ejem_idioma; ?></td>
+                  <td><?php echo $registros->ejem_resumen; ?></td>
+                  <td><?php echo $registros->ejem_tipo_id; ?></td>
+                  <td><?php echo $registros->ejem_cate_id; ?></td>
+                  <td><?php echo $registros->ejem_anio; ?></td>                 
+                  <td><?php echo $registros->ejem_nprestamos; ?></td>
 
                   <?php if($posicion==2):?>
                      <td>
-                        <a href="<?php echo base_url();?>ctrlejemplar/editar?id=<?php echo $reg->ejem_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
-                        <a href="<?php echo base_url();?>ctrlejemplar/eliminar?id=<?php echo $reg->ejem_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
+                        <a href="<?php echo base_url();?>ctrlejemplar1/editar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                        <a href="<?php echo base_url();?>ctrlejemplar1/eliminar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
                      </td>
                  <?php endif;?>
                </tr>
-               <?php endforeach; ?>
+              
             </tbody>
          </table>
   </div>
