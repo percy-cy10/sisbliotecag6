@@ -20,18 +20,14 @@
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url() ?>"><i class="fas fa-home fa-lg"></i> INICIO&nbsp;&nbsp;</a>
         </li>
-<<<<<<< HEAD
+
 
         <?php if($posicion==2):?>
          <li class="nav-item active">
           <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>">TABUSUARIOS&nbsp;&nbsp;</a>
          </li>
        <?php endif;?>
-=======
-        <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>"><i class="fas fa-users fa-lg"></i> USUARIOS&nbsp;&nbsp;</a>
-        </li>
->>>>>>> 4ffe97652a22c89a409c97a95969843e57fbb4f0
+
        
       
       <?php if($posicion==2):?>
@@ -45,15 +41,12 @@
         </li>
      <?php if($posicion==2):?>
         <li class="nav-item active">
-<<<<<<< HEAD
+
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>">CATEGORIA&nbsp;&nbsp;</a>
         </li>
       <?php endif;?>
 
-=======
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>"><i class="fad fa-send-backward fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
-        </li> 
->>>>>>> 4ffe97652a22c89a409c97a95969843e57fbb4f0
+
         <li class="nav-item active">
             <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
         </li>
