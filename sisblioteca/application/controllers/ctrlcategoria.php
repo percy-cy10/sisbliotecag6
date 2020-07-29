@@ -4,8 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ctrlcategoria extends CI_Controller {
 
 	public function index(){
-<<<<<<< HEAD
-=======
+
 
         //$id = $this->input->get('cate_id');
     
@@ -17,7 +16,7 @@ class ctrlcategoria extends CI_Controller {
        // $this->load->view('biblioteca/formCategoria',$datos);
         
         
->>>>>>> 16da93ef4eeb9d19d8b18e5af847db6adf669d01
+
         
     }
     
