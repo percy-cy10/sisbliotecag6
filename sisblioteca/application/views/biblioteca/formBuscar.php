@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>CREAR USUARIO</title>
+      <link rel="icon" type="image/png" href="https://portal.unap.edu.pe/sites/default/files/UNAPUNO.png">
 </head>
 <body>
     <header class="container " >
