@@ -24,7 +24,7 @@
 
         <?php if($posicion==2):?>
          <li class="nav-item active">
-          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>">TABUSUARIOS&nbsp;&nbsp;</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabusuarios') ?>"><i class="fas fa-users fa-lg"></i> BUSUARIOS&nbsp;&nbsp;</a>
          </li>
        <?php endif;?>
 
@@ -42,7 +42,7 @@
      <?php if($posicion==2):?>
         <li class="nav-item active">
 
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>">CATEGORIA&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/categoria') ?>"><i class="fas fa-send-back fa-lg"></i> CATEGORIA&nbsp;&nbsp;</a>
         </li>
       <?php endif;?>
 
