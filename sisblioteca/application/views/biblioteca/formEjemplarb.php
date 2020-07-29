@@ -11,12 +11,12 @@
     <title>CREAR EJEMPLAR</title>
 </head>
 <body>
-    <header class="container " >
+    <header class="container">
         <br>
         <div class="card container "style="width: 700px;height: auto;" method="post">
           <div class="card-body">
 
-        <form method="post"  action="<?php echo base_url();?>ctrlejemplar/guardar?id=<?php echo $registros->ejem_id;?>">
+        <form method="post"  action="<?php echo base_url();?>ctrlejemplar1/guardar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>">
             
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
