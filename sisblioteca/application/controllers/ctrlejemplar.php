@@ -14,7 +14,7 @@ class ctrlejemplar extends CI_Controller {
          $ejem_paginas = $this->input->post('ejem_paginas');
          $ejem_isbn = $this->input->post('ejem_isbn');
          $ejem_idioma = $this->input->post('ejem_idioma');
-         $ejem_postada = $this->input->post('ejem_postada');
+         $ejem_portada = $this->input->post('ejem_portada');
          $ejem_digital = $this->input->post('ejem_digital');
          $ejem_audio = $this->input->post('ejem_audio');
          $ejem_resumen = $this->input->post('ejem_resumen');
@@ -32,7 +32,7 @@ class ctrlejemplar extends CI_Controller {
              'ejem_paginas'=>$ejem_paginas,
              'ejem_isbn'=>$ejem_isbn,
              'ejem_idioma'=>$ejem_idioma,
-             'ejem_portada'=>$ejem_postada,
+             'ejem_portada'=>$ejem_portada,
              'ejem_digital'=>$ejem_digital,
              'ejem_audio'=>$ejem_audio,
              'ejem_resumen'=>$ejem_resumen,

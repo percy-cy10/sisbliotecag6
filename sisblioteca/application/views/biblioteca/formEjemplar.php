@@ -75,13 +75,13 @@
           <div class="input-group-prepend">
               <span class="input-group-text">TIPO ID</span>
             </div>
-            <input type="number" class="form-control" name="ejem_tipo_id">
+            <input type="text" class="form-control" name="ejem_tipo_id">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">CATEGORIA ID</span>
             </div>
-            <input type="number" class="form-control" name="ejem_cate_id">
+            <input type="text" class="form-control" name="ejem_cate_id">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
@@ -93,13 +93,13 @@
           <div class="input-group-prepend">
               <span class="input-group-text">AÑO</span>
             </div>
-            <input type="date" class="form-control" name="ejem_anio">
+            <input type="text" class="form-control" name="ejem_anio">
           </div>
           <div class="input-group mb-3 input-group-lg">
           <div class="input-group-prepend">
               <span class="input-group-text">NUMERO DE PRESTAMOS</span>
             </div>
-            <input type="number" class="form-control" name="ejem_nprestamos">
+            <input type="text" class="form-control" name="ejem_nprestamos">
           </div>
           <button  class="btn btn-success" type="submit">ENVIAR</button>
         </form>

@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ctrlcategoria extends CI_Controller {
 
 	public function index(){
+
         //$id = $this->input->get('cate_id');
     
         $this->load->model('model_categoria');
@@ -15,6 +16,18 @@ class ctrlcategoria extends CI_Controller {
         
         
         
+    }
+    
+    public function editar(){
+        $id = $this->input->get('cate_id');
+    
+       $this->load->model('model_categoria');
+       $result = $this->model_categoria->consultar1($id=0);
+   
+       $datos = array('registros'=>$result);
+      
+      $this->load->view('biblioteca/formCategoria',$datos);
+       
     }
 
     public function guardar(){
@@ -42,7 +55,7 @@ class ctrlcategoria extends CI_Controller {
        
       
     }
-    public function eliminar(){
+   public function eliminar(){
         $id = $this->input->get('cate_id');
         $this->load->model('model_categoria');
         $this->model_categoria->eliminar($id);  
