@@ -63,5 +63,15 @@ class ctrlusuarios extends CI_Controller {
         $datos = array('registros'=>$result);
         $this->load->view('biblioteca/tabusuarios',$datos);   
     }
+    public function eliminar1(){
+        $id = $this->input->get('id');
+        $this->load->model('model_usuario');
+        $this->model_usuario->eliminar($id); 
+
+        $this->load->view('biblioteca/header');
+        $this->load->view('biblioteca/login');
+        $this->load->view('biblioteca/footer');
+
+    }
        
 }
