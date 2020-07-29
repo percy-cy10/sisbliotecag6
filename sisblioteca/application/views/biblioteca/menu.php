@@ -1,6 +1,7 @@
 <?php 
  include("estilos.php");
 
+  echo "este es la verificaion=",$this->session->userdata('veri'); 
 ?>
 <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
 <div >

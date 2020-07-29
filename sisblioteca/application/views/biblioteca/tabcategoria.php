@@ -23,8 +23,8 @@
       <thead class="thead-dark">
 
             <tr>
-               <th>cate_id</th>
-               <th>cate_nombre</th>
+               <th>ID CATEGORIA</th>
+               <th>NOMBRE CATEGORIA</th>
                <th colspan='2'>OPCIONES</th>
             </tr>
 		</thead>
