@@ -37,10 +37,7 @@
                      <th>RESUMEM</th>
                      <th>TIPO_ID</th>
                      <th>CATE_ID</th>
-<<<<<<< HEAD
                      <th>VLRCN</th>
-=======
->>>>>>> 270148a8425d4c4a926e1305841e1f9092f7a896
                      <th>AÑO</th>
                      <th>PRSTMS</th>
                      <th>OPCIONES</th>
