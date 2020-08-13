@@ -2,8 +2,6 @@
  include("estilos.php");
 
 ?>
-<br><br>
-<div class="container ">
 <?php 
    echo form_open('ctrlejemplar/guardar?id=0');
 
@@ -146,9 +144,9 @@
          
       );
       echo form_input($data_nP,"");
+      echo form_submit('Enviar','Enviar');
 
-      echo form_submit('Guardar','Guardar');
-      
+
    echo form_close();
 
-?></div>
+?>
