@@ -112,24 +112,6 @@
 
 
 
-
-
-
-
-
-
-      echo form_label('CATE ID:', 'ejem_cate_id');
-      $data_cat=array(
-        'name'=> 'ejem_cate_id',
-        'class'=> 'form-control',
-        'id'=>'ejem_cate_id',
-        'type'=>'text'
-        
-         
-      );
-      echo form_input($data_cat,"");
-
-
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
         'name'=> 'ejem_valoracion',
