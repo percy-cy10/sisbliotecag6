@@ -2,7 +2,7 @@
  include("estilos.php");
 
 ?>
-
+<div class="container">
 <?php 
    echo form_open('ctrlejemplar/guardar?id=0');
 
@@ -145,7 +145,7 @@
          
       );
       echo form_input($data_nP,"");
-      echo form_submit('Enviar','Enviar');
+      echo form_submit('Enviar','Enviar',"class='btn btn-success'");
 
 
    echo form_close();

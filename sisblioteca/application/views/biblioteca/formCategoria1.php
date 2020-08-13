@@ -2,9 +2,9 @@
  include("estilos.php");
 
 ?>
+<div class="container">
 <?php 
    echo form_open('ctrlcategoria/guardar?cate_id=0');
-
       echo form_label('CATEGORIA ID:', 'cate_id');
       $cate_id1=array(
         'name'=> 'cate_id',
@@ -26,7 +26,7 @@
       echo form_input($cate_nom,"");
      
      
-      echo form_submit('Guardar','Guardar');
+      echo form_submit('Guardar','Guardar','class="btn btn-success"');
     
    echo form_close();
 
