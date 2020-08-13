@@ -70,6 +70,7 @@ class Welcome extends CI_Controller {
 	}
 	public function categoria()
 	{
+		$this->load->helper('form');
 		$this->load->view('biblioteca/formCategoria1');
 	}
 	public function tabcategoria()
