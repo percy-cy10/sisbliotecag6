@@ -22,16 +22,34 @@ class model_categoria extends CI_Model {
     } 
     public function consultarvarios($id){
 
-     
-      if(!$this->db->get_where("ejemplar", array("ejem_cate_id" => $id))->row()){
-           echo "incorrecto";
+      if(!$this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=$id AND cate_id=$id")->result()){
+        
       }else{
-        return $this->db->get_where("ejemplar", array("ejem_cate_id" => $id))->row();
-      
- 
-    }
+        return $this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=$id AND cate_id=$id")->result();
+      }
 
     } 
+
+    public function obtener(){
+
+        return $this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=cate_id")->result();
+      
+
+    } 
+
+    public function getCategoria(){
+      $query = $this->db->get('categoria');
+      $rows = $query->result();
+
+      $opciones=array();
+      foreach ($rows as $row) {
+        
+          $opciones[$row->cate_id]=$row->cate_nombre;
+      }
+      return $opciones;
+  }
+
+ 
 
 
    

@@ -2,113 +2,169 @@
  include("estilos.php");
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css" rel="stylesheet">
-    <title>CREAR EJEMPLAR</title>
-</head>
-<body>
-    <header class="container">
-        <br>
-        <div class="card container "style="width: 700px;height: auto;" method="post">
-          <div class="card-body">
+<?php 
+   echo form_open("ctrlejemplar1/guardar?ejem_cate_id=<?php echo $registros->ejem_cate_id");
+      echo form_label('TITULO:', 'ejem_titulo');
+      $data_t=array(
+        'name'=> 'ejem_titulo',
+        'class'=> 'form-control',
+        'id'=>'ejem_titulo',
+        'type'=>'text',
+        'value'=>"$registros->ejem_titulo"
+      );
+      echo form_input($data_t,"");
+     
 
-        <form method="post"  action="<?php echo base_url();?>ctrlejemplar1/guardar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>">
-            
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">TITULO</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_titulo" value="<?php echo $registros->ejem_titulo;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">EDITORIAL</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_editorial" value="<?php echo $registros->ejem_editorial;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">PAGINAS</span>
-            </div>
-            <input type="number" class="form-control" name="ejem_paginas" value="<?php echo $registros->ejem_paginas;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">ISBN</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_isbn" value="<?php echo $registros->ejem_isbn;?>">
-          </div>
-        <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-              <span class="input-group-text">IDIOMA</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_idioma" value="<?php echo $registros->ejem_idioma;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">PORTADA</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_portada" value="<?php echo $registros->ejem_portada;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">DIGITAL</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_digital" value="<?php echo $registros->ejem_digital;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">AUDIO</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_audio" value="<?php echo $registros->ejem_audio;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">RESUMEN</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_resumen" value="<?php echo $registros->ejem_resumen;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">TIPO ID</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_tipo_id" value="<?php echo $registros->ejem_tipo_id;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">CATEGORIA ID</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_cate_id" value="<?php echo $registros->ejem_cate_id;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">VALORACION</span>
-            </div>
-            <input type="number" class="form-control" name="ejem_valoracion" value="<?php echo $registros->ejem_valoracion;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">AÑO</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_anio" value="<?php echo $registros->ejem_anio;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">NUMERO DE PRESTAMOS</span>
-            </div>
-            <input type="text" class="form-control" name="ejem_nprestamos" value="<?php echo $registros->ejem_nprestamos;?>">
-          </div>
-          <div class="text-center">
-            <button  class="btn btn-success" type="submit" >ENVIAR <i class="fas fa-paper-plane fa-lg"></i></i></button></div>
-          
-        </form>
+      echo form_label('EDITORIAL:', 'ejem_editorial');
+      $data_e=array(
+        'name'=> 'ejem_editorial',
+        'class'=> 'form-control',
+        'id'=>'ejem_editorial',
+        'type'=>'text',
+        'value'=>"$registros->ejem_editorial"
+         
+      );
+      echo form_input($data_e,"");
 
-          </div>
-        </div>
-    </header>
-</body>
-</html>
+      echo form_label('PAGINAS:', 'ejem_paginas');
+      $data_p=array(
+        'name'=> 'ejem_paginas',
+        'class'=> 'form-control',
+        'id'=>'ejem_paginas',
+        'type'=>'number',
+        'value'=>"$registros->ejem_paginas"
+         
+      );
+      echo form_input($data_p,"");
+
+      echo form_label('ISBN:', 'ejem_isbn');
+      $data_i=array(
+        'name'=> 'ejem_isbn',
+        'class'=> 'form-control',
+        'id'=>'ejem_isbn',
+        'type'=>'text',
+        'value'=>"$registros->ejem_isbn"
+      );
+      echo form_input($data_i,"");
+
+      
+       
+
+      echo form_label('IDIOMA:', 'ejem_idioma');
+      $data_id=array(
+        'name'=> 'ejem_idioma',
+        'class'=> 'form-control',
+        'id'=>'ejem_idioma',
+        'type'=>'text',
+        'value'=>"$registros->ejem_idioma"
+         
+      );
+      echo form_input($data_id,"");
+       
+      echo form_label('PORTADA:', 'ejem_portada');
+      $data_por=array(
+        'name'=> 'ejem_portada',
+        'class'=> 'form-control',
+        'id'=>'ejem_portada',
+        'type'=>'text',
+        'value'=>"$registros->ejem_portada"
+         
+      );
+      echo form_input($data_por,"");
+
+     
+
+
+      echo form_label('DIGITAL:', 'ejem_digital');
+      $data_dig=array(
+        'name'=> 'ejem_digital',
+        'class'=> 'form-control',
+        'id'=>'ejem_digital',
+        'type'=>'text',
+        'value'=>"$registros->ejem_digital"
+         
+      );
+      echo form_input($data_dig,"");
+
+      echo form_label('AUDIO:', 'ejem_audio');
+      $data_au=array(
+        'name'=> 'ejem_audio',
+        'class'=> 'form-control',
+        'id'=>'ejem_audio',
+        'type'=>'text',
+        'value'=>"$registros->ejem_audio"
+         
+      );
+      echo form_input($data_au,"");
+      
+    
+      echo form_label('RESUMEN:', 'ejem_resumen');
+      $data_res=array(
+        'name'=> 'ejem_resumen',
+        'class'=> 'form-control',
+        'id'=>'ejem_resumen',
+        'type'=>'text',
+        'value'=>"$registros->ejem_resumen"
+        
+         
+      );
+      echo form_input($data_res,"");
+
+     echo "<br>";
+      echo form_label('EJEM_CATE_ID: &nbsp;', 'ejem_cate_id');
+      echo form_dropdown('ejem_cate_id',$opciones,"$registros->ejem_cate_id");
+     echo "<br>";
+
+
+
+
+
+
+
+      echo form_label('VALORACION:', 'ejem_valoracion');
+      $data_var=array(
+        'name'=> 'ejem_valoracion',
+        'class'=> 'form-control',
+        'id'=>'ejem_valoracion',
+        'type'=>'number',
+        'value'=>"$registros->ejem_valoracion"
+        
+         
+      );
+      echo form_input($data_var,"");
+
+      echo form_label('AÑO:', 'ejem_anio');
+      $data_anio=array(
+        'name'=> 'ejem_anio',
+        'class'=> 'form-control',
+        'id'=>'ejem_anio',
+        'type'=>'text',
+        'value'=>"$registros->ejem_anio"
+        
+         
+      );
+      echo form_input($data_anio,"");
+
+      
+      echo form_label('NUMERO DE PRESTAMOS:', 'ejem_nprestamos');
+      $data_nP=array(
+        'name'=> 'ejem_nprestamos',
+        'class'=> 'form-control',
+        'id'=>'ejem_nprestamos',
+        'type'=>'text',
+        'value'=>"$registros->ejem_nprestamos"
+        
+         
+      );
+      echo form_input($data_nP,"");
+     
+      echo form_submit('Guardar','Guardar');
+    
+   echo form_close();
+
+?>
+       
+      
+
+
+

@@ -57,14 +57,23 @@ class ctrlejemplar extends CI_Controller {
 
 
     public function editar(){
+
         $id = $this->input->get('id');
-    
         $this->load->model('model_ejemplar');
         $result = $this->model_ejemplar->consultar1($id);
-
         $datos = array('registros'=>$result);
-       
-        $this->load->view('biblioteca/formEjemplar1',$datos);
+
+        
+        $this->load->model('model_categoria');
+		$opciones = $this->model_categoria->getCategoria();
+		$data['opciones']=$opciones;
+        
+        $general=$datos+$data;
+
+
+        $this->load->helper('form');
+
+        $this->load->view('biblioteca/formEjemplar1',$general);
     }
 
 

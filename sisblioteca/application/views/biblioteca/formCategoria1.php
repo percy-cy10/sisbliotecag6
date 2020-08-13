@@ -14,6 +14,7 @@
          
       );
       echo form_input($cate_id1,"");
+      echo "<br>";
       
       echo form_label('CATEGORIA NOMBRES:', 'cate_nombre');
       $cate_nom=array(

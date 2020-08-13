@@ -101,16 +101,21 @@
       );
       echo form_input($data_res,"");
 
-      echo form_label('Cate ID:', 'ejem_cate_id');
-      $data_cat=array(
-        'name'=> 'ejem_cate_id',
-        'class'=> 'form-control',
-        'id'=>'ejem_cate_id',
-        'type'=>'text'
-        
-         
-      );
-      echo form_input($data_cat,"");
+
+
+     echo "<br>";
+
+      echo form_label('CATE_ID: &nbsp;', 'cate_id');
+      echo form_dropdown('cate_id',$opciones );
+    echo "<br>";
+
+
+
+
+
+
+
+
 
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(

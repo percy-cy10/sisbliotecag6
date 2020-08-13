@@ -26,15 +26,20 @@
 <div class="row">
   <div class=" col-sm-8.2 p-3 bg-white " id="div">
 
-  <?php if($registros->ejem_cate_id==1): ?>
+<?php foreach ($rows as $row):?>
+
+  <?php if($row->ejem_cate_id==1): ?>
      <h1 class="text-warning text-center font-weight-bold">Libros de Biomedicas</h1>
   <?php endif; ?>     
-  <?php if($registros->ejem_cate_id==2): ?>
+  <?php if($row->ejem_cate_id==2): ?>
      <h1 class="text-warning text-center font-weight-bold">Libros de Sociales</h1>
   <?php endif; ?> 
-  <?php if($registros->ejem_cate_id==3): ?>
+  <?php if($row->ejem_cate_id==3): ?>
      <h1 class="text-warning text-center font-weight-bold">Libros de Ingenierias</h1>
   <?php endif; ?> 
+
+<?php endforeach;?>
+
 
             <table class="table table-bordered table-active">
             <thead class="thead-dark">
@@ -45,7 +50,6 @@
                      <th>TITULO</th>
                      <th>EDITORIAL</th>
                      <th>PAGINAS</th>
-                     <th>ISBN</th>
                      <th>IDIOMA</th>
                      <th>RESUMEM</th>
                      <th>TIPO_ID</th>
@@ -59,27 +63,28 @@
                   </tr>
             </thead>
             <tbody>
+            <?php foreach ($rows as $row):?>
+  
                <tr>
-                  <td><?php echo $registros->ejem_id; ?></td>
-                  <td><?php echo $registros->ejem_titulo; ?></td>
-                  <td><?php echo $registros->ejem_editorial; ?></td>
-                  <td><?php echo $registros->ejem_paginas; ?></td>
-                  <td><?php echo $registros->ejem_isbn; ?></td>
-                  <td><?php echo $registros->ejem_idioma; ?></td>
-                  <td><?php echo $registros->ejem_resumen; ?></td>
-                  <td><?php echo $registros->ejem_tipo_id; ?></td>
-                  <td><?php echo $registros->ejem_cate_id; ?></td>
-                  <td><?php echo $registros->ejem_anio; ?></td>                 
-                  <td><?php echo $registros->ejem_nprestamos; ?></td>
+                  <td><?php echo $row->ejem_id; ?></td>
+                  <td><?php echo $row->ejem_titulo; ?></td>
+                  <td><?php echo $row->ejem_editorial; ?></td>
+                  <td><?php echo $row->ejem_paginas; ?></td>
+                  <td><?php echo $row->ejem_idioma; ?></td>
+                  <td><?php echo $row->ejem_resumen; ?></td>
+                  <td><?php echo $row->cate_nombre; ?></td>
+                  <td><?php echo $row->ejem_cate_id; ?></td>
+                  <td><?php echo $row->ejem_anio; ?></td>                 
+                  <td><?php echo $row->ejem_nprestamos; ?></td>
 
                   <?php if($posicion==2):?>
                      <td>
-                        <a href="<?php echo base_url();?>ctrlejemplar1/editar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
-                        <a href="<?php echo base_url();?>ctrlejemplar1/eliminar?ejem_cate_id=<?php echo $registros->ejem_cate_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
+                        <a href="<?php echo base_url();?>ctrlejemplar1/editar?ejem_cate_id=<?php echo $row->ejem_cate_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
+                        <a href="<?php echo base_url();?>ctrlejemplar1/eliminar?ejem_cate_id=<?php echo $row->ejem_cate_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
                      </td>
                  <?php endif;?>
                </tr>
-              
+               <?php endforeach;?>
             </tbody>
          </table>
   </div>

@@ -11,6 +11,9 @@ class ctrlusuarios extends CI_Controller {
 
         $datos = array('registros'=>$result);
        
+
+        $this->load->helper('form');
+        
         $this->load->view('biblioteca/formUsuario',$datos);
         
         

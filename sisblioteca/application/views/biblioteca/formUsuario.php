@@ -2,84 +2,112 @@
  include("estilos.php");
   //var_dump($registros);
 ?>
+<?php 
+   echo form_open("ctrlusuarios/guardar?id=$registros->usua_id");
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>CREAR USUARIO</title>
-</head>
-<body>
-    <header class="container " >
-        <br>
-        <div class="card container "style="width: 700px;height: auto;">
-          <div class="card-body">
-
-          <form method="post"  action="<?php echo base_url();?>ctrlusuarios/guardar?id=<?php echo $registros->usua_id;?>"  >
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">LOGIN</span>
-            </div>
-            <input type="text" class="form-control" name="usua_login" value="<?php echo $registros->usua_login;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">PASSWORD</span>
-            </div>
-            <input type="password" class="form-control" name="usua_password" value="<?php echo $registros->usua_password;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">CODIGO</span>
-            </div>
-            <input type="text" class="form-control" name="usua_codigo"  value="<?php echo $registros->usua_codigo;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">NOMBRES</span>
-            </div>
-            <input type="text" class="form-control" name="usua_nombres" value="<?php echo $registros->usua_nombres;?>">
-          </div>
-        <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-              <span class="input-group-text">APELLIDOS</span>
-            </div>
-            <input type="text" class="form-control" name="usua_apellidos" value="<?php echo $registros->usua_apellidos;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">DIRECCION</span>
-            </div>
-            <input type="text" class="form-control" name="usua_direccion" value="<?php echo $registros->usua_direccion;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">EMAIL</span>
-            </div>
-            <input type="text" class="form-control" name="usua_email" value="<?php echo $registros->usua_email;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">TELEFONO</span>
-            </div>
-            <input type="text" class="form-control" name="usua_telefono" value="<?php echo $registros->usua_telefono;?>">
-          </div>
+      echo form_label('LOGIN:', 'usua_login');
+      $data_us=array(
+        'name'=> 'usua_login',
+        'class'=> 'form-control',
+        'id'=>'usua_login',
+        'type'=>'text',
+        'value'=>"$registros->usua_login"
           
-          <div class="input-group mb-3 input-group-lg">
-          <div class="input-group-prepend">
-              <span class="input-group-text">ESAADMIN</span>
-            </div>
-            <input type="text" class="form-control" name="usua_esadmin" value="<?php echo $registros->usua_esadmin;?>">
-          </div>
+      );
+      echo form_input($data_us,"");
 
-          <div class="text-center">
-          <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
-          </div>
-        </form>
+      echo form_label('PASSWORD:', 'usua_password');
+      $data_pas=array(
+        'name'=> 'usua_password',
+        'class'=> 'form-control',
+        'id'=>'usua_password',
+        'type'=>'password',
+        'value'=>"$registros->usua_password"
+          
+      );
+      echo form_input($data_pas,"");
 
-          </div>
-        </div>
-    </header>
-</body>
-</html>
+      echo form_label('CODIGO:', 'usua_codigo');
+      $data_cod=array(
+        'name'=> 'usua_codigo',
+        'class'=> 'form-control',
+        'id'=>'usua_codigo',
+        'type'=>'text',
+        'value'=>"$registros->usua_codigo"
+          
+      );
+      echo form_input($data_cod,"");
+
+      echo form_label('NOMBRES:', 'usua_nombres');
+      $data_nom1=array(
+        'name'=> 'usua_nombres',
+        'class'=> 'form-control',
+        'id'=>'usua_nombres',
+        'type'=>'text',
+        'value'=>"$registros->usua_nombres"
+          
+      );
+      echo form_input($data_nom1,"");
+
+      echo form_label('APELLIDOS:', 'usua_apellidos');
+      $data_ape=array(
+        'name'=> 'usua_apellidos',
+        'class'=> 'form-control',
+        'id'=>'usua_apellidos',
+        'type'=>'text',
+        'value'=>"$registros->usua_apellidos"
+          
+      );
+      echo form_input($data_ape,"");
+
+      echo form_label('DIRECCION:', 'usua_direccion');
+      $data_dir=array(
+        'name'=> 'usua_direccion',
+        'class'=> 'form-control',
+        'id'=>'usua_direccion',
+        'type'=>'text',
+        'value'=>"$registros->usua_direccion"
+          
+      );
+      echo form_input($data_dir,"");
+
+
+      echo form_label('EMAIL:', 'usua_email');
+      $data_ema=array(
+        'name'=> 'usua_email',
+        'class'=> 'form-control',
+        'id'=>'usua_email',
+        'type'=>'email',
+        'value'=>"$registros->usua_email"
+          
+      );
+      echo form_input($data_ema,"");
+
+      echo form_label('TELEFONO:', 'usua_telefono');
+      $data_tel=array(
+        'name'=> 'usua_telefono',
+        'class'=> 'form-control',
+        'id'=>'usua_telefono',
+        'type'=>'text',
+        'value'=>"$registros->usua_telefono"
+          
+      );
+      echo form_input($data_tel,"");
+
+      echo form_label('ESAADMIN:', 'usua_esadmin');
+      $data_esad=array(
+        'name'=> 'usua_esadmin',
+        'class'=> 'form-control',
+        'id'=>'usua_esadmin',
+        'type'=>'text',
+        'value'=>"$registros->usua_esadmin"
+          
+      );
+      echo form_input($data_esad,"");
+
+
+      echo form_submit('Guardar','Guardar');
+      
+   echo form_close();
+
+?>

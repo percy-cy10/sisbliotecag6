@@ -57,16 +57,23 @@ class Welcome extends CI_Controller {
 
 		$this->load->helper('form');
 
-		$this->load->view('biblioteca/formEjemplar');
+		$this->load->model('model_categoria');
+		$opciones = $this->model_categoria->getCategoria();
+		$data['opciones']=$opciones;
+        
+		$this->load->view('biblioteca/formEjemplar',$data);
 
 
 		
 	}
 	public function tabejemplar()
 	{
-		$this->load->model('model_ejemplar');
-        $result = $this->model_ejemplar->consultar();
-        $datos = array('registros'=>$result);
+	
+
+		$this->load->model('model_categoria');
+		$opciones = $this->model_categoria->obtener();
+		$datos['registros']=$opciones;
+		
 		$this->load->view('biblioteca/tabEjemplar',$datos);
 		
 	}
@@ -77,6 +84,8 @@ class Welcome extends CI_Controller {
 	}
 	public function tabcategoria()
 	{
+		//$this->load->helper('form');
+
 		$this->load->model('model_categoria');
         $result = $this->model_categoria->consultar();
         $datos = array('registros'=>$result);
@@ -84,8 +93,15 @@ class Welcome extends CI_Controller {
 		
 	}
 	public function buscar(){
-		
-		$this->load->view('biblioteca/formBuscar');
+
+		$this->load->helper('form');
+		$this->load->model('model_categoria');
+		$opciones = $this->model_categoria->getCategoria();
+	
+
+		$data['opciones']=$opciones;
+
+		$this->load->view('biblioteca/formBuscar',$data);
 	}
 }
 

@@ -62,7 +62,7 @@
                   <td><?php echo $reg->ejem_idioma; ?></td>
                   <td><?php echo $reg->ejem_resumen; ?></td>
                   <td><?php echo $reg->ejem_tipo_id; ?></td>
-                  <td><?php echo $reg->ejem_cate_id; ?></td>
+                  <td><?php echo $reg->cate_nombre; ?></td>
                   <td><?php echo $reg->ejem_anio; ?></td>                 
                   <td><?php echo $reg->ejem_nprestamos; ?></td>
 

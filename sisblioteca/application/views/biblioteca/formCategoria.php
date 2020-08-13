@@ -2,40 +2,34 @@
  include("estilos.php");
 
 ?>
+<?php 
+  
+  echo form_open("ctrlcategoria/guardar?cate_id=$registros->cate_id");
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>CREAR USUARIO</title>
-</head>
-<body>
-    <header class="container " >
-        <br>
-        <div class="card container "style="width: 700px;height: auto;">
-          <div class="card-body">
+ 
+  $cate_id1=array(
+    'name'=> 'cate_id',
+    'class'=> 'form-control',
+    'id'=>'cate_id',
+    'type'=>'hidden',
+    'value'=>"$registros->cate_id"
+     
+  );
+  echo form_input($cate_id1,"");
+  
+  echo form_label('CATEGORIA NOMBRES:', 'cate_nombre');
+  $cate_nom=array(
+    'name'=> 'cate_nombre',
+    'class'=> 'form-control',
+    'id'=>'cate_nombre',
+    'type'=>'text',
+    'value'=>"$registros->cate_nombre"
+  );
+  echo form_input($cate_nom,"");
+ 
 
-          <form method="post"  action="<?php echo base_url();?>ctrlcategoria/guardar?cate_id=<?php echo $registros->cate_id;?> "  >
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-             
-            </div>
-            <input type="hidden" class="form-control" name="cate_id" value="<?php echo $registros->cate_id;?>">
-          </div>
-          <div class="input-group mb-3 input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text">CATEGORIA NOMBRES</span>
-            </div>
-            <input type="text" class="form-control" name="cate_nombre" value="<?php echo $registros->cate_nombre;?>">
-          </div>
-          <div class="text-center">
-          <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
-          </div>
-        </form>
+     echo form_submit('ENVIAR','ENVIAR');
+   
+  echo form_close();
 
-          </div>
-        </div>
-    </header>
-</body>
-</html>
+?>
