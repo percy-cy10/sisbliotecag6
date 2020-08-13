@@ -52,7 +52,12 @@ class Welcome extends CI_Controller {
 	}
 	public function ejemplar()
 	{
+
+		$this->load->helper('form');
+
 		$this->load->view('biblioteca/formEjemplar');
+
+
 		
 	}
 	public function tabejemplar()
