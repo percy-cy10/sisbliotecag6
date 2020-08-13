@@ -2,7 +2,7 @@
  include("estilos.php");
 
 ?>
-
+<div class="container">
 <?php 
    echo form_open('ctrlejemplar/guardar?id=0');
 
@@ -101,6 +101,7 @@
       );
       echo form_input($data_res,"");
 
+<<<<<<< HEAD
 
 
      echo "<br>";
@@ -116,6 +117,18 @@
 
 
 
+=======
+      echo form_label('CATE ID:', 'ejem_cate_id');
+      $data_cat=array(
+        'name'=> 'ejem_cate_id',
+        'class'=> 'form-control',
+        'id'=>'ejem_cate_id',
+        'type'=>'text'
+        
+         
+      );
+      echo form_input($data_cat,"");
+>>>>>>> 21365e25ab7d8c312e3c52237176e077dbed5e0d
 
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
@@ -150,7 +163,7 @@
          
       );
       echo form_input($data_nP,"");
-      echo form_submit('Enviar','Enviar');
+      echo form_submit('Enviar','Enviar',"class='btn btn-success'");
 
 
    echo form_close();
