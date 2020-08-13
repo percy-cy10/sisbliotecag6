@@ -2,6 +2,7 @@
  include("estilos.php");
 
 ?>
+
 <?php 
    echo form_open('ctrlejemplar/guardar?id=0');
 
