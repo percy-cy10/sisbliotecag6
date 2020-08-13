@@ -146,9 +146,9 @@
          
       );
       echo form_input($data_nP,"");
-      ?>
-      <button  class="btn btn-success" type="submit"><li class="fa fa-save"> </li>&nbspENVIAR</button>
-      <?php
+
+      echo form_submit('Guardar','Guardar');
+      
    echo form_close();
 
 ?></div>
