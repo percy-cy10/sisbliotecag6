@@ -101,7 +101,7 @@
       );
       echo form_input($data_res,"");
 
-      echo form_label('Cate ID:', 'ejem_cate_id');
+      echo form_label('CATE ID:', 'ejem_cate_id');
       $data_cat=array(
         'name'=> 'ejem_cate_id',
         'class'=> 'form-control',
