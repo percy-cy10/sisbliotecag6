@@ -41,7 +41,6 @@
                      <th>ISBN</th>
                      <th>IDIOMA</th>
                      <th>RESUMEM</th>
-                     <th>TIPO_ID</th>
                      <th>CATE_ID</th>
                      <th>AÑO</th>
                      <th>PRESTAMOS</th>
@@ -61,7 +60,6 @@
                   <td><?php echo $reg->ejem_isbn; ?></td>
                   <td><?php echo $reg->ejem_idioma; ?></td>
                   <td><?php echo $reg->ejem_resumen; ?></td>
-                  <td><?php echo $reg->ejem_tipo_id; ?></td>
                   <td><?php echo $reg->cate_nombre; ?></td>
                   <td><?php echo $reg->ejem_anio; ?></td>                 
                   <td><?php echo $reg->ejem_nprestamos; ?></td>
