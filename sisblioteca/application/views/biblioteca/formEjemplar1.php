@@ -3,11 +3,11 @@
 
 ?>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
-
+<br>
 <div class="container">
 
 <div class="card" style="width: 28rem;float:left;left:30%;">
-<h1 style="text-align: center;color:orange;">INGRESE LOS DATOS DEL EJEMPLAR</h1>
+<h1 style="text-align: center;color:orange;">INGRESE LOS NUEVOS DATOS DEL EJEMPLAR</h1>
   <div class="card-body">
 <?php 
    echo form_open("ctrlejemplar/guardar?id=<?php echo $registros->ejem_id");
@@ -167,6 +167,8 @@
          
       );
       echo form_input($data_nP,"");
+
+      echo "<br>";
       $estilos1=array(
         'class'=>'btn btn-success'
          

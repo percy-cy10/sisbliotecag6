@@ -3,11 +3,11 @@
 
 ?>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
-
+<br>
 <div class="container">
 
 <div class="card" style="width: 28rem;float:left;left:30%;">
-<h1 style="text-align: center;color:orange;">INGRESE LOS DATOS DEL EJEMPLAR</h1>
+<h1 style="text-align: center;color:orange;">INGRESE EL NUEVO DATO DE LA CATEGORIA</h1>
   <div class="card-body">
 <?php 
   
@@ -33,9 +33,13 @@
     'value'=>"$registros->cate_nombre"
   );
   echo form_input($cate_nom,"");
- 
 
-     echo form_submit('ENVIAR','ENVIAR');
+  echo "<br>";
+  $estilos1=array(
+    'class'=>'btn btn-success'
+  );
+
+    echo form_submit('ENVIAR','ENVIAR',$estilos1);
    
   echo form_close();
 
