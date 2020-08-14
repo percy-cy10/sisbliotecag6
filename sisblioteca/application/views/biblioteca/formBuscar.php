@@ -23,7 +23,7 @@
          'class'=>'btn btn-success'
          
      );
-     echo "<br>";
+      echo "<br>";
       echo form_submit('BUSCAR','BUSCAR',$estilos1);
     
    echo form_close();
