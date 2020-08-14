@@ -10,7 +10,7 @@
 <h1 style="text-align: center;color:orange;">INGRESE LOS NUEVOS DATOS DEL EJEMPLAR</h1>
   <div class="card-body">
 <?php 
-   echo form_open("ctrlejemplar/guardar?id=<?php echo $registros->ejem_id");
+   echo form_open("ctrlejemplar/guardar?id=$registros->ejem_id");
       echo form_label('TITULO:', 'ejem_titulo');
       $data_t=array(
         'name'=> 'ejem_titulo',

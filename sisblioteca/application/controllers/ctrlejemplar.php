@@ -59,6 +59,7 @@ class ctrlejemplar extends CI_Controller {
     public function editar(){
 
         $id = $this->input->get('id');
+        
         $this->load->model('model_ejemplar');
         $result = $this->model_ejemplar->consultar1($id);
         $datos = array('registros'=>$result);
@@ -72,7 +73,6 @@ class ctrlejemplar extends CI_Controller {
 
 
         $this->load->helper('form');
-
         $this->load->view('biblioteca/formEjemplar1',$general);
     }
 
