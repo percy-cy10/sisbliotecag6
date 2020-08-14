@@ -108,9 +108,11 @@
 
       echo form_label('CATE_ID: &nbsp;', 'cate_id');
       echo "<br>";
-      echo form_dropdown('cate_id',$opciones );
-      echo "<br>";
-      echo "<br>";
+      $estilos=array(
+          'class'=>'form-control'
+
+      );
+      echo form_dropdown('cate_id',$opciones,'',$estilos);
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
         'name'=> 'ejem_valoracion',
@@ -142,8 +144,14 @@
     
       );
       echo form_input($data_nP,"");
-      echo "<br>";
-      echo form_submit('GUARDAR','Enviar',"class='btn btn-success'");
+
+      $estilos1=array(
+        'class'=>'btn btn-success'
+         
+
+    );
+    echo "<br>";
+      echo form_submit('GUARDAR','Enviar',$estilos1);
 
    echo form_close();
 

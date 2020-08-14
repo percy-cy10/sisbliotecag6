@@ -111,8 +111,12 @@
       echo form_input($data_res,"");
 
      echo "<br>";
+     $estilos=array(
+      'class'=>'form-control'
+
+  );
       echo form_label('EJEM_CATE_ID: &nbsp;', 'ejem_cate_id');
-      echo form_dropdown('ejem_cate_id',$opciones,"$registros->ejem_cate_id");
+      echo form_dropdown('ejem_cate_id',$opciones,"$registros->ejem_cate_id",$estilos);
      echo "<br>";
 
 
@@ -157,8 +161,12 @@
          
       );
       echo form_input($data_nP,"");
-     
-      echo form_submit('Guardar','Guardar');
+      $estilos1=array(
+        'class'=>'btn btn-success'
+         
+
+    );
+      echo form_submit('Guardar','Guardar',$estilos1);
     
    echo form_close();
 
