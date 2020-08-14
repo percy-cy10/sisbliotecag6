@@ -43,15 +43,10 @@ class ctrlejemplar1 extends CI_Controller {
              'ejem_nprestamos'=>$ejem_nprestamos              
          );
      $this->model_ejemplar1->guardar($data,$idbs);
-     if($idbs>0){
-        redirect();
-    }else{
-        redirect();
+        
+            redirect();
+        
     }
-       
-      
-    }
-
 
     public function editar(){
         $idbs = $this->input->get('ejem_cate_id');

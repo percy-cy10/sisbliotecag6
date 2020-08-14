@@ -43,14 +43,9 @@ class ctrlejemplar extends CI_Controller {
              'ejem_nprestamos'=>$ejem_nprestamos              
          );
      $this->model_ejemplar->guardar($data,$id);
-     if($id>0){
-        $this->load->model('model_ejemplar');
-        $result = $this->model_ejemplar->consultar();
-        $datos = array('registros'=>$result);
-        $this->load->view('biblioteca/tabEjemplar',$datos);
-    }else{
+    
         redirect();
-    }
+    
        
       
     }
@@ -59,7 +54,7 @@ class ctrlejemplar extends CI_Controller {
     public function editar(){
 
         $id = $this->input->get('id');
-        
+
         $this->load->model('model_ejemplar');
         $result = $this->model_ejemplar->consultar1($id);
         $datos = array('registros'=>$result);
