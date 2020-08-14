@@ -106,13 +106,14 @@
       );
       echo form_input($data_res,"");
 
-      echo form_label('CATE_ID: &nbsp;', 'cate_id');
+      echo form_label('EJEM_CATE_ID: &nbsp;', 'ejem_cate_id');
       echo "<br>";
       $estilos=array(
           'class'=>'form-control'
 
       );
-      echo form_dropdown('cate_id',$opciones,'',$estilos);
+      echo form_dropdown('ejem_cate_id',$opciones,'',$estilos);
+
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
         'name'=> 'ejem_valoracion',

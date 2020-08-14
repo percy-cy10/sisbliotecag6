@@ -19,8 +19,11 @@ class ctrlejemplar extends CI_Controller {
          $ejem_audio = $this->input->post('ejem_audio');
          $ejem_resumen = $this->input->post('ejem_resumen');
          $ejem_tipo_id = $this->input->post('ejem_tipo_id');
+
          $ejem_cate_id = $this->input->post('ejem_cate_id');
+         
          $ejem_valoracion = $this->input->post('ejem_valoracion');
+
          $ejem_anio = $this->input->post('ejem_anio');
          $ejem_nprestamos = $this->input->post('ejem_nprestamos');
 
@@ -75,9 +78,13 @@ class ctrlejemplar extends CI_Controller {
     public function eliminar(){
         $id = $this->input->get('id');
         $this->load->model('model_ejemplar');
-        $this->model_ejemplar->eliminar($id);  
-        $result = $this->model_ejemplar->consultar();
-        $datos = array('registros'=>$result);
+        $this->model_ejemplar->eliminar($id); 
+        
+        
+        $this->load->model('model_categoria');
+		$opciones = $this->model_categoria->obtener();
+		$datos['registros']=$opciones;
+
         $this->load->view('biblioteca/tabEjemplar',$datos);  
     }
     
