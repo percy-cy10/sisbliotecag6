@@ -2,7 +2,14 @@
  include("estilos.php");
 
 ?>
+<body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
+
 <div class="container">
+
+<div class="card" style="width: 28rem;float:left;left:30%;">
+<h1 style="text-align: center;color:orange;">INGRESE LOS DATOS DEL EJEMPLAR</h1>
+  <div class="card-body">
+
 <?php 
    echo form_open('ctrlejemplar/guardar?id=0');
 
@@ -52,8 +59,7 @@
         'class'=> 'form-control',
         'id'=>'ejem_idioma',
         'type'=>'text'
-        
-         
+     
       );
       echo form_input($data_id,"");
        
@@ -63,8 +69,7 @@
         'class'=> 'form-control',
         'id'=>'ejem_portada',
         'type'=>'text'
-        
-         
+     
       );
       echo form_input($data_por,"");
 
@@ -101,17 +106,11 @@
       );
       echo form_input($data_res,"");
 
-
-
-
-     echo "<br>";
-
       echo form_label('CATE_ID: &nbsp;', 'cate_id');
+      echo "<br>";
       echo form_dropdown('cate_id',$opciones );
-    echo "<br>";
-
-
-
+      echo "<br>";
+      echo "<br>";
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
         'name'=> 'ejem_valoracion',
@@ -129,25 +128,28 @@
         'class'=> 'form-control',
         'id'=>'ejem_anio',
         'type'=>'text'
-        
-         
+ 
       );
+
       echo form_input($data_anio,"");
 
-      
       echo form_label('NUMERO DE PRESTAMOS:', 'ejem_nprestamos');
       $data_nP=array(
         'name'=> 'ejem_nprestamos',
         'class'=> 'form-control',
         'id'=>'ejem_nprestamos',
         'type'=>'text'
-        
-         
+    
       );
       echo form_input($data_nP,"");
-      echo form_submit('Enviar','Enviar',"class='btn btn-success'");
-
+      echo "<br>";
+      echo form_submit('GUARDAR','Enviar',"class='btn btn-success'");
 
    echo form_close();
 
 ?>
+
+  </div>
+</div>
+  
+</body>
