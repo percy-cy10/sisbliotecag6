@@ -151,7 +151,7 @@
         'name'=> 'ejem_anio',
         'class'=> 'form-control',
         'id'=>'ejem_anio',
-        'type'=>'text',
+        'type'=>'date',
         'value'=>"$registros->ejem_anio"
         
          
@@ -164,7 +164,7 @@
         'name'=> 'ejem_nprestamos',
         'class'=> 'form-control',
         'id'=>'ejem_nprestamos',
-        'type'=>'text',
+        'type'=>'number',
         'value'=>"$registros->ejem_nprestamos"
         
          

@@ -49,7 +49,7 @@
     
 
       <li class="nav-item active">
-            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tabcategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIAS&nbsp;&nbsp;</a>
+            <a class="flex-sm-fill text-sm-center nav-link " href="<?php echo base_url('Welcome/tablacategoria') ?>"><i class="fas fa-sort-amount-up-alt fa-lg"></i> CATEGORIAS&nbsp;&nbsp;</a>
            
 
         <?php if($posicion==1):?>

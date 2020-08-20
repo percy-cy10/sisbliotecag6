@@ -120,6 +120,8 @@
         'class'=>'form-control'
   
     );
+
+    
      echo "<br>";
       echo form_label('EJEM_CATE_ID: &nbsp;', 'ejem_cate_id');
       echo form_dropdown('ejem_cate_id',$opciones,"$registros->ejem_cate_id",$estilos);
@@ -148,7 +150,7 @@
         'name'=> 'ejem_anio',
         'class'=> 'form-control',
         'id'=>'ejem_anio',
-        'type'=>'text',
+        'type'=>'date',
         'value'=>"$registros->ejem_anio"
         
          
@@ -161,7 +163,7 @@
         'name'=> 'ejem_nprestamos',
         'class'=> 'form-control',
         'id'=>'ejem_nprestamos',
-        'type'=>'text',
+        'type'=>'number',
         'value'=>"$registros->ejem_nprestamos"
         
          
