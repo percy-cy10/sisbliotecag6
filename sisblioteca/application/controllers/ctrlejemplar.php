@@ -62,11 +62,11 @@ class ctrlejemplar extends CI_Controller {
         $result = $this->model_ejemplar->consultar1($id);
         $datos = array('registros'=>$result);
 
-        
         $this->load->model('model_categoria');
 		$opciones = $this->model_categoria->getCategoria();
 		$data['opciones']=$opciones;
         
+
         $general=$datos+$data;
 
 

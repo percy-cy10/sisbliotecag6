@@ -130,7 +130,7 @@
         'name'=> 'ejem_anio',
         'class'=> 'form-control',
         'id'=>'ejem_anio',
-        'type'=>'text'
+        'type'=>'date'
  
       );
 
@@ -141,7 +141,7 @@
         'name'=> 'ejem_nprestamos',
         'class'=> 'form-control',
         'id'=>'ejem_nprestamos',
-        'type'=>'text'
+        'type'=>'number'
     
       );
       echo form_input($data_nP,"");

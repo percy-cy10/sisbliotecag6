@@ -1,6 +1,8 @@
 <?php 
- include("estilos.php");
-
+   include("estilos.php");
+   $this->load->view('biblioteca/header');
+   $this->load->view('biblioteca/menu');
+   $this->load->view('biblioteca/footer');
 ?>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
 

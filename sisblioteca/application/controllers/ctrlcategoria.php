@@ -41,10 +41,9 @@ class ctrlcategoria extends CI_Controller {
          );
         $this->model_categoria->guardar($data,$id);
         if($id>0){
-            $this->load->model('model_categoria');
-            $result = $this->model_categoria->consultar();
-            $datos = array('registros'=>$result);
-            $this->load->view('biblioteca/tabcategoria',$datos);
+
+            $this->load->view('biblioteca/tabCategoria2');
+
         }else{
             redirect();
         }
@@ -61,7 +60,8 @@ class ctrlcategoria extends CI_Controller {
         if($rows!=NULL){
             $this->load->view('biblioteca/tabcategoria1',$data);
         }else{
-            echo "No hay ningun Libro con ese EJEM_CATE_ID";
+            echo 'NO HAY NINGUN LIBRO RELACIONADO CON LO QUE ESTA BUSCANDO :( ';
+            //redirect('Welcome/buscar');
         }
           
          

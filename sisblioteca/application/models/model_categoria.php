@@ -5,9 +5,15 @@ class model_categoria extends CI_Model {
 
     public function consultar()
     {
-            $query = $this->db->get('categoria', 100);
+            $query = $this->db->get('categoria');
             return $query->result();
     }
+    public function datos(){
+            $query = $this->db->get('categoria');
+            return $query;
+    }
+
+
     public function guardar($data,$id){
         if($id>0){
                 $this->db->where('cate_id', $id);
@@ -48,7 +54,39 @@ class model_categoria extends CI_Model {
       }
       return $opciones;
   }
+  public function get_items()
+  {
+     $draw = intval($this->input->get("draw"));
+     $start = intval($this->input->get("start"));
+     $length = intval($this->input->get("length"));
 
+
+     $query = $this->db->get("items");
+
+
+     $data = [];
+
+
+     foreach($query->result() as $r) {
+          $data[] = array(
+               $r->id,
+               $r->title,
+               $r->description
+          );
+     }
+
+
+     $result = array(
+              "draw" => $draw,
+                "recordsTotal" => $query->num_rows(),
+                "recordsFiltered" => $query->num_rows(),
+                "data" => $data
+           );
+
+
+     echo json_encode($result);
+     exit();
+  }
  
 
 
