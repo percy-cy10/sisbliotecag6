@@ -48,8 +48,10 @@ class ctrlusuarios extends CI_Controller {
         );
         $this->model_usuario->guardar($data,$id);
         if($id>0){
-        
-		    $this->load->view('biblioteca/tabusuarios');
+            $this->load->model('model_usuario');
+            $result = $this->model_usuario->consultar();
+            $datos = array('registros'=>$result);
+		    $this->load->view('biblioteca/tabusuarios',$datos);
         }else{
             redirect();
         }
@@ -58,7 +60,7 @@ class ctrlusuarios extends CI_Controller {
     }
 
     public function eliminar(){
-        $id = $this->input->get('id');b
+        $id = $this->input->get('id');
         $this->load->model('model_usuario');
         $this->model_usuario->eliminar($id);  
         $result = $this->model_usuario->consultar();
@@ -72,11 +74,11 @@ class ctrlusuarios extends CI_Controller {
         redirect('Biblioteca/salir');
 
     }
-<<<<<<< HEAD
-    
+
     public function procesar()
     {
         $this->load->library('form_validation');
+        
         $this->form_validation->set_rules('username', 'Nombre de usuario', 'required|min_length[5]|max_length[12]');
         $this->form_validation->set_rules('password', 'Password', 'required|matches[passconf]');
         $this->form_validation->set_rules('passconf', 'Confirmar Password', 'required');
@@ -89,54 +91,5 @@ class ctrlusuarios extends CI_Controller {
         }
         
     }
-=======
-    public function datosdeUsuario()
-	{
-		
-		$draw = intval($this->input->get("draw"));
-		$start = intval($this->input->get("start"));
-		$length = intval($this->input->get("length"));
-
-	   
-		$this->load->model('model_usuario');
-		$query = $this->model_usuario->datos();
-		$data = array();
-
-		//la base_url()
-        $url = base_url();
-    
-		foreach($query->result() as $r) {
-		 $sub_array = array();
-		 $sub_array[] = $r->usua_id;
-         $sub_array[] = $r->usua_login;
-         $sub_array[] = $r->usua_password;
-         $sub_array[] = $r->usua_codigo;
-         $sub_array[] = $r->usua_nombres;
-         $sub_array[] = $r->usua_apellidos;
-         $sub_array[] = $r->usua_email;
-         $sub_array[] = $r->usua_direccion;
-         $sub_array[] = $r->usua_telefono;
-         $sub_array[] = $r->usua_esadmin;
-
-         
-		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/index?id='.$r->usua_id.'" 
-		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
-		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/eliminar?id='.$r->usua_id.'" 
-		 class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
-			   
-		 $data[] = $sub_array;
-		}
-	    
-		$result = array(
-			 "draw" => $draw,
-			 "recordsTotal" => $query->num_rows(),
-			 "recordsFiltered" => $query->num_rows(),
-			 "data" => $data
-		  );
-		  echo json_encode($result);
-		exit();
-	 
-	}
->>>>>>> 74cafa6825831d2c516c8b54c439a6a0b939fcd4
        
 }
