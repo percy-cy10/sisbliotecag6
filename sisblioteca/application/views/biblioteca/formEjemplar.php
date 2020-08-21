@@ -9,8 +9,13 @@
 <div class="card" style="width: 28rem;float:left;left:30%;">
 <h1 style="text-align: center;color:orange;">INGRESE LOS DATOS DEL EJEMPLAR</h1>
   <div class="card-body">
+  
 
-<?php 
+<?php
+   $form=array(
+    'class'=>'was-validated p-3'
+
+ );
    echo form_open('ctrlejemplar/guardar?id=0');
 
       echo form_label('TITULO:', 'ejem_titulo');
@@ -21,7 +26,20 @@
         'type'=>'text'
          
       );
-      echo form_input($data_t,"");
+      echo form_input($data_t,'','required');
+
+      //para el icono de error del campo titulo
+      $error = array(
+       'class' => 'invalid-feedback',
+     );
+     echo form_label('falta completar', 'ejem_titulo', $error);
+
+     //para el icono de bien del campo titulo
+     $correcto = array(
+       'class' => 'valid-feedback',
+     );
+     echo form_label('correcto', 'ejem_titulo', $correcto);
+
 
       echo form_label('EDITORIAL:', 'ejem_editorial');
       $data_e=array(

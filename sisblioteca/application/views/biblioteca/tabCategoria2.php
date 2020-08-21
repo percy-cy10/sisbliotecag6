@@ -1,5 +1,9 @@
 <?php 
+<<<<<<< HEAD
         include("estilos.php");
+=======
+       include("estilos.php");
+>>>>>>> 74cafa6825831d2c516c8b54c439a6a0b939fcd4
         include("estilosTab.php");
         $this->load->view('biblioteca/header');
 		$this->load->view('biblioteca/menu');
@@ -21,7 +25,11 @@
         
          
 
+<<<<<<< HEAD
       <table class="table table-bordered table-active" id="product-list">
+=======
+      <table class="table table-active" id="product-list">
+>>>>>>> 74cafa6825831d2c516c8b54c439a6a0b939fcd4
          <thead class="thead-dark">
 
                <tr>
@@ -44,7 +52,11 @@
 <script>
     $('#product-list').DataTable({
         "ajax": {
+<<<<<<< HEAD
             url : "<?php echo base_url(); ?>ctrlcategoria/datosdeCategoria",
+=======
+            url : "<?php echo base_url(); ?>Welcome/datosdeCategoria",
+>>>>>>> 74cafa6825831d2c516c8b54c439a6a0b939fcd4
             type : 'POST'
         },
         

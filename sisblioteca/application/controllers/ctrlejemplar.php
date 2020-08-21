@@ -88,4 +88,50 @@ class ctrlejemplar extends CI_Controller {
         $this->load->view('biblioteca/tabEjemplar',$datos);  
     }
     
+    public function datosdeEjemplar()
+	{
+		
+		$draw = intval($this->input->get("draw"));
+		$start = intval($this->input->get("start"));
+		$length = intval($this->input->get("length"));
+
+	   
+		$this->load->model('model_ejemplar');
+		$query = $this->model_ejemplar->datos();
+		$data = array();
+
+		//la base_url()
+        $url = base_url();
+		foreach($query->result() as $r) {
+		 $sub_array = array();
+		 $sub_array[] = $r->ejem_id;
+         $sub_array[] = $r->ejem_titulo;
+         $sub_array[] = $r->ejem_editorial;
+         $sub_array[] = $r->ejem_paginas;
+         $sub_array[] = $r->ejem_isbn;
+         $sub_array[] = $r->ejem_idioma;
+         $sub_array[] = $r->ejem_resumen;
+         $sub_array[] = $r->cate_nombre;
+         $sub_array[] = $r->ejem_anio;
+         $sub_array[] = $r->ejem_nprestamos;
+
+         
+		 $sub_array[] = '<a href="'.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
+		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+		 $sub_array[] = '<a href="'.$url.'ctrlejemplar/eliminar?id='.$r->ejem_id.'" 
+		 class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+			   
+		 $data[] = $sub_array;
+		}
+	    
+		$result = array(
+			 "draw" => $draw,
+			 "recordsTotal" => $query->num_rows(),
+			 "recordsFiltered" => $query->num_rows(),
+			 "data" => $data
+		  );
+		  echo json_encode($result);
+		exit();
+	 
+	}
 }
