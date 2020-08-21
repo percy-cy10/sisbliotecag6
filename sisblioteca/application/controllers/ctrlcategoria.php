@@ -66,42 +66,4 @@ class ctrlcategoria extends CI_Controller {
           
          
     }
-
-    public function datosdeCategoria()
-	{
-		
-		$draw = intval($this->input->get("draw"));
-		$start = intval($this->input->get("start"));
-		$length = intval($this->input->get("length"));
-
-	   
-		$this->load->model('model_categoria');
-		$query = $this->model_categoria->datos();
-		$data = array();
-
-		//la base_url()
-        $url = base_url();
-		
-		foreach($query->result() as $r) {
-		 $sub_array = array();
-		 $sub_array[] = $r->cate_id;
-		 $sub_array[] = $r->cate_nombre;
-		 $sub_array[] = '<a href="'.$url.'ctrlcategoria/editar?cate_id='.$r->cate_id.'" 
-		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
-		 $sub_array[] = '<a href="'.$url.'ctrlcategoria/eliminar?cate_id='.$r->cate_id.'" 
-		 class="btn btn-danger  disabled" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
-			   
-		 $data[] = $sub_array;
-		}
-	    
-		$result = array(
-			 "draw" => $draw,
-			 "recordsTotal" => $query->num_rows(),
-			 "recordsFiltered" => $query->num_rows(),
-			 "data" => $data
-		  );
-		  echo json_encode($result);
-		exit();
-	 
-	}
 }
