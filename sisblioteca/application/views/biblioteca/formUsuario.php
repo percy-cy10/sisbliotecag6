@@ -2,6 +2,11 @@
    include("estilos.php");
   //var_dump($registros);
 ?>
+<style>
+  .error{
+      color: red;
+      }
+</style>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
 <br>
 <div class="container">
@@ -13,11 +18,11 @@
 
 
 <?php 
-    $form=array(
-      'class'=>'was-validated p-3'
-    );
-
-   echo form_open("ctrlusuarios/guardar?id=$registros->usua_id",$form);
+   
+   echo "<div>";
+      echo validation_errors();
+   echo "</div>"; 
+    echo form_open("ctrlusuarios/procesar?id=$registros->usua_id");
 
     echo "<div>";
       echo form_label('LOGIN:', 'usua_login');
@@ -29,19 +34,8 @@
         'value'=>"$registros->usua_login"
           
       );
-      echo form_input($data_us,'','required');
+      echo form_input($data_us,'');
 
-        //para el icono de error del campo usua_login
-        $error = array(
-          'class' => 'invalid-feedback',
-        );
-        echo form_label('falta completar', 'usua_login', $error);
-  
-        //para el icono de bien del campo usua_login
-        $correcto = array(
-          'class' => 'valid-feedback',
-        );
-        echo form_label('correcto', 'usua_login', $correcto);
       echo "</div>";
 
 
@@ -56,18 +50,8 @@
         'value'=>"$registros->usua_password"
           
       );
-      echo form_input($data_pas,'','required');
-      //para el icono de error del campo usua_password
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_password', $error);
-
-      //para el icono de bien del campo usua_password
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_password', $correcto);
+      echo form_input($data_pas,'');
+      
     echo "</div>";
 
 
@@ -81,18 +65,8 @@
         'value'=>"$registros->usua_codigo"
           
       );
-      echo form_input($data_cod,'','required');
-      //para el icono de error del campo usua_codigo
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_codigo', $error);
-
-      //para el icono de bien del campo usua_codigo
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_codigo', $correcto);
+      echo form_input($data_cod,'');
+      
     echo "</div>";
 
 
@@ -106,18 +80,8 @@
         'value'=>"$registros->usua_nombres"
           
       );
-      echo form_input($data_nom1,'','required');
-      //para el icono de error del campo usua_nombres
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_nombres', $error);
-
-      //para el icono de bien del campo usua_nombres
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_nombres', $correcto);
+      echo form_input($data_nom1,'');
+      
     echo "</div>";
 
 
@@ -131,18 +95,7 @@
         'value'=>"$registros->usua_apellidos"
           
       );
-      echo form_input($data_ape,'','required');
-      //para el icono de error del campo usua_apellidos
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_apellidos', $error);
-
-      //para el icono de bien del campo usua_apellidos
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_apellidos', $correcto);
+      echo form_input($data_ape,'');
     echo "</div>";
 
 
@@ -157,18 +110,7 @@
         'value'=>"$registros->usua_direccion"
           
       );
-      echo form_input($data_dir,'','required');
-      //para el icono de error del campo usua_direccion
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_direccion', $error);
-
-      //para el icono de bien del campo usua_direccion
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_direccion', $correcto);
+      echo form_input($data_dir,'');
     echo "</div>";
 
 
@@ -183,18 +125,7 @@
         'value'=>"$registros->usua_email"
           
       );
-      echo form_input($data_ema,'','required');
-      //para el icono de error del campo usua_email
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_email', $error);
-
-      //para el icono de bien del campo usua_email
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_email', $correcto);
+      echo form_input($data_ema,'');
     echo "</div>";
 
 
@@ -209,18 +140,7 @@
         'value'=>"$registros->usua_telefono"
           
       );
-      echo form_input($data_tel,'','required');
-      //para el icono de error del campo usua_telefono
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_telefono', $error);
-
-      //para el icono de bien del campo usua_telefono
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_telefono', $correcto);
+      echo form_input($data_tel,'');
     echo "</div>";
 
 
@@ -235,18 +155,7 @@
         'value'=>"$registros->usua_esadmin"
           
       );
-      echo form_input($data_esad,'','required');
-      //para el icono de error del campo usua_esadmin
-      $error = array(
-        'class' => 'invalid-feedback',
-      );
-      echo form_label('falta completar', 'usua_esadmin', $error);
-
-      //para el icono de bien del campo usua_esadmin
-      $correcto = array(
-        'class' => 'valid-feedback',
-      );
-      echo form_label('correcto', 'usua_esadmin', $correcto);
+      echo form_input($data_esad,'');
     echo "</div>";
 
       $estilos1=array(

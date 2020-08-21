@@ -74,5 +74,21 @@ class ctrlusuarios extends CI_Controller {
         redirect('Biblioteca/salir');
 
     }
+    
+    public function procesar()
+    {
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('username', 'Nombre de usuario', 'required|min_length[5]|max_length[12]');
+        $this->form_validation->set_rules('password', 'Password', 'required|matches[passconf]');
+        $this->form_validation->set_rules('passconf', 'Confirmar Password', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('formulario');
+        } else {
+            echo "Datos cargador correctamente";
+        }
+        
+    }
        
 }

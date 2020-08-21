@@ -1,5 +1,5 @@
 <?php 
-       include("estilos.php");
+        include("estilos.php");
         include("estilosTab.php");
         $this->load->view('biblioteca/header');
 		$this->load->view('biblioteca/menu');
@@ -21,7 +21,7 @@
         
          
 
-      <table class="table table-active" id="product-list">
+      <table class="table table-bordered table-active" id="product-list">
          <thead class="thead-dark">
 
                <tr>
@@ -44,7 +44,7 @@
 <script>
     $('#product-list').DataTable({
         "ajax": {
-            url : "<?php echo base_url(); ?>Welcome/datosdeCategoria",
+            url : "<?php echo base_url(); ?>ctrlcategoria/datosdeCategoria",
             type : 'POST'
         },
         
