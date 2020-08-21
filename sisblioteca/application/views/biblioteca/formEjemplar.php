@@ -3,7 +3,7 @@
 
 ?>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
-
+<br>
 <div class="container">
 
 <div class="card" style="width: 28rem;float:left;left:30%;">
@@ -11,7 +11,13 @@
   <div class="card-body">
 
 <?php 
+  
+   $form=array(
+      'class'=>'was-validated p-3'
+
+   );
    echo form_open('ctrlejemplar/guardar?id=0');
+
 
       echo form_label('TITULO:', 'ejem_titulo');
       $data_t=array(
@@ -21,7 +27,20 @@
         'type'=>'text'
          
       );
-      echo form_input($data_t,"");
+      echo form_input($data_t,'','required');
+
+      //para el icono de error del campo titulo
+      $error = array(
+       'class' => 'invalid-feedback',
+     );
+     echo form_label('falta completar', 'ejem_titulo', $error);
+
+     //para el icono de bien del campo titulo
+     $correcto = array(
+       'class' => 'valid-feedback',
+     );
+     echo form_label('correcto', 'ejem_titulo', $correcto);
+
 
       echo form_label('EDITORIAL:', 'ejem_editorial');
       $data_e=array(
