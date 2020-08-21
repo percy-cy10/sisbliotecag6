@@ -74,8 +74,6 @@ class ctrlusuarios extends CI_Controller {
         redirect('Biblioteca/salir');
 
     }
-<<<<<<< HEAD
-=======
 
     public function procesar()
     {
@@ -93,6 +91,5 @@ class ctrlusuarios extends CI_Controller {
         }
         
     }
->>>>>>> e9d7f08d275bb00bcd3d885d00b6264e55aaea4d
        
 }
