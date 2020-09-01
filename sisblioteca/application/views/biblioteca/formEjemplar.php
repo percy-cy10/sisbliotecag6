@@ -2,6 +2,12 @@
  include("estilos.php");
 
 ?>
+<style>
+    .error{
+       color: red;
+    }
+</style>
+
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
 <br>
 <div class="container">
@@ -11,36 +17,33 @@
   <div class="card-body">
 
 <?php 
-  
-   $form=array(
-      'class'=>'was-validated p-3'
 
-   );
-   echo form_open('ctrlejemplar/guardar?id=0');
+    $form=array(
+        'class'=>'was-validated p-3'
 
+    );
+    echo form_open('ctrlejemplar/procesar?id=0');
+
+    echo "<div class='error'>";
+      echo form_error('ejem_titulo');
+    echo "</div>";
+    
+    $var=set_value('ejem_titulo');
 
       echo form_label('TITULO:', 'ejem_titulo');
       $data_t=array(
         'name'=> 'ejem_titulo',
         'class'=> 'form-control',
         'id'=>'ejem_titulo',
-        'type'=>'text'
-         
+        'type'=>'text',
+        'value'=>"$var"
+        
       );
-      echo form_input($data_t,'','required');
+      echo form_input($data_t,'');
 
-      //para el icono de error del campo titulo
-      $error = array(
-       'class' => 'invalid-feedback',
-     );
-     echo form_label('falta completar', 'ejem_titulo', $error);
-
-     //para el icono de bien del campo titulo
-     $correcto = array(
-       'class' => 'valid-feedback',
-     );
-     echo form_label('correcto', 'ejem_titulo', $correcto);
-
+      echo "<div class='error'>";
+         echo form_error('ejem_editorial');
+      echo "</div>";
 
       echo form_label('EDITORIAL:', 'ejem_editorial');
       $data_e=array(
@@ -52,6 +55,9 @@
       );
       echo form_input($data_e,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_paginas');
+      echo "</div>";
       echo form_label('PAGINAS:', 'ejem_paginas');
       $data_p=array(
         'name'=> 'ejem_paginas',
@@ -62,6 +68,9 @@
       );
       echo form_input($data_p,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_isbn');
+      echo "</div>";
       echo form_label('ISBN:', 'ejem_isbn');
       $data_i=array(
         'name'=> 'ejem_isbn',
@@ -72,6 +81,9 @@
       );
       echo form_input($data_i,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_idioma');
+      echo "</div>";
       echo form_label('IDIOMA:', 'ejem_idioma');
       $data_id=array(
         'name'=> 'ejem_idioma',
@@ -82,6 +94,9 @@
       );
       echo form_input($data_id,"");
        
+      echo "<div class='error'>";
+         echo form_error('ejem_portada');
+      echo "</div>";
       echo form_label('PORTADA:', 'ejem_portada');
       $data_por=array(
         'name'=> 'ejem_portada',
@@ -92,6 +107,9 @@
       );
       echo form_input($data_por,"");
 
+      echo "<div class='error'>";
+        echo form_error('ejem_digital');
+      echo "</div>";
       echo form_label('DIGITAL:', 'ejem_digital');
       $data_dig=array(
         'name'=> 'ejem_digital',
@@ -103,6 +121,9 @@
       );
       echo form_input($data_dig,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_audio');
+      echo "</div>";
       echo form_label('AUDIO:', 'ejem_audio');
       $data_au=array(
         'name'=> 'ejem_audio',
@@ -113,7 +134,10 @@
          
       );
       echo form_input($data_au,"");
-
+ 
+      echo "<div class='error'>";
+        echo form_error('ejem_resumen');
+      echo "</div>";
       echo form_label('RESUMEN:', 'ejem_resumen');
       $data_res=array(
         'name'=> 'ejem_resumen',
@@ -124,7 +148,10 @@
          
       );
       echo form_input($data_res,"");
-
+      
+      echo "<div class='error'>";
+        echo form_error('ejem_cate_id');
+      echo "</div>";
       echo form_label('EJEM_CATE_ID: &nbsp;', 'ejem_cate_id');
       echo "<br>";
       $estilos=array(
@@ -133,6 +160,9 @@
       );
       echo form_dropdown('ejem_cate_id',$opciones,'',$estilos);
 
+      echo "<div class='error'>";
+         echo form_error('ejem_valoracion');
+      echo "</div>";
       echo form_label('VALORACION:', 'ejem_valoracion');
       $data_var=array(
         'name'=> 'ejem_valoracion',
@@ -144,6 +174,9 @@
       );
       echo form_input($data_var,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_anio');
+      echo "</div>";
       echo form_label('AÑO:', 'ejem_anio');
       $data_anio=array(
         'name'=> 'ejem_anio',
@@ -155,6 +188,9 @@
 
       echo form_input($data_anio,"");
 
+      echo "<div class='error'>";
+         echo form_error('ejem_nprestamos');
+      echo "</div>";
       echo form_label('NUMERO DE PRESTAMOS:', 'ejem_nprestamos');
       $data_nP=array(
         'name'=> 'ejem_nprestamos',
