@@ -94,19 +94,19 @@ class ctrlejemplar extends CI_Controller {
         $id = $this->input->get('id');
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('ejem_titulo', 'Titulo', 'required','alpha');
-        $this->form_validation->set_rules('ejem_editorial', 'editorial', 'required','alpha');
-        $this->form_validation->set_rules('ejem_paginas', 'paginas', 'required','numeric');
-        $this->form_validation->set_rules('ejem_isbn', 'isb', 'required','numeric');
-        $this->form_validation->set_rules('ejem_idioma', 'idioma', 'required','alpha');
-        $this->form_validation->set_rules('ejem_portada', 'portada', 'required','alpha');
-        $this->form_validation->set_rules('ejem_digital', 'digital', 'required','alpha');
-        $this->form_validation->set_rules('ejem_audio', 'audio', 'required','alpha');
-        $this->form_validation->set_rules('ejem_resumen', 'resumen', 'required','alpha');
-        $this->form_validation->set_rules('ejem_cate_id', 'cate_id', 'required');
-        $this->form_validation->set_rules('ejem_valoracion', 'valoracion', 'required','alpha');
-        $this->form_validation->set_rules('ejem_anio', 'anio', 'required','numeric');
-        $this->form_validation->set_rules('ejem_nprestamos', 'prestamos', 'required','numeric');
+        $this->form_validation->set_rules('ejem_titulo', 'Titulo','alpha|required');
+        $this->form_validation->set_rules('ejem_editorial', 'editorial','alpha|required');
+        $this->form_validation->set_rules('ejem_paginas', 'paginas','numeric|required');
+        $this->form_validation->set_rules('ejem_isbn', 'isb','numeric|required');
+        $this->form_validation->set_rules('ejem_idioma', 'idioma','alpha|required');
+        $this->form_validation->set_rules('ejem_portada', 'portada','alpha|required');
+        $this->form_validation->set_rules('ejem_digital', 'digital','alpha|required');
+        $this->form_validation->set_rules('ejem_audio', 'audio','alpha|required');
+        $this->form_validation->set_rules('ejem_resumen', 'resumen','alpha|required');
+        $this->form_validation->set_rules('ejem_cate_id', 'cate_id','required');
+        $this->form_validation->set_rules('ejem_valoracion', 'valoracion','alpha|required');
+        $this->form_validation->set_rules('ejem_anio', 'anio','numeric|required');
+        $this->form_validation->set_rules('ejem_nprestamos', 'prestamos','numeric|required');
         
 
         if ($this->form_validation->run() == FALSE) {
