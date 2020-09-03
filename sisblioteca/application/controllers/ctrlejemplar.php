@@ -94,10 +94,10 @@ class ctrlejemplar extends CI_Controller {
         $id = $this->input->get('id');
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('ejem_titulo', 'Titulo','alpha|required');
+        $this->form_validation->set_rules('ejem_titulo', 'Titulo','required');
         $this->form_validation->set_rules('ejem_editorial', 'editorial','alpha|required');
         $this->form_validation->set_rules('ejem_paginas', 'paginas','numeric|required');
-        $this->form_validation->set_rules('ejem_isbn', 'isb','is_natural|required');
+        $this->form_validation->set_rules('ejem_isbn', 'isb','is_natural|required|min_length[8]|max_length[8]');
         $this->form_validation->set_rules('ejem_idioma', 'idioma','alpha|required');
         $this->form_validation->set_rules('ejem_portada', 'portada','alpha|required');
         $this->form_validation->set_rules('ejem_digital', 'digital','alpha|required');
