@@ -1,10 +1,10 @@
 <style>
     
     #div{
-      margin:0 0 0 -8%;
+      margin:0 0 0 -4%;
        border-radius:1%;
   }
-  
+
 
 
 </style>
@@ -14,7 +14,8 @@
  $posicion=$this->session->userdata('veri'); 
 
 
-   include('estilos.php');
+      include('estilos.php');
+      include("estilosTab.php");
       $this->load->view('biblioteca/header');
 		$this->load->view('biblioteca/menu');
 		$this->load->view('biblioteca/footer');
@@ -29,7 +30,7 @@
         
          
 
-            <table class="table table-bordered table-active">
+         <table class="table table-bordered table-active " id="ejemplar_list">
             <thead class="thead-dark">
 
 
@@ -46,36 +47,26 @@
                      <th>PRESTAMOS</th>
 
                      <?php if($posicion==2):?>
-                         <th>OPCIONES</th>
-                      <?php endif;?>
+                         <th>EDITAR</th>
+                         <th>ELIMINAR</th>
+                     <?php endif;?>
                   </tr>
             </thead>
             <tbody>
-               <?php foreach($registros as $reg): ?>
-               <tr>
-                  <td><?php echo $reg->ejem_id; ?></td>
-                  <td><?php echo $reg->ejem_titulo; ?></td>
-                  <td><?php echo $reg->ejem_editorial; ?></td>
-                  <td><?php echo $reg->ejem_paginas; ?></td>
-                  <td><?php echo $reg->ejem_isbn; ?></td>
-                  <td><?php echo $reg->ejem_idioma; ?></td>
-                  <td><?php echo $reg->ejem_resumen; ?></td>
-                  <td><?php echo $reg->cate_nombre; ?></td>
-                  <td><?php echo $reg->ejem_anio; ?></td>                 
-                  <td><?php echo $reg->ejem_nprestamos; ?></td>
+              
 
-                  <?php if($posicion==2):?>
-                     <td>
-                        <a href="<?php echo base_url();?>ctrlejemplar/editar?id=<?php echo $reg->ejem_id;?>" class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>
-                        <a href="<?php echo base_url();?>ctrlejemplar/eliminar?id=<?php echo $reg->ejem_id;?>" class="btn btn-danger"><li class="fa fa-trash"></li>&nbspEliminar</a>
-                     </td>
-                 <?php endif;?>
-               </tr>
-               <?php endforeach; ?>
             </tbody>
          </table>
   </div>
 </div>
 </div>
+<script>
+    $('#ejemplar_list').DataTable({
+        "ajax": {
+            url : "<?php echo base_url(); ?>ctrlejemplar/datosdeejemplar",
+            type : 'POST'
+        },  
+    });
+</script>
 
 

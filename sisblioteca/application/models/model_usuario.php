@@ -6,6 +6,10 @@ class Model_usuario extends CI_model
             $query = $this->db->get('usuario', 10);
             return $query->result();
     }
+    public function datos(){
+        $query = $this->db->get('usuario');
+        return $query;
+}
     public function guardar($data,$id){
         if($id>0){
                 $this->db->where('usua_id', $id);

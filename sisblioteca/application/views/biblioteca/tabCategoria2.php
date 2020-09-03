@@ -5,23 +5,25 @@
 		$this->load->view('biblioteca/menu');
 		$this->load->view('biblioteca/footer');
 ?>
-  
-
-  <?php 
-
-
-
+<?php 
         $posicion=$this->session->userdata('veri'); 
         $this->load->view('biblioteca/header');
 		$this->load->view('biblioteca/footer');
 ?>
+<style>
+    #div{
+      margin:0 0 0 -3%;
+     border-radius:1%;
+  }
+</style>
 <br>
-
+<div class="container">
+<div class="row">
+  <div class=" col-sm-8.2 p-3 bg-white " id="div">
      <h1 class="text-warning text-center font-weight-bold">CATEGORIA</h1>
-        
-         
 
-      <table class="table table-active" id="product-list">
+
+      <table class="table table-active" id="categoria_list">
          <thead class="thead-dark">
 
                <tr>
@@ -39,20 +41,19 @@
                 
          </tbody>
 	   </table>
-  
    <br>
+   </div>
+  </div>
+</div>
+
 <script>
-    $('#product-list').DataTable({
+    $('#categoria_list').DataTable({
         "ajax": {
-            url : "<?php echo base_url(); ?>Welcome/datosdeCategoria",
+            url : "<?php echo base_url(); ?>ctrlcategoria/datosdeCategoria",
             type : 'POST'
-        },
-        
-       
+        },     
     });
    
-
- 
 </script>
 
 

@@ -92,4 +92,53 @@ class ctrlusuarios extends CI_Controller {
         
     }
        
+    public function datosdeUsuarios()
+	{
+		
+		$draw = intval($this->input->get("draw"));
+		$start = intval($this->input->get("start"));
+		$length = intval($this->input->get("length"));
+
+
+		
+	   
+		$this->load->model('model_usuario');
+		$query = $this->model_usuario->datos();
+        $data = array();
+        
+        
+        
+		//la base_url()
+        $url = base_url();
+		
+		foreach($query->result() as $r) {
+		 $sub_array = array();
+		 $sub_array[] = $r->usua_id;
+         $sub_array[] = $r->usua_login;
+         $sub_array[] = $r->usua_password;
+         $sub_array[] = $r->usua_codigo;
+         $sub_array[] = $r->usua_nombres;
+         $sub_array[] = $r->usua_apellidos;
+         $sub_array[] = $r->usua_email;
+         $sub_array[] = $r->usua_direccion;
+         $sub_array[] = $r->usua_telefono;
+         
+		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/index?id='.$r->usua_id.'" 
+		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/eliminar?id='.$r->usua_id.'" 
+		 class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+			   
+		 $data[] = $sub_array;
+		}
+	    
+		$result = array(
+			 "draw" => $draw,
+			 "recordsTotal" => $query->num_rows(),
+			 "recordsFiltered" => $query->num_rows(),
+			 "data" => $data
+		  );
+		  echo json_encode($result);
+		exit();
+	 
+	}
 }

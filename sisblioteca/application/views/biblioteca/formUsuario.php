@@ -1,6 +1,5 @@
 <?php 
    include("estilos.php");
-  //var_dump($registros);
 ?>
 <body class="full-cover-background" style="background-image:url(https://thumbs.dreamstime.com/z/biblioteca-fondo-de-los-estantes-blancos-con-libros-y-texto-concepto-del-aprendizaje-la-educaci-n-ilustraci-n-d-145388432.jpg);">
 <br>
@@ -14,13 +13,16 @@
 
 <?php 
     $form=array(
-      'class'=>'was-validated p-3'
+      'class'=>'was-validated p-3',
+      'id'=>'loginForm'
     );
 
    echo form_open("ctrlusuarios/guardar?id=$registros->usua_id",$form);
 
     echo "<div>";
-      echo form_label('LOGIN:', 'usua_login');
+      
+     
+      echo form_label('LOGIN:', 'usua_login','required');
       $data_us=array(
         'name'=> 'usua_login',
         'class'=> 'form-control',
@@ -30,7 +32,7 @@
           
       );
       echo form_input($data_us,'','required');
-
+      
         //para el icono de error del campo usua_login
         $error = array(
           'class' => 'invalid-feedback',
@@ -52,7 +54,7 @@
         'name'=> 'usua_password',
         'class'=> 'form-control',
         'id'=>'usua_password',
-        'type'=>'password',
+        'type'=>'text',
         'value'=>"$registros->usua_password"
           
       );

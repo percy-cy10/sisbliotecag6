@@ -9,6 +9,13 @@ class model_ejemplar extends CI_Model {
             $query = $this->db->get('ejemplar', 100);
             return $query->result();
     }
+
+    public function datos(){
+        
+        return $this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=cate_id");
+     
+    }
+
     public function guardar($data,$id){
         if($id>0){
                 $this->db->where('ejem_id', $id);
