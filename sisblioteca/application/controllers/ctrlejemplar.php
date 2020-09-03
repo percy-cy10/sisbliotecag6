@@ -100,19 +100,19 @@ class ctrlejemplar extends CI_Controller {
         $id = $this->input->get('id');
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('ejem_titulo', 'Titulo','alpha|required');
+        $this->form_validation->set_rules('ejem_titulo', 'Titulo','required');
         $this->form_validation->set_rules('ejem_editorial', 'editorial','alpha|required');
         $this->form_validation->set_rules('ejem_paginas', 'paginas','numeric|required');
-        $this->form_validation->set_rules('ejem_isbn', 'isb','numeric|required');
+        $this->form_validation->set_rules('ejem_isbn', 'isb','is_natural|required|min_length[8]|max_length[8]');
         $this->form_validation->set_rules('ejem_idioma', 'idioma','alpha|required');
         $this->form_validation->set_rules('ejem_portada', 'portada','alpha|required');
         $this->form_validation->set_rules('ejem_digital', 'digital','alpha|required');
         $this->form_validation->set_rules('ejem_audio', 'audio','alpha|required');
         $this->form_validation->set_rules('ejem_resumen', 'resumen','alpha|required');
         $this->form_validation->set_rules('ejem_cate_id', 'cate_id','required');
-        $this->form_validation->set_rules('ejem_valoracion', 'valoracion','alpha|required');
-        $this->form_validation->set_rules('ejem_anio', 'anio','numeric|required');
-        $this->form_validation->set_rules('ejem_nprestamos', 'prestamos','numeric|required');
+        $this->form_validation->set_rules('ejem_valoracion', 'valoracion','numeric|required');
+        $this->form_validation->set_rules('ejem_anio', 'anio','date|required');
+        $this->form_validation->set_rules('ejem_nprestamos', 'prestamos','is_natural|required');
         
 
         if ($this->form_validation->run() == FALSE) {
