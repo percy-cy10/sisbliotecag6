@@ -5,7 +5,7 @@
 <br>
 <div class="container">
 
-<div class="card" style="width: 35rem; left:27%;">
+<div class="card" style="width: 35rem; left:23%;">
 <br>
 <h1 style="text-align: center;color:orange;">REGISTRE SUS DATOS</h1>
   <div class="card-body">
@@ -79,7 +79,9 @@
         'name'=> 'usua_codigo',
         'class'=> 'form-control',
         'id'=>'usua_codigo',
-        'type'=>'text',
+        'type'=>'number',
+        'maxlength'=>'4',
+        'minlength'=>'4',
         'value'=>"$registros->usua_codigo"
           
       );
@@ -207,16 +209,21 @@
         'name'=> 'usua_telefono',
         'class'=> 'form-control',
         'id'=>'usua_telefono',
-        'type'=>'text',
+        'type'=>'tel',
+        'maxlength'=>'9',
+        'minlength'=>'9',
         'value'=>"$registros->usua_telefono"
           
       );
       echo form_input($data_tel,'','required');
+      
+      
       //para el icono de error del campo usua_telefono
+      
       $error = array(
         'class' => 'invalid-feedback',
       );
-      echo form_label('falta completar', 'usua_telefono', $error);
+      echo form_label('tiene que tener 9 digitos', 'usua_telefono', $error);
 
       //para el icono de bien del campo usua_telefono
       $correcto = array(
