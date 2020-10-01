@@ -1,7 +1,7 @@
 <style>
     
     #div{
-      margin:0 0 0 -4%;
+      margin:0 0 0 -9%;
        border-radius:1%;
   }
 
@@ -49,6 +49,7 @@
                      <?php if($posicion==2):?>
                          <th>EDITAR</th>
                          <th>ELIMINAR</th>
+                         <th>IMPRIMIR</th>
                      <?php endif;?>
                   </tr>
             </thead>

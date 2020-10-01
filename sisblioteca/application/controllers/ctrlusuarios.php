@@ -126,7 +126,9 @@ class ctrlusuarios extends CI_Controller {
 		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/index?id='.$r->usua_id.'" 
 		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
 		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/eliminar?id='.$r->usua_id.'" 
-		 class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+         class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+         $sub_array[] = '<a href="'.$url.'ctrlusuarios/imprimir?id='.$r->usua_id.'" 
+		 class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
 			   
 		 $data[] = $sub_array;
 		}
@@ -140,5 +142,40 @@ class ctrlusuarios extends CI_Controller {
 		  echo json_encode($result);
 		exit();
 	 
-	}
+    }
+    
+    function imprimir(){
+         $id = $this->input->get('id');
+         $this->load->library('pdf');
+
+         $pdf = new PDF();
+         $pdf->AliasNbPages();
+         $pdf->AddPage();
+         $pdf->SetFont('Times','',12);
+        
+         $this->load->model('model_usuario');
+         $rows = $this->model_usuario->consultarPdf($id);
+         $pdf->Rect(5, 50, 200, 100);
+         $pdf->ln(20);
+
+         foreach ($rows->result() as $row) {
+             $pdf->Text(20,60,'Usuario');
+             $pdf->Text(100,60,$row->usua_login);
+             $pdf->Text(20,70,utf8_decode('Contraseña'));
+             $pdf->Text(100,70,$row->usua_password);
+             $pdf->Text(20,80,'Codigo');
+             $pdf->Text(100,80,$row->usua_codigo);
+             $pdf->Text(20,90,'Nombres');
+             $pdf->Text(100,90,$row->usua_nombres);
+             $pdf->Text(20,100,'Apellidos');
+             $pdf->Text(100,100,$row->usua_apellidos);
+             $pdf->Text(20,110,'Email');
+             $pdf->Text(100,110,$row->usua_email);
+             $pdf->Text(20,120,'Direccion');
+             $pdf->Text(100,120,$row->usua_direccion);
+             $pdf->Text(20,130,'Telefono');
+             $pdf->Text(100,130,$row->usua_telefono);
+         }
+         $pdf->Output();
+    }
 }

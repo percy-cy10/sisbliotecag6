@@ -90,7 +90,8 @@ class ctrlcategoria extends CI_Controller {
             class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
             $sub_array[] = '<a href="'.$url.'ctrlcategoria/eliminar?cate_id='.$r->cate_id.'" 
             class="btn btn-danger  disabled" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
-                
+            $sub_array[] = '<a href="'.$url.'ctrlcategoria/imprimir?id='.$r->cate_id.'" 
+            class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
             $data[] = $sub_array;
 		}
 	    
@@ -104,6 +105,23 @@ class ctrlcategoria extends CI_Controller {
 		exit();
 	 
     }
+    function imprimir(){
+        $id = $this->input->get('id');
+        $this->load->library('pdf');
+
+        $pdf = new PDF();
+        $pdf->AliasNbPages();
+        $pdf->AddPage();
+        $pdf->SetFont('Times','',12);
+       
+        $this->load->model('model_categoria');
+        $rows = $this->model_categoria->consultarPDF($id);
+  
+        $header = array('categoria id', 'categoria nombre');
+        $pdf->BasicTable($header,$rows);
+        $pdf->Output();
+        
+   }
     
 
 

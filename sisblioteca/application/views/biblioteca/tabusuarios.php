@@ -8,7 +8,7 @@
 <style>
     
     #div{
-       margin:0 0 0 %;
+       margin:0 0 0 -9%;
        border-radius:1%;
   }
 </style>
@@ -35,9 +35,10 @@
                   <th>TELEFONO</th>
                   <th>EDITAR</th>
                   <th>ELIMINAR</th>
+                  <th>PDF</th>
                </tr>
-         </thead>
-         <tbody>
+          </thead>
+          <tbody>
 	    	
 			
 		   </tbody>

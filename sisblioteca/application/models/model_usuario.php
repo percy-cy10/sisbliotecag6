@@ -6,10 +6,12 @@ class Model_usuario extends CI_model
             $query = $this->db->get('usuario', 10);
             return $query->result();
     }
+
     public function datos(){
         $query = $this->db->get('usuario');
         return $query;
-}
+    }
+
     public function guardar($data,$id){
         if($id>0){
                 $this->db->where('usua_id', $id);
@@ -23,6 +25,10 @@ class Model_usuario extends CI_model
     }
     public function consultar1($id){
         return $this->db->get_where("usuario", array("usua_id" => $id))->row();
+        
+    }
+    public function consultarPdf($id){
+        return $this->db->get_where("usuario", array("usua_id" => $id));
         
     }
 

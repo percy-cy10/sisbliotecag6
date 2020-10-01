@@ -22,6 +22,11 @@ class model_categoria extends CI_Model {
                 $this->db->insert('categoria',$data);
          }
     } 
+    public function consultarPDF($id){
+        
+        return $this->db->query("SELECT * FROM categoria WHERE cate_id=$id");
+        
+    }
     public function consultar1($id){
       return $this->db->get_where("categoria", array("cate_id" => $id))->row();
         

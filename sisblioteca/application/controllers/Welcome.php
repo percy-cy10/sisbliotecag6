@@ -81,6 +81,7 @@ class Welcome extends CI_Controller {
 	public function categoria()
 	{
 		$this->load->helper('form');
+		$this->load->helper("formularioCat");
 		$this->load->view('biblioteca/formCategoria1');
 	}
 	

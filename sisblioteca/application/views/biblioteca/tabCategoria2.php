@@ -31,9 +31,8 @@
                   <th>NOMBRE CATEGORIA</th>
                   <?php if($posicion==2):?>
                      <th>EDITAR</th>
-                  <?php endif;?>
-                  <?php if($posicion==2):?>
                      <th>ELIMINAR</th>
+                     <th>IMPRIMIR</th>
                   <?php endif;?>
                </tr>
          </thead>

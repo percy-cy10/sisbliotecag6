@@ -15,6 +15,11 @@ class model_ejemplar extends CI_Model {
         return $this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=cate_id");
      
     }
+    public function datosPdf($id){
+        
+        return $this->db->query("SELECT * FROM ejemplar,categoria WHERE ejem_cate_id=$id AND cate_id=$id");
+     
+    }
 
     public function guardar($data,$id){
         if($id>0){

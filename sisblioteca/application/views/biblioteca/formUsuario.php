@@ -32,7 +32,7 @@
           
       );
       echo form_input($data_us,'','required');
-      
+   
         //para el icono de error del campo usua_login
         $error = array(
           'class' => 'invalid-feedback',
