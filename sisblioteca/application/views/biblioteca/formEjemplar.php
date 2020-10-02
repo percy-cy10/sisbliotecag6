@@ -190,10 +190,11 @@
           echo form_label('PORTADA:', 'ejem_portada');
           $data_por=array(
             'name'=> 'ejem_portada',
-            'class'=> 'form-control',
+            'class'=>'form-control input-lg',
             'id'=>'ejem_portada',
-            'type'=>'text',
+            'type'=>'file',
             'value'=>"$porv"
+            
         
           );
           echo form_input($data_por,"",'required');

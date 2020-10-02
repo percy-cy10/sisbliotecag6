@@ -76,7 +76,7 @@
         'class'=> 'form-control',
         'id'=>'ejem_portada',
         'type'=>'text',
-        'value'=>"$registros->ejem_portada"
+        'value'=>"$registros->ejem_portada",
          
       );
       echo form_input($data_por,"");
