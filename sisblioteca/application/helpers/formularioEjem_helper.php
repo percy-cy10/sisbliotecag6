@@ -23,7 +23,7 @@
     }
 
 
-    $out.= '</select>';
+    $out.= '</select></br>';
 
     return $out;
    }
