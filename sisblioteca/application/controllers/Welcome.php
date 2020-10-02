@@ -65,11 +65,13 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_categoria');
         $result = $this->model_categoria->consultar();
 		$datos = array('registros'=>$result);
+		$error = array('error'=>'');
 
+		$todo = $datos + $error;
 
 		$this->load->helper("formularioEjem");
 
-		$this->load->view('biblioteca/formEjemplar',$datos);
+		$this->load->view('biblioteca/formEjemplar',$todo);
 
 
 		

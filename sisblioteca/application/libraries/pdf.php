@@ -7,6 +7,7 @@
             // Logo
             $this->Image(FCPATH.'assets/logo.jpg',10,10,35,30);
             $this->Image(FCPATH.'assets/logo1.jpg',170,10,33,33);
+           
             // Arial bold 15
             $this->SetFont('Arial','B',15);
             // Movernos a la derecha

@@ -13,7 +13,7 @@
           <?php
  
             echo form_open('ctrlcategoria/guardar?cate_id=0');
-            //las letras falta completar y correcto
+            
               echo miinput('number',"cate_id",'CATEGORIA ID:','opcion','required');
               echo miinput('text',"cate_nombre",'CATEGORIA NOMBRES:','categoria','required');
               echo miButon('btn btn-success','Guardar');

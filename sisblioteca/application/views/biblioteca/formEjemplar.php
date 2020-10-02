@@ -24,7 +24,7 @@
         'id'=>'loginForm'
 
     );
-    echo form_open('ctrlejemplar/procesar?id=0',$form);
+    echo form_open_multipart('ctrlejemplar/procesar?id=0',$form);
 
     
 
@@ -32,9 +32,8 @@
     echo miinput('text',"ejem_editorial",'EDITORIAL:','','required');
     echo miinput('text',"ejem_paginas",'PAGINAS:','','required');
     echo miinput('text',"ejem_isbn",'ISBN:','','required');
-    echo miinput('text',"ejem_isbn",'ISBN:','','required');
     echo miinput('text',"ejem_idioma",'IDIOMA:','','required');
-    echo miinput('text',"ejem_portada",'PORTADA:','','required');
+    echo miinput('file',"ejem_portada",'PORTADA:','','required');
     echo miinput('text',"ejem_digital",'DIGITAL:','','required');
     echo miinput('text',"ejem_audio",'AUDIO:','','required');
     echo miinput('text',"ejem_resumen",'RESUMEN:','','required');

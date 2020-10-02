@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ctrlejemplar extends CI_Controller {
 
+    function __construct(){
+        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+
+    }
+
 	public function index(){
         
     }
@@ -135,34 +141,53 @@ class ctrlejemplar extends CI_Controller {
             
         
       //  } else {*/
-            
-            $ejem_titulo = $this->input->post('ejem_titulo');
+
+
+
+
+
+            $Titulo = $this->input->post('ejem_titulo');
+            $file = uniqid();
+
+            $data = $this->do_upload('./uploads/',$file);
+
+            if(!$data)die("archivo vacio");
+
+            $archivo = $data['file_name'];
+
+            /*$data=array(
+                'ejem_titulo'=>$Titulo,
+                'ejem_portada'=>$archivo
+
+            );*/
+            //$this->db->insert('ejemplar',$data);
+
+
+
+
+
             $ejem_editorial = $this->input->post('ejem_editorial');
             $ejem_paginas = $this->input->post('ejem_paginas');
             $ejem_isbn = $this->input->post('ejem_isbn');
             $ejem_idioma = $this->input->post('ejem_idioma');
-            $ejem_portada = $this->input->post('ejem_portada');
             $ejem_digital = $this->input->post('ejem_digital');
             $ejem_audio = $this->input->post('ejem_audio');
             $ejem_resumen = $this->input->post('ejem_resumen');
             $ejem_tipo_id = $this->input->post('ejem_tipo_id');
-   
             $ejem_cate_id = $this->input->post('ejem_cate_id');
-            
             $ejem_valoracion = $this->input->post('ejem_valoracion');
-   
             $ejem_anio = $this->input->post('ejem_anio');
             $ejem_nprestamos = $this->input->post('ejem_nprestamos');
    
             $this->load->model('model_ejemplar');
             
             $data=array(
-                'ejem_titulo'=>$ejem_titulo,
+                'ejem_titulo'=>$Titulo,
                 'ejem_editorial'=>$ejem_editorial,
                 'ejem_paginas'=>$ejem_paginas,
                 'ejem_isbn'=>$ejem_isbn,
                 'ejem_idioma'=>$ejem_idioma,
-                'ejem_portada'=>$ejem_portada,
+                'ejem_portada'=>$archivo,
                 'ejem_digital'=>$ejem_digital,
                 'ejem_audio'=>$ejem_audio,
                 'ejem_resumen'=>$ejem_resumen,
@@ -172,7 +197,7 @@ class ctrlejemplar extends CI_Controller {
                 'ejem_anio'=>$ejem_anio,
                 'ejem_nprestamos'=>$ejem_nprestamos              
             );
-        $this->model_ejemplar->guardar($data,$id);
+           $this->model_ejemplar->guardar($data,$id);
        
            redirect();
 
@@ -207,26 +232,29 @@ class ctrlejemplar extends CI_Controller {
         $url = base_url();
 		
 		foreach($query->result() as $r) {
-		 $sub_array = array();
-		 $sub_array[] = $r->ejem_id;
-         $sub_array[] = $r->ejem_titulo;
-         $sub_array[] = $r->ejem_editorial;
-         $sub_array[] = $r->ejem_paginas;
-         $sub_array[] = $r->ejem_isbn;
-         $sub_array[] = $r->ejem_idioma;
-         $sub_array[] = $r->ejem_portada;
-         $sub_array[] = $r->ejem_resumen;
-         $sub_array[] = $r->cate_nombre;
-         $sub_array[] = $r->ejem_anio;
-         
-		 $sub_array[] = '<a href="'.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
-		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
-		 $sub_array[] = '<a href="'.$url.'ctrlejemplar/eliminar?id='.$r->ejem_id.'" 
-         class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
-         $sub_array[] = '<a href="'.$url.'ctrlejemplar/imprimir?id='.$r->ejem_cate_id.'" 
-		 class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
-			   
-		 $data[] = $sub_array;
+            $sub_array = array();
+            $sub_array[] = $r->ejem_id;
+            $sub_array[] = $r->ejem_titulo;
+            $sub_array[] = $r->ejem_editorial;
+            $sub_array[] = $r->ejem_paginas;
+            $sub_array[] = $r->ejem_isbn;
+            $sub_array[] = $r->ejem_idioma;
+            $sub_array[] = '<img width="80" src=" '.$url.'uploads/'.$r->ejem_portada.' "  >';
+            $sub_array[] = $r->ejem_resumen;
+            $sub_array[] = $r->cate_nombre;
+            $sub_array[] = $r->ejem_anio;
+            
+
+            $sub_array[] = '<a href=" '.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
+            class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+
+            $sub_array[] = '<a href="'.$url.'ctrlejemplar/eliminar?id='.$r->ejem_id.'" 
+
+            class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+            $sub_array[] = '<a href="'.$url.'ctrlejemplar/imprimir?id='.$r->ejem_cate_id.'" 
+            class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
+                
+            $data[] = $sub_array;
 		}
 	    
 		$result = array(
@@ -254,7 +282,7 @@ class ctrlejemplar extends CI_Controller {
        
         $this->load->model('model_ejemplar');
         $rows = $this->model_ejemplar->datosPdf($id);
-        $pdf->Rect(5, 50, 200, 100);
+        $pdf->Rect(5, 50, 200, 150);
         $pdf->ln(20);
 
         foreach ($rows->result() as $row) {
@@ -274,17 +302,73 @@ class ctrlejemplar extends CI_Controller {
             $pdf->Text(100,120,$row->cate_nombre);
             $pdf->Text(20,130,utf8_decode('Año'));
             $pdf->Text(100,130,$row->ejem_anio);
+
             $pdf->Text(20,140,'Prestamos');
             $pdf->Text(100,140,$row->ejem_nprestamos);
 
+            $pdf->Text(20,150,"portada");
+           
+            
 
-            $pdf->Text(20,110,'portada');
-            $pdf->Text(100,110,$row->ejem_portada);
+            $pdf->Image(FCPATH."uploads/$row->ejem_portada",100,150,33,33);
+           
+            
         }
         $pdf->Output();
    }
 
 
+
+
+
+
+
+   function subir(){
+
+    $Titulo = $this->input->post('ejem_titulo');
+    $file = uniqid();
+
+    $data = $this->do_upload('./uploads/',$file);
+
+    if(!$data)die("archivo vacio");
+
+    $archivo = $data['file_name'];
+
+    $data=array(
+        'ejem_titulo'=>$Titulo,
+        'ejem_portada'=>$archivo
+
+    );
+    $this->db->insert('ejemplar',$data);
+}
+
+
+
+
+
+   public function do_upload($path,$name)
+   {
+           $config['upload_path']          = $path;
+           $config['allowed_types']        = 'gif|jpg|png|doc|docx|xls|xlsx|pdf|jpeg';
+           $config['file_name']            = $name;
+           $config['max_size']             = 5000;
+           $config['max_width']            = 1024;
+           $config['max_height']           = 768;
+
+           $this->load->library('upload', $config);
+
+           if ( ! $this->upload->do_upload('ejem_portada')){
+           
+                   return false;
+           } else {
+                   $data =$this->upload->data();
+                   
+                   return $data;
+
+           }
+   }
+
+   
    
     
 }
