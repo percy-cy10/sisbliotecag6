@@ -106,7 +106,7 @@ class ctrlejemplar extends CI_Controller {
 
         $id = $this->input->get('id');
 
-        $this->load->library('form_validation');
+        /*$this->load->library('form_validation');
         $this->form_validation->set_rules('ejem_titulo', 'Titulo','alpha|required');
         $this->form_validation->set_rules('ejem_editorial', 'editorial','alpha|required');
         $this->form_validation->set_rules('ejem_paginas', 'paginas','numeric|required');
@@ -134,7 +134,7 @@ class ctrlejemplar extends CI_Controller {
             $this->load->view("biblioteca/formejemplar",$data);
             
         
-        } else {
+      //  } else {*/
             
             $ejem_titulo = $this->input->post('ejem_titulo');
             $ejem_editorial = $this->input->post('ejem_editorial');
@@ -176,7 +176,7 @@ class ctrlejemplar extends CI_Controller {
        
            redirect();
 
-        }
+      //  }
     }
     
 
@@ -214,10 +214,10 @@ class ctrlejemplar extends CI_Controller {
          $sub_array[] = $r->ejem_paginas;
          $sub_array[] = $r->ejem_isbn;
          $sub_array[] = $r->ejem_idioma;
+         $sub_array[] = $r->ejem_portada;
          $sub_array[] = $r->ejem_resumen;
          $sub_array[] = $r->cate_nombre;
          $sub_array[] = $r->ejem_anio;
-         $sub_array[] = $r->ejem_nprestamos;
          
 		 $sub_array[] = '<a href="'.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
 		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
@@ -276,6 +276,10 @@ class ctrlejemplar extends CI_Controller {
             $pdf->Text(100,130,$row->ejem_anio);
             $pdf->Text(20,140,'Prestamos');
             $pdf->Text(100,140,$row->ejem_nprestamos);
+
+
+            $pdf->Text(20,110,'portada');
+            $pdf->Text(100,110,$row->ejem_portada);
         }
         $pdf->Output();
    }

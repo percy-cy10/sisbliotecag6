@@ -41,10 +41,10 @@
                      <th>PAGINAS</th>
                      <th>ISBN</th>
                      <th>IDIOMA</th>
+                     <th>PORTADA</th>
                      <th>RESUMEM</th>
                      <th>CATE_ID</th>
                      <th>AÑO</th>
-                     <th>PRESTAMOS</th>
 
                      <?php if($posicion==2):?>
                          <th>EDITAR</th>

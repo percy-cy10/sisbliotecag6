@@ -6,10 +6,9 @@
       $out= '<div class="form-group  was-validated ">';
       $out.= '<label for="'.$id.'">'.$label.'</label>';
       $out.= '<input type="'.$type.'" class="form-control" id="'.$id.'" name="'.$id.'" 
-              placeholder="'.$placeholder.'" '.$required.'>';
+              placeholder="'.$placeholder.'" '.$required.'> ';
       $out.= '</div>';
-      
-     
+   
 
       return $out;
    }
