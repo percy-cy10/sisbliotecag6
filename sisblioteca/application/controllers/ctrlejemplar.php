@@ -247,9 +247,7 @@ class ctrlejemplar extends CI_Controller {
 
             $sub_array[] = '<a href=" '.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
             class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
-
             $sub_array[] = '<a href="'.$url.'ctrlejemplar/eliminar?id='.$r->ejem_id.'" 
-
             class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
             $sub_array[] = '<a href="'.$url.'ctrlejemplar/imprimir?id='.$r->ejem_cate_id.'" 
             class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
