@@ -6,7 +6,11 @@
 ?>
 
 <div class="container shadow p-3 mb-5 bg-white rounded"> 
-
+<style>
+  p{
+    font-size:"2";
+  }
+</style>
 
 <div class="card">
   <h5 class="card-header font-weight-bold">HOLA, Bienvenido seas <?php echo $this->session->userdata('user'); ?></h5>
@@ -25,33 +29,40 @@
 </div>
 </div>
 <br>
-<img class="aligncenter wp-image-3850 size-full" title="Las bibliotecas escolares son imprescindibles en los centros educativos" src="http://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg" alt="Las bibliotecas escolares son imprescindibles en los centros educativos" width="700" height="450" srcset="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg 1000w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-300x201.jpg 300w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-768x515.jpg 768w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-82x55.jpg 82w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-75x50.jpg 75w" >
+<img class="aligncenter wp-image-3850 size-full" title="Las bibliotecas escolares son imprescindibles en los centros educativos" src="http://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg" alt="Las bibliotecas escolares son imprescindibles en los centros educativos" width="68%" height="45%" srcset="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg 1000w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-300x201.jpg 300w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-768x515.jpg 768w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-82x55.jpg 82w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-75x50.jpg 75w" >
 
-<div class="card rounded float-right" style="width: 23rem;">
-  <div class="card-body">
 
-<div id="custom_html-5" class="widget_text widget widget_custom_html">
-  <h3 class="title"></h3>
-  <div class="textwidget custom-html-widget">
-     <iframe src="https://www.youtube.com/embed/ltcFowDPTtQ" allow="autoplay; encrypted-media" allowfullscreen="" width="328" height="150" frameborder="0">
-   </iframe>
+
+<div class="card-deck rounded float-right" style="width: 33%;" >
+  <div class="card">
+
+      <div id="custom_html-5" class="widget_text widget widget_custom_html">
+        <div class="textwidget custom-html-widget">
+            <iframe src="https://www.youtube.com/embed/ltcFowDPTtQ" allow="autoplay; encrypted-media" allowfullscreen="" width="100%" height="15%" frameborder="2">
+            </iframe>
+        </div>
+      </div>
+
+
+    <div class="card-body">
+
+      <h5 class="card-title"></h5>
+
+      <p class="card-text" >La lectura permite mejorar nuestra ortografía.
+          Ayuda al desarrollo y perfeccionamiento del lenguaje. Mejora la expresión 
+          oral y escrita y hace el lenguaje más fluido. La lectura da facilidad para 
+          exponer el propio pensamiento y posibilita la capacidad de pensar.</p>
+
+      <p class="card-text"><small class="text-muted">
+           <a class="button"  href="https://quiurevista.com/por-que-importante-es-la-lectura/#:~:text=La%20lectura%20permite%20mejorar%20nuestra,posibilita%20la%20capacidad%20de%20pensar." class="card-link"><button class="btn btn-primary"><li class="fa fa-edit"></li>&nbsp;MAS INFORMACION</button></a>
+      </small></p>
+    </div>
   </div>
-    <div class="clear">
-  </div>
-</div>
-  
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">La lectura permite mejorar nuestra ortografía.
-     Ayuda al desarrollo y perfeccionamiento del lenguaje. Mejora la expresión 
-     oral y escrita y hace el lenguaje más fluido. La lectura da facilidad para 
-     exponer el propio pensamiento y posibilita la capacidad de pensar.</li>
-  </ul>
-  
-  <div class="card-body">
-    <a class="button" href="https://quiurevista.com/por-que-importante-es-la-lectura/#:~:text=La%20lectura%20permite%20mejorar%20nuestra,posibilita%20la%20capacidad%20de%20pensar." class="card-link"><button class="btn btn-primary"><li class="fa fa-edit"></li>&nbsp;MAS INFORMACION</button></a>
-  </div>
-  
-</div>
+
+
+
+
+
+
 
 
