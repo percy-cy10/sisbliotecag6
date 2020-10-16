@@ -31,7 +31,7 @@
     <br>
   <div class="card" style="width:35%;float: left;left: 35%;" >
   <div class="card-body">
-        <form action="<?php echo base_url('Biblioteca/evaluar')?>" method="post">
+        <form action="<?php echo base_url('Biblioteca/evaluar')?>" method="post" class="was-validated">
           <p class="text-center" style="margin-top: 17px;">
              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png" width=100px height=100px>
          </p>

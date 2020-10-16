@@ -23,6 +23,7 @@
     <script type="text/javascript" src="../datatable/datatable.js"></script>
     <link rel="stylesheet" href="../datatable/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../datatable/css/responsive.dataTables.min.css">
+
 </head>
 
 

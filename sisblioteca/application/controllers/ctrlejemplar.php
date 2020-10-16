@@ -220,6 +220,8 @@ class ctrlejemplar extends CI_Controller {
     }
 
     function imprimir(){
+
+        
        
         $id = $this->input->get('id');
         $id1 = $this->input->get('id1');
@@ -234,6 +236,7 @@ class ctrlejemplar extends CI_Controller {
         $pdf->SetTextColor(157, 25, 206);
         $pdf->Ln(17);
         $pdf->Cell(0,0,'"DESTALLES DEL LIBRO"',0,0,'C');
+
         $pdf->SetTextColor(0,0,0);
         $pdf->SetFont('Times','',12);
        
@@ -242,6 +245,7 @@ class ctrlejemplar extends CI_Controller {
         $pdf->Rect(118,53,63.5,93.5);
         //$pdf->ln(40);
         //
+        
 
         foreach ($rows->result() as $row) {
             
@@ -290,6 +294,7 @@ class ctrlejemplar extends CI_Controller {
             $pdf->Text(19,190,utf8_decode('quedado para siempre grabados en nuestro corazón. En Diario Femenino somos unas verdaderas apasiona-'));
             $pdf->Text(19,195,utf8_decode('das de la lectura y, por eso, hemos querido hacer una recopilación de las 126 frases más bonitas de libros.'));
             $pdf->Text(19,200,utf8_decode('A continuación encontrarás algunos fragmentos literarios imposibles de olvidar y para todos los gustos:'));
+
             $pdf->Text(21,210,utf8_decode('citas de amor, de autoayuda, de libros famosos, de bestseller… Seguro que al leerlas no puedes evitar una'));
             $pdf->Text(19,215,utf8_decode('sonrisa en tu cara al recordar todo lo que te marcó ese libro y su escritor. ¡No esperes más y deléitate'));
             $pdf->Text(19,220,utf8_decode('las mejores frases de libros!'));
@@ -300,6 +305,11 @@ class ctrlejemplar extends CI_Controller {
             $pdf->Text(25,240,utf8_decode('Siempre se puede ser mejor...!'),0,0,'T');
            
             $pdf->SetTextColor(0, 0, 0 );
+
+            $pdf->Image('assets/percy.png',40,245,30,30);
+            $pdf->Image('assets/dany.png',75,245,30,30);
+            $pdf->Image('assets/julio.png',110,245,30,30);
+
         }
         $pdf->Output();
    }

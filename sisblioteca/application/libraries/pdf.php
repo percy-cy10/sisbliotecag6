@@ -1,6 +1,8 @@
-<?php
-  include(APPPATH."libraries/fpdf/fpdf.php");
 
+<?php
+
+  include(APPPATH."libraries/fpdf/fpdf.php");
+  
     class PDF extends FPDF{
         function Header()
         {
@@ -42,13 +44,14 @@
         // Pie de página
         function Footer()
         {
-            $this->Image('assets/percy.png',40,245,30,30);
-            $this->Image('assets/dany.png',75,245,30,30);
-            $this->Image('assets/julio.png',110,245,30,30);
+
             $this->Image('assets/manos.jpeg',100,275,20,20);
             // Posición: a 1,5 cm del final
+            
+
             $this->SetY(-15);
             // Arial italic 8
+
             $this->SetFont('Arial','B',15);
             // Número de página
             $this->Cell(380,15,utf8_decode('').$this->PageNo(),0,0,'C');
@@ -65,7 +68,7 @@
         // Tabla simple
         function cabeceraVertical($cabecera)
         {
-            $this->SetXY(10, 54);
+            $this->SetXY(10, 64);
             $this->SetFont('Arial','B',10);
             $this->SetTextColor(250, 0, 0 );
             foreach($cabecera as $columna)
@@ -77,7 +80,7 @@
     
         function datosVerticales($datos)
         {
-            $this->SetXY(40, 54); //40 = 10 posiciónX_anterior + 30ancho Celdas de cabecera
+            $this->SetXY(40, 64); //40 = 10 posiciónX_anterior + 30ancho Celdas de cabecera
             $this->SetFont('Arial','B',10); //Fuente, Normal, tamaño
             $this->SetTextColor(0, 0, 0 );
             foreach($datos->result() as $columna)

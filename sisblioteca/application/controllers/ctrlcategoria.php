@@ -112,19 +112,46 @@ class ctrlcategoria extends CI_Controller {
         $pdf = new PDF();
         $pdf->AliasNbPages();
         $pdf->AddPage();
-        $pdf->SetFont('Times','',12);
-       
+        $pdf->SetFont('Times','B',30);
+        $pdf->SetTextColor(157, 25, 206);
+        $pdf->Text(55,50,'TIPO DE TEXTO');
 
         $this->load->model('model_categoria');
         $rows = $this->model_categoria->consultarPDF($id);
-
         $miCabecera = array('Id', 'Nombre');
-         
         $pdf->cabeceraVertical($miCabecera);
         $pdf->datosVerticales($rows);
-         
-    
 
+        $pdf->SetFont('Times','B',20);
+        $pdf->SetTextColor(66, 202, 27);
+        $pdf->Text(10,90,'Ingeniera');
+        $pdf->SetFont('Arial','',12);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Text(10,100,utf8_decode(' Cuando hablamos de libros generales de ingeniería, estamos hablando , '));
+        $pdf->Text(10,110,utf8_decode('"básicamente de libros relacionados con la matemática, la física, química,'));
+        $pdf->Text(10,120,utf8_decode(' el cálculo, álgebra análisis,que son prácticamente libros de cursos o materias'));
+        $pdf->Text(10,130,utf8_decode('que se enseñan en la mayoría de casos al principio de todas las ramas de ingeniería.'));
+     
+        $pdf->SetFont('Times','B',20);
+        $pdf->SetTextColor(66, 202, 27);
+        $pdf->Text(10,150,'Sociales');
+        $pdf->SetFont('Arial','',12);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Text(10,160,utf8_decode(' En este sentido, lo social puede otorgar un sentido de pertenencia  '));
+        $pdf->Text(10,170,utf8_decode('"En este sentido, lo social puede otorgar un sentido de pertenencia '));
+        $pdf->Text(10,180,utf8_decode('  Por ejemplo, la noción de convivencia social se refiere al modo'));
+        $pdf->Text(10,190,utf8_decode('de convivir que tienen los integrantes de una sociedad.'));
+     
+        $pdf->SetFont('Times','B',20);
+        $pdf->SetTextColor(66, 202, 27);
+        $pdf->Text(10,210,'Biomedicas');
+        $pdf->SetFont('Arial','',12);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Text(10,220,utf8_decode(' es un término que engloba el conocimiento y la investigación que es común a los campos  '));
+        $pdf->Text(10,230,utf8_decode('" de la medicina como la odontología y las disciplinas del ámbito de la biología,'));
+        $pdf->Text(10,240,utf8_decode(' como son la bioquímica, inmunología, histología, genética, embriología, anatomía, fisiología,'));
+        $pdf->Text(10,250,utf8_decode('patología, ingeniería biomédica, zoología, botánica, microbiología y farmacología..'));
+     
         $pdf->Output();
         
    }

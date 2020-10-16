@@ -146,7 +146,7 @@ function __construct($orientation='P', $unit='mm', $size='A4')
 		$this->h = $size[0];
 	}
 	else
-		$this->Error('Incorrect orientation: '.$orientation);
+	$this->Error('Incorrect orientation: '.$orientation);
 	$this->CurOrientation = $this->DefOrientation;
 	$this->wPt = $this->w*$this->k;
 	$this->hPt = $this->h*$this->k;

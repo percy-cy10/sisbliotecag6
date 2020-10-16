@@ -19,22 +19,21 @@
               'class'=>"form-inline"
 
              );
-                
-               echo form_open_multipart('ctrlejemplar/procesar?id=0',$form);
+                echo form_open_multipart('ctrlejemplar/procesar?id=0',$form);
 
-                        echo miinput('text',"ejem_titulo",'TITULO:&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
+                        echo miinput('text',"ejem_titulo",'TITULO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
                         echo miinput('text',"ejem_editorial",'EDITORIAL:','','required','',4);
-                        echo miinput('text',"ejem_paginas",'PAGINAS:','','required',3,4);
-                        echo miinput('text',"ejem_isbn",'ISBN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','','required',8,4);
+                        echo miinput('text',"ejem_paginas",'PAGINAS:&nbsp;&nbsp;','','required',3,4);
+                        echo miinput('text',"ejem_isbn",'ISBN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','','required',8,4);
                         echo miinput('text',"ejem_idioma",'IDIOMA:&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);                      
-                        echo miinput('text',"ejem_digital",'DIGITAL_:','','required','',4);
+                        echo miinput('text',"ejem_digital",'DIGITAL:&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
                         
-                        echo miinput('text',"ejem_audio",'AUDIO:&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
+                        echo miinput('text',"ejem_audio",'AUDIO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
                         echo miinput('text',"ejem_resumen",'RESUMEN:','','required','',4);
                         echo miinput('number',"ejem_valoracion",'Valoracion:','','required',1,4);
                         echo miinput('number',"ejem_nprestamos",'Prestamos:','','required',1,4);
                         echo miinput('date',"ejem_anio",'AÑO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;','','required','',4);
-                        echo miSelect('ejem_cate_id','EJEM_ID:',$registros ,1);
+                        echo miSelect('ejem_cate_id','Ejem_cat_id:',$registros ,1);
                         echo miinput('file',"ejem_portada",'PORTADA:','','required','',6);
                         
                         echo miButon('btn btn-success','Enviar');
