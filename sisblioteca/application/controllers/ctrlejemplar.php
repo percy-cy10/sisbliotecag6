@@ -229,41 +229,71 @@ class ctrlejemplar extends CI_Controller {
         $pdf = new PDF();
         $pdf->AliasNbPages();
         $pdf->AddPage();
+        $pdf->SetFont('Times','B',20);
+            //color
+        $pdf->SetTextColor(157, 25, 206);
+        $pdf->Ln(17);
+        $pdf->Cell(0,0,'"DESTALLES DEL LIBRO"',0,0,'C');
+        $pdf->SetTextColor(0,0,0);
         $pdf->SetFont('Times','',12);
        
         $this->load->model('model_ejemplar');
         $rows = $this->model_ejemplar->datosPdf($id);
-        $pdf->Rect(5, 50, 200, 150);
-        $pdf->ln(20);
+        $pdf->Rect(118,53,63.5,93.5);
+        //$pdf->ln(40);
+        //
 
         foreach ($rows->result() as $row) {
-            $pdf->Text(20,60,'Titulo');
-            $pdf->Text(100,60,$row->ejem_titulo);
-            $pdf->Text(20,70,utf8_decode('Editorial'));
-            $pdf->Text(100,70,$row->ejem_editorial);
-            $pdf->Text(20,80,'Paginas');
-            $pdf->Text(100,80,$row->ejem_paginas);
-            $pdf->Text(20,90,'Isbn');
-            $pdf->Text(100,90,$row->ejem_isbn);
-            $pdf->Text(20,100,'Idioma');
-            $pdf->Text(100,100,utf8_decode($row->ejem_idioma));
-            $pdf->Text(20,110,'Resumen');
-            $pdf->Text(100,110,$row->ejem_resumen);
-            $pdf->Text(20,120,'Cate Nombre');
-            $pdf->Text(100,120,$row->cate_nombre);
-            $pdf->Text(20,130,utf8_decode('Año'));
-            $pdf->Text(100,130,$row->ejem_anio);
+$pdf->Text(30,60,'TITULO');
+            $pdf->Text(61,60,':');
+            $pdf->Text(63,60,$row->ejem_titulo);
+            $pdf->Text(30,70,utf8_decode('EDITORIAL'));
+            $pdf->Text(61,70,':');
+            $pdf->Text(63,70,$row->ejem_editorial);
+            $pdf->Text(30,80,'PAGINAS');
+            $pdf->Text(61,80,':');
+            $pdf->Text(63,80,$row->ejem_paginas);
+            $pdf->Text(30,90,'ISBM');
+            $pdf->Text(61,90,':');
+            $pdf->Text(63,90,$row->ejem_isbn);
+            $pdf->Text(30,100,'IDIOMA');
+            $pdf->Text(61,100,':');
+            $pdf->Text(63,100,utf8_decode($row->ejem_idioma));
+            $pdf->Text(30,110,'RESUMEN');
+            $pdf->Text(61,110,':');
+            $pdf->Text(63,110,$row->ejem_resumen);
+            $pdf->Text(30,120,'CATEGORIA');
+            $pdf->Text(61,120,':');
+            $pdf->Text(63,120,$row->cate_nombre);
+            $pdf->Text(30,130,utf8_decode('AÑO'));
+            $pdf->Text(61,130,':');
+            $pdf->Text(63,130,$row->ejem_anio);
+            $pdf->Text(30,140,'PRESTAMOS');
+            $pdf->Text(61,140,':');
+            $pdf->Text(63,140,$row->ejem_nprestamos);
+            $pdf->Image(FCPATH."uploads/$row->ejem_portada",120,55,60,90);
+            $pdf->Text(140,144,"PORTADA");
 
-            $pdf->Text(20,140,'Prestamos');
-            $pdf->Text(100,140,$row->ejem_nprestamos);
+            $pdf->Text(21,160,utf8_decode('Qué sería de la vida sin libros, ¿verdad?  Tal y como dijo Joseph Addison (escritor y político británico), '));
+            $pdf->Text(19,165,utf8_decode('"leer es para la mente lo que el ejercicio físico es para el cuerpo". Y qué razón llevaba. Leer estimula la'));
+            $pdf->Text(19,170,utf8_decode('concentración y la empatía, agudiza los sentidos, reduce el estrés, mejora el sueño y nos hace más'));
+            $pdf->Text(19,175,utf8_decode('inteligentes, entre otros muchísimos beneficios. Leer nos da la vida.'));
 
-            $pdf->Text(20,150,"portada");
-           
+
+            $pdf->Text(21,185,utf8_decode('A lo largo de la historia se han escrito cientos de libros y obras literarias cuyas páginas y relatos se han'));
+            $pdf->Text(19,190,utf8_decode('quedado para siempre grabados en nuestro corazón. En Diario Femenino somos unas verdaderas apasiona-'));
+            $pdf->Text(19,195,utf8_decode('das de la lectura y, por eso, hemos querido hacer una recopilación de las 126 frases más bonitas de libros.'));
+            $pdf->Text(19,200,utf8_decode('A continuación encontrarás algunos fragmentos literarios imposibles de olvidar y para todos los gustos:'));
+            $pdf->Text(21,210,utf8_decode('citas de amor, de autoayuda, de libros famosos, de bestseller… Seguro que al leerlas no puedes evitar una'));
+            $pdf->Text(19,215,utf8_decode('sonrisa en tu cara al recordar todo lo que te marcó ese libro y su escritor. ¡No esperes más y deléitate'));
+            $pdf->Text(19,220,utf8_decode('las mejores frases de libros!'));
             
-
-            $pdf->Image(FCPATH."uploads/$row->ejem_portada",100,150,33,33);
+            $pdf->SetFont('Times','B',15);
+            //color
+            $pdf->SetTextColor(250, 0, 0 );
+            $pdf->Text(25,240,utf8_decode('Siempre se puede ser mejor...!'),0,0,'T');
            
-            
+            $pdf->SetTextColor(0, 0, 0 );
         }
         $pdf->Output();
    }
