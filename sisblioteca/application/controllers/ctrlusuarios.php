@@ -155,26 +155,90 @@ class ctrlusuarios extends CI_Controller {
         
          $this->load->model('model_usuario');
          $rows = $this->model_usuario->consultarPdf($id);
-         $pdf->Rect(5, 50, 200, 100);
+         $pdf->Rect(30, 60, 150, 85);
+         $pdf->Image(FCPATH."uploads/fcarnet2.jpg",30.5, 60.5, 149, 84);
          $pdf->ln(20);
+         $pdf->SetFont('Times','B',20);
+         $pdf->SetTextColor(157, 25, 206);
+         $pdf->Cell(0,0,'"INFORMACION PERSONAL"',0,0,'C');
+
+         $pdf->SetTextColor(0, 0, 0);
 
          foreach ($rows->result() as $row) {
-             $pdf->Text(20,60,'Usuario');
-             $pdf->Text(100,60,$row->usua_login);
-             $pdf->Text(20,70,utf8_decode('Contraseña'));
-             $pdf->Text(100,70,$row->usua_password);
-             $pdf->Text(20,80,'Codigo');
-             $pdf->Text(100,80,$row->usua_codigo);
-             $pdf->Text(20,90,'Nombres');
-             $pdf->Text(100,90,$row->usua_nombres);
-             $pdf->Text(20,100,'Apellidos');
-             $pdf->Text(100,100,$row->usua_apellidos);
-             $pdf->Text(20,110,'Email');
-             $pdf->Text(100,110,$row->usua_email);
-             $pdf->Text(20,120,'Direccion');
-             $pdf->Text(100,120,$row->usua_direccion);
-             $pdf->Text(20,130,'Telefono');
-             $pdf->Text(100,130,$row->usua_telefono);
+             $pdf->Rect(34.5,79.5,50,60);
+
+             $pdf->Image(FCPATH."uploads/usuario.jpg",35,80,49,59);
+
+             $pdf->Image(FCPATH."uploads/snperu.gif",35,62,13,15);
+             $pdf->Image('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/554px-Logo_UNAP.png',160,62,15,15,'PNG');
+             $pdf->SetFont('Times','B',13);
+             $pdf->Text(50,69,utf8_decode('UNIVERSIDAD NACIONAL DEL ALTIPLANO'));
+             $pdf->SetFont('Arial','I',10);
+             $pdf->Text(50,74,utf8_decode('ESCUELA PROFESIONAL DE INGENIERÍA DE SISTERMAS'));
+             
+             $pdf->SetFont('Times','B',20);
+             //$pdf->Text(90,85,'USUARIO');
+             
+             $pdf->Text(50,135,$row->usua_login);
+
+             $pdf->SetFont('Times','',13);
+             $pdf->Text(120,143,utf8_decode('Clave'));
+             $pdf->Text(133,143,':');
+             $pdf->Text(135,143,$row->usua_password);
+
+             $pdf->SetFont('Arial','B',14);
+             $pdf->Text(90,84,'CARNET DEL USUARIO');
+             $pdf->SetFont('Times','',13);
+             $pdf->Text(90,90,'Codigo');
+             $pdf->Text(117,90,':');
+             $pdf->Text(120,90,$row->usua_codigo);
+             $pdf->Text(90,97,'Nombres');
+             $pdf->Text(117,97,':');
+             $pdf->Text(120,97,utf8_decode($row->usua_nombres));
+             $pdf->Text(90,104,'Apellidos');
+             $pdf->Text(117,104,':');
+             $pdf->Text(120,104,utf8_decode($row->usua_apellidos));
+             $pdf->Text(90,111,'Email');
+             $pdf->Text(117,111,':');
+             $pdf->Text(120,111,utf8_decode($row->usua_email));
+             $pdf->Text(90,118,'Direccion');
+             $pdf->Text(117,118,':');
+             $pdf->Text(120,118,utf8_decode($row->usua_direccion));
+             $pdf->Text(90,125,'Telefono');
+             $pdf->Text(117,125,':');
+             $pdf->Text(120,125,$row->usua_telefono);
+
+             $pdf->Image(FCPATH."assets/percy.png",145,110,30,30);
+
+             $pdf->Text(90,132,utf8_decode('AÑO'));
+             $pdf->Text(117,132,':');
+             $pdf->Text(120,132,'2020-10-16');
+
+            $pdf->Text(21,160,utf8_decode('Qué sería de la vida sin libros, ¿verdad?  Tal y como dijo Joseph Addison (escritor y político británico), '));
+            $pdf->Text(19,165,utf8_decode('"leer es para la mente lo que el ejercicio físico es para el cuerpo". Y qué razón llevaba. Leer estimula la'));
+            $pdf->Text(19,170,utf8_decode('concentración y la empatía, agudiza los sentidos, reduce el estrés, mejora el sueño y nos hace más'));
+            $pdf->Text(19,175,utf8_decode('inteligentes, entre otros muchísimos beneficios. Leer nos da la vida.'));
+
+            $pdf->Image(FCPATH."uploads/personal.png",110,170,90,80);
+
+            $pdf->Text(21,185,utf8_decode('A lo largo de la historia se han escrito cientos de libros y'));
+            $pdf->Text(19,190,utf8_decode('quedado para siempre grabados en nuestro corazón. '));
+            $pdf->Text(19,195,utf8_decode('das de la lectura y, por eso,'));
+            $pdf->Text(19,200,utf8_decode('A continuación encontrarás algunos'));
+
+            $pdf->Text(21,210,utf8_decode('citas de amor, de autoayuda, de libros famosos,'));
+            $pdf->Text(19,215,utf8_decode('sonrisa en tu cara al recordar todo lo'));
+            $pdf->Text(19,220,utf8_decode('las mejores frases de libros!'));
+            
+            $pdf->SetFont('Times','B',15);
+            //color
+            $pdf->SetTextColor(250, 0, 0 );
+            $pdf->Text(25,240,utf8_decode('Siempre se puede ser mejor...!'),0,0,'T');
+           
+            $pdf->SetTextColor(0, 0, 0 );
+
+
+            //$pdf->Image(FCPATH."uploads/usuario.jpg",110,170,90,80);
          }
          $pdf->Output();
     }

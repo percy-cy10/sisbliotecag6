@@ -300,6 +300,10 @@ class ctrlejemplar extends CI_Controller {
            
             $pdf->SetTextColor(0, 0, 0 );
 
+            $pdf->Image('assets/percy.png',40,245,30,30);
+            $pdf->Image('assets/dany.png',75,245,30,30);
+            $pdf->Image('assets/julio.png',110,245,30,30);
+
         }
         $pdf->Output();
    }

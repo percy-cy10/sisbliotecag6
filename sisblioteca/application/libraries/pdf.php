@@ -44,9 +44,7 @@
         // Pie de página
         function Footer()
         {
-            $this->Image('assets/percy.png',40,245,30,30);
-            $this->Image('assets/dany.png',75,245,30,30);
-            $this->Image('assets/julio.png',110,245,30,30);
+
             $this->Image('assets/manos.jpeg',100,275,20,20);
             // Posición: a 1,5 cm del final
             
