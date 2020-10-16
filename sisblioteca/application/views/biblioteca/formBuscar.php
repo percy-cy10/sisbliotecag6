@@ -12,14 +12,17 @@
 <h1 style="text-align: center;color:orange;">SELECCIONE UNA CATEGORIA A BUSCAR</h1>
   <div class="card-body">
 <?php 
-  
-   echo form_open('ctrlcategoria/buscar?cate_id=0');
+   $form=array(
+      'class'=>'was-validated'
+   );
+
+   echo form_open('ctrlcategoria/buscar?cate_id=0',$form);
 
    $opcionesES=array(
       'class'=> 'form-control'
        
     );
-      echo form_dropdown('cate_id',$opciones,'', $opcionesES);
+      echo form_dropdown('cate_id',$opciones,'', $opcionesES,'required');
 
       $estilos1=array(
          'class'=>'btn btn-success'

@@ -110,49 +110,14 @@ class ctrlejemplar extends CI_Controller {
 
     public function procesar(){
 
-        $id = $this->input->get('id');
-
-        /*$this->load->library('form_validation');
-        $this->form_validation->set_rules('ejem_titulo', 'Titulo','alpha|required');
-        $this->form_validation->set_rules('ejem_editorial', 'editorial','alpha|required');
-        $this->form_validation->set_rules('ejem_paginas', 'paginas','numeric|required');
-        $this->form_validation->set_rules('ejem_isbn', 'isb','is_natural|required|min_length[5]|max_length[5]');
-        $this->form_validation->set_rules('ejem_idioma', 'idioma','alpha|required');
-        $this->form_validation->set_rules('ejem_portada', 'portada','alpha|required');
-        $this->form_validation->set_rules('ejem_digital', 'digital','alpha|required');
-        $this->form_validation->set_rules('ejem_audio', 'audio','alpha|required');
-        $this->form_validation->set_rules('ejem_resumen', 'resumen','alpha|required');
-        $this->form_validation->set_rules('ejem_cate_id', 'cate_id','required');
-        $this->form_validation->set_rules('ejem_valoracion', 'valoracion','numeric|required|min_length[2]|max_length[2]');
-        $this->form_validation->set_rules('ejem_anio', 'anio','date|required');
-        $this->form_validation->set_rules('ejem_nprestamos', 'prestamos','is_natural|required');
-        
-
-        if ($this->form_validation->run() == FALSE) {
-
-            $direccion = base_url();
-            $this->load->helper('form');
-            
-            $this->load->model('model_categoria');
-            $opciones = $this->model_categoria->getCategoria();
-            $data['opciones']=$opciones;
-
-            $this->load->view("biblioteca/formejemplar",$data);
-            
-        
-      //  } else {*/
-
-
-
-
+            $id = $this->input->get('id');
 
             $Titulo = $this->input->post('ejem_titulo');
             $file = uniqid();
 
+
             $data = $this->do_upload('./uploads/',$file);
-
             if(!$data)die("archivo vacio");
-
             $archivo = $data['file_name'];
 
             /*$data=array(
@@ -161,9 +126,6 @@ class ctrlejemplar extends CI_Controller {
 
             );*/
             //$this->db->insert('ejemplar',$data);
-
-
-
 
 
             $ejem_editorial = $this->input->post('ejem_editorial');
@@ -206,12 +168,6 @@ class ctrlejemplar extends CI_Controller {
     
 
 
-
-
-
-
-
-
     public function datosdeejemplar()
 	{
 		
@@ -219,9 +175,6 @@ class ctrlejemplar extends CI_Controller {
 		$start = intval($this->input->get("start"));
 		$length = intval($this->input->get("length"));
 
-
-		
-	   
 		$this->load->model('model_ejemplar');
 		$query = $this->model_ejemplar->datos();
         $data = array();
@@ -246,11 +199,11 @@ class ctrlejemplar extends CI_Controller {
             
 
             $sub_array[] = '<a href=" '.$url.'ctrlejemplar/editar?id='.$r->ejem_id.'" 
-            class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+            class="btn btn-primary"><button style="background: none;border: none;"><li class="fa fa-edit"></li> Editar </button></a>';
             $sub_array[] = '<a href="'.$url.'ctrlejemplar/eliminar?id='.$r->ejem_id.'" 
-            class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+            class="btn btn-danger" ><button style="background: none;border: none;"><li class="fa fa-trash"></li> Eliminar </button></a>';
             $sub_array[] = '<a href="'.$url.'ctrlejemplar/imprimir?id='.$r->ejem_cate_id.'" 
-            class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
+            class="btn btn-secondary" ><button style="background: none;border: none;"><li class="fas fa-arrow-alt-circle-down"></li> PDF </button></a>';
                 
             $data[] = $sub_array;
 		}
@@ -356,7 +309,7 @@ class ctrlejemplar extends CI_Controller {
            $this->load->library('upload', $config);
 
            if ( ! $this->upload->do_upload('ejem_portada')){
-           
+                
                    return false;
            } else {
                    $data =$this->upload->data();

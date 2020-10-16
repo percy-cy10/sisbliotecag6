@@ -87,11 +87,11 @@ class ctrlcategoria extends CI_Controller {
             $sub_array[] = $r->cate_id;
             $sub_array[] = $r->cate_nombre;
             $sub_array[] = '<a href="'.$url.'ctrlcategoria/editar?cate_id='.$r->cate_id.'" 
-            class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+            class="btn btn-primary"><button style="background: none;border: none;"> <li class="fa fa-edit"></li> Editar </button></a>';
             $sub_array[] = '<a href="'.$url.'ctrlcategoria/eliminar?cate_id='.$r->cate_id.'" 
-            class="btn btn-danger  disabled" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+            class="btn btn-danger  disabled" ><button style="background: none;border: none;"><li class="fa fa-trash"></li> Eliminar</button></a>';
             $sub_array[] = '<a href="'.$url.'ctrlcategoria/imprimir?id='.$r->cate_id.'" 
-            class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
+            class="btn btn-secondary" ><button style="background: none;border: none;"><li class="fas fa-arrow-alt-circle-down"></li> PDF </button></a>';
             $data[] = $sub_array;
 		}
 	    

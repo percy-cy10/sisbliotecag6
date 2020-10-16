@@ -5,22 +5,24 @@
 		$this->load->view('biblioteca/menu');
 		$this->load->view('biblioteca/footer');
 ?>
-<style>
-    
-    #div{
-       margin:0 0 0 -9%;
-       border-radius:1%;
-  }
-</style>
-<br>
+    <style>
+        
+      
+    </style>
+    <script type="text/javascript" src="../datatable/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../datatable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../datatable/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="../datatable/datatable.js"></script>
+    <link rel="stylesheet" href="../datatable/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../datatable/css/responsive.dataTables.min.css">
+
 <div class="container">
-<div class="row">
-  <div class=" col-sm-8.2 p-3 bg-white " id="div">
+  <div class=" col-sm-8.2 p-3 bg-white ">
      <h1 class="text-warning text-center font-weight-bold">Lista de Usuarios</h1>
         
          
 
-      <table class="table table-bordered table-active" id="usuarios_list">
+      <table class="table table-active display responsive nowrap" id="usuarios_list"  style="width:100%">
          <thead class="thead-dark">
 
                <tr>
@@ -43,7 +45,7 @@
 			
 		   </tbody>
 	   </table>
-   </div>
+  
    </div>
 </div>
 <script>

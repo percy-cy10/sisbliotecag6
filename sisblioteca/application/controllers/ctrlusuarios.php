@@ -124,11 +124,11 @@ class ctrlusuarios extends CI_Controller {
          $sub_array[] = $r->usua_telefono;
          
 		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/index?id='.$r->usua_id.'" 
-		 class="btn btn-primary"><li class="fa fa-edit"></li>&nbspEditar</a>';
+		 class="btn btn-primary"><button style="background: none;border: none;"><li class="fa fa-edit"></li> Editar </button></a>';
 		 $sub_array[] = '<a href="'.$url.'ctrlusuarios/eliminar?id='.$r->usua_id.'" 
-         class="btn btn-danger" ><li class="fa fa-trash"></li>&nbspEliminar</a>';
+         class="btn btn-danger" ><button style="background: none;border: none;"><li class="fa fa-trash"></li> Eliminar </button></a>';
          $sub_array[] = '<a href="'.$url.'ctrlusuarios/imprimir?id='.$r->usua_id.'" 
-		 class="btn btn-secondary" ><li class="fas fa-arrow-alt-circle-down"></li>&nbspPDF</a>';
+		 class="btn btn-secondary" ><button style="background: none;border: none;"><li class="fas fa-arrow-alt-circle-down"></li> PDF </button></a>';
 			   
 		 $data[] = $sub_array;
 		}
