@@ -20,7 +20,7 @@
 
              );
                 
-                echo form_open_multipart('ctrlejemplar/procesar?id=0',$form);
+                zecho form_open_multipart('ctrlejemplar/procesar?id=0',$form);
 
                         echo miinput('text',"ejem_titulo",'TITULO:','','required','','');
                         echo miinput('text',"ejem_editorial",'EDITORIAL:','','required','',6);
