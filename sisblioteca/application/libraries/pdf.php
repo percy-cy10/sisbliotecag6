@@ -62,30 +62,31 @@
             $this->Cell(50,7,'ING. DANY SALCA LAGAR :dsalccal@est.unap.edu.pe',0,0,'T');
         }
 
-    
         // Tabla simple
-        function BasicTable($header, $data)
+        function cabeceraVertical($cabecera)
         {
-            
-            $this->Ln(20);
-            $this->SetTextColor(245,11,11);
-            $this->SetFont('Arial','B',12);
-            // Cabecera
-            foreach($header as $col)
-                $this->Cell(40,7,$col,1);
-            $this->Ln();
-            // Datos
-            foreach($data->result() as $row)
+            $this->SetXY(10, 54);
+            $this->SetFont('Arial','B',10);
+            $this->SetTextColor(250, 0, 0 );
+            foreach($cabecera as $columna)
             {
-                $this->SetTextColor(0,0,0);
-                foreach($row as $col)
-                    $this->Cell(40,6,$col,1);
-                $this->Ln();
+                //Parámetro con valor 2, hace que la cabecera sea vertical
+                $this->Cell(30,7, utf8_decode($columna),1, 2 , 'L' );
             }
         }
-  
+    
+        function datosVerticales($datos)
+        {
+            $this->SetXY(40, 54); //40 = 10 posiciónX_anterior + 30ancho Celdas de cabecera
+            $this->SetFont('Arial','B',10); //Fuente, Normal, tamaño
+            $this->SetTextColor(0, 0, 0 );
+            foreach($datos->result() as $columna)
+            {
+                foreach($columna as $col)
+                
+                     $this->Cell(50,7,$col,1, 2 , 'L' );
+            }
+        }
 
     }
-
-
 ?>

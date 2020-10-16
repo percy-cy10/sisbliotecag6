@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../datatable/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../datatable/css/responsive.dataTables.min.css">
 
+
 <div class="container">
   <div class=" col-sm-8.2 p-3 bg-white ">
      <h1 class="text-warning text-center font-weight-bold">Lista de Usuarios</h1>

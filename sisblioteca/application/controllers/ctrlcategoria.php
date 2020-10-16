@@ -114,11 +114,17 @@ class ctrlcategoria extends CI_Controller {
         $pdf->AddPage();
         $pdf->SetFont('Times','',12);
        
+
         $this->load->model('model_categoria');
         $rows = $this->model_categoria->consultarPDF($id);
-  
-        $header = array('categoria id', 'categoria nombre');
-        $pdf->BasicTable($header,$rows);
+
+        $miCabecera = array('Id', 'Nombre');
+         
+        $pdf->cabeceraVertical($miCabecera);
+        $pdf->datosVerticales($rows);
+         
+    
+
         $pdf->Output();
         
    }

@@ -6,28 +6,27 @@
 ?>
 
 <div class="container shadow p-3 mb-5 bg-white rounded"> 
-<style>
-  p{
-    font-size:"2";
-  }
-</style>
+    <style>
+      p{
+        font-size:"2";
+      }
+    </style>
 
-<div class="card">
-  <h5 class="card-header font-weight-bold">HOLA, Bienvenido seas <?php echo $this->session->userdata('user'); ?></h5>
-  <div class="card-body">
-  <h5 class="card-title">Finalidad de nuestro Sistema Bibliotecario</h5>
-  <p class="card-text text-primary ">
-  El éxito de los estudiantes también reside en la presencia y utilización de las 
-  bibliotecas escolares. Son éstas las encargadas de proporcionar información e ideas 
-  a su comunidad educativa, además de proporcionar las competencias necesarias para 
-  su aprendizaje y las encargadas de desarrollar su curiosidad e imaginación. Y es que 
-  las bibliotecas escolares, pese a quien le pese, son imprescindibles dentro de las 
-  instituciones educativas.
-  </p>
+    <div class="card">
+        <h5 class="card-header font-weight-bold">HOLA, Bienvenido seas <?php echo $this->session->userdata('user'); ?></h5>
+        <div class="card-body">
 
- 
-</div>
-</div>
+        <h5 class="card-title">Finalidad de nuestro Sistema Bibliotecario</h5>
+        <p class="card-text text-primary ">
+        El éxito de los estudiantes también reside en la presencia y utilización de las 
+        bibliotecas escolares. Son éstas las encargadas de proporcionar información e ideas 
+        a su comunidad educativa, además de proporcionar las competencias necesarias para 
+        su aprendizaje y las encargadas de desarrollar su curiosidad e imaginación. Y es que 
+        las bibliotecas escolares, pese a quien le pese, son imprescindibles dentro de las 
+        instituciones educativas.
+        </p>
+      </div>
+    </div>
 
 <br>
 <div class="card-group">
@@ -36,7 +35,7 @@
 
       <div class="card-body">
         <p class="card-text">
-        <img class="aligncenter wp-image-3850 size-full card-img-top" title="Las bibliotecas escolares son imprescindibles en los centros educativos" src="http://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg" alt="Las bibliotecas escolares son imprescindibles en los centros educativos" width="208%" height="205%" srcset="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg 1000w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-300x201.jpg 300w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-768x515.jpg 768w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-82x55.jpg 82w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-75x50.jpg 75w" >
+        <img class="aligncenter wp-image-3850 size-full card-img-top" title="Las bibliotecas escolares son imprescindibles en los centros educativos" src="http://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg" alt="Las bibliotecas escolares son imprescindibles en los centros educativos" width="50%" height="205%" srcset="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos.jpg 1000w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-300x201.jpg 300w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-768x515.jpg 768w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-82x55.jpg 82w, https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-escolares-son-imprescindibles-en-los-centros-educativos-75x50.jpg 75w" >
         </p>
       </div>
       

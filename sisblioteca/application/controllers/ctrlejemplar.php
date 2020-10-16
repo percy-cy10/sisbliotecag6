@@ -244,7 +244,8 @@ class ctrlejemplar extends CI_Controller {
         //
 
         foreach ($rows->result() as $row) {
-$pdf->Text(30,60,'TITULO');
+            
+            $pdf->Text(30,60,'TITULO');
             $pdf->Text(61,60,':');
             $pdf->Text(63,60,$row->ejem_titulo);
             $pdf->Text(30,70,utf8_decode('EDITORIAL'));
@@ -271,8 +272,13 @@ $pdf->Text(30,60,'TITULO');
             $pdf->Text(30,140,'PRESTAMOS');
             $pdf->Text(61,140,':');
             $pdf->Text(63,140,$row->ejem_nprestamos);
+
+
+
             $pdf->Image(FCPATH."uploads/$row->ejem_portada",120,55,60,90);
             $pdf->Text(140,144,"PORTADA");
+
+
 
             $pdf->Text(21,160,utf8_decode('Qué sería de la vida sin libros, ¿verdad?  Tal y como dijo Joseph Addison (escritor y político británico), '));
             $pdf->Text(19,165,utf8_decode('"leer es para la mente lo que el ejercicio físico es para el cuerpo". Y qué razón llevaba. Leer estimula la'));
@@ -297,12 +303,6 @@ $pdf->Text(30,60,'TITULO');
         }
         $pdf->Output();
    }
-
-
-
-
-
-
 
    function subir(){
 
