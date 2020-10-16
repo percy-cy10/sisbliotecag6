@@ -11,13 +11,13 @@
       }
 
    function miSelect($id,$label,$registro){
-         $out= '<div class="form-group col-md-3 mb-4 was-validated ">';
+         $out= '<div class="form-group col-md-4 mb-4 was-validated ">';
          $out.= '<label for="'.$id.'">'.$label.'</label>';
          $out.= '<select class="form-control" name="'.$id.'" id="'.$id.'">';
          foreach ($registro as $valu){
             $out.=   '<option value="'.$valu->cate_id.'">'.$valu->cate_nombre.'</option>';
          }
-         $out.= '</select></br>';
+         $out.= '</select>';
          $out.= '</div>';
 
          return $out;
@@ -27,8 +27,6 @@
 
    function miButon($class,$nombre){
       $out='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-      $out.='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-      $out.='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
       $out.='<div class="form-group row">';
       $out.= '<div class="col-sm-10">';
       $out.='<button type="submit" class="'.$class.'" >'.$nombre.'</button>';

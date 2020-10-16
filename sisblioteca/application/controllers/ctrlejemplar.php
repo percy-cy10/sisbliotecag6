@@ -220,6 +220,8 @@ class ctrlejemplar extends CI_Controller {
     }
 
     function imprimir(){
+
+        
        
         $id = $this->input->get('id');
         $id1 = $this->input->get('id1');
@@ -233,7 +235,11 @@ class ctrlejemplar extends CI_Controller {
             //color
         $pdf->SetTextColor(157, 25, 206);
         $pdf->Ln(17);
+<<<<<<< Updated upstream
         $pdf->Cell(0,0,'"DESTALLES DEL LIBRO"',0,0,'C');
+=======
+        $pdf->Cell(0,0,'"DESTALLES DEL PRODUCTO"',0,0,'C');
+>>>>>>> Stashed changes
         $pdf->SetTextColor(0,0,0);
         $pdf->SetFont('Times','',12);
        
@@ -242,9 +248,16 @@ class ctrlejemplar extends CI_Controller {
         $pdf->Rect(118,53,63.5,93.5);
         //$pdf->ln(40);
         //
+<<<<<<< Updated upstream
 
         foreach ($rows->result() as $row) {
 $pdf->Text(30,60,'TITULO');
+=======
+        
+
+        foreach ($rows->result() as $row) {
+            $pdf->Text(30,60,'TITULO');
+>>>>>>> Stashed changes
             $pdf->Text(61,60,':');
             $pdf->Text(63,60,$row->ejem_titulo);
             $pdf->Text(30,70,utf8_decode('EDITORIAL'));
@@ -284,6 +297,7 @@ $pdf->Text(30,60,'TITULO');
             $pdf->Text(19,190,utf8_decode('quedado para siempre grabados en nuestro corazón. En Diario Femenino somos unas verdaderas apasiona-'));
             $pdf->Text(19,195,utf8_decode('das de la lectura y, por eso, hemos querido hacer una recopilación de las 126 frases más bonitas de libros.'));
             $pdf->Text(19,200,utf8_decode('A continuación encontrarás algunos fragmentos literarios imposibles de olvidar y para todos los gustos:'));
+<<<<<<< Updated upstream
             $pdf->Text(21,210,utf8_decode('citas de amor, de autoayuda, de libros famosos, de bestseller… Seguro que al leerlas no puedes evitar una'));
             $pdf->Text(19,215,utf8_decode('sonrisa en tu cara al recordar todo lo que te marcó ese libro y su escritor. ¡No esperes más y deléitate'));
             $pdf->Text(19,220,utf8_decode('las mejores frases de libros!'));
@@ -294,6 +308,13 @@ $pdf->Text(30,60,'TITULO');
             $pdf->Text(25,240,utf8_decode('Siempre se puede ser mejor...!'),0,0,'T');
            
             $pdf->SetTextColor(0, 0, 0 );
+=======
+           
+            $pdf->Text(21,210,utf8_decode('citas de amor, de autoayuda, de libros famosos, de bestseller… Seguro que al leerlas no puedes evitar una'));
+            $pdf->Text(19,215,utf8_decode('sonrisa en tu cara al recordar todo lo que te marcó ese libro y su escritor. ¡No esperes más y deléitate'));
+            $pdf->Text(19,220,utf8_decode('las mejores frases de libros!'));
+           // $pdf->Text(19,225,utf8_decode('A continuación encontrarás algunos fragmentos literarios imposibles de olvidar y para todos los gustos:'));
+>>>>>>> Stashed changes
         }
         $pdf->Output();
    }
