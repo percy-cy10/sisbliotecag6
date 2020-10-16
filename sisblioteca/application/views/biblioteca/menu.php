@@ -60,12 +60,20 @@ LIBROS</a>
       <a class="flex-sm-fill  nav-link " href="<?php echo base_url('Biblioteca/mostrar') ?>"><i class="far fa-info-circle fa-lg"></i> INFORMACION PERSONAL&nbsp;&nbsp;</a>
       </li>
       <?php endif;?>
+
       <li class="nav-item active">
-            <a class="flex-sm-fill  nav-link " href="<?php echo base_url('Welcome/buscar') ?>"><i class="fal fa-search fa-lg"></i> BUSCAR&nbsp;&nbsp;</a>
-        </li>
-        <li class="nav-item active">
-            <a class="flex-sm-fill  nav-link " style="float: right;right: 7%;position: absolute;"href="<?php echo base_url('biblioteca/salir') ?>"> <i class="fas fa-sign-out-alt fa-lg"></i> &nbsp;&nbsp;</a>  
-        </li>
+          <a class="flex-sm-fill  nav-link " href="<?php echo base_url('Welcome/buscar') ?>"><i class="fal fa-search fa-lg"></i> BUSCAR&nbsp;&nbsp;</a>
+      </li>
+
+    
+      <li class="nav-item active" style="right: 10%;position: absolute;">
+          <a class="flex-sm-fill nav-link btn btn-outline-danger " href="<?php echo base_url('biblioteca/salir') ?>"><i class=" fas fa-sign-out-alt fa-lg"  ></i></a>  
+      </li>
+          
+        
+
+        
+        
     </ul>
   </div>
 </nav>
